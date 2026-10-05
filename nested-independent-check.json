@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "ua2_zero_failed_rules": true,
+    "ua2_zero_failed_checks": true,
+    "all_1727_rules_passed": true,
+    "all_470_checks_passed": true,
+    "page_count_preserved": true,
+    "geometry_preserved": true,
+    "text_hash_preserved": true,
+    "raster_hash_preserved": true,
+    "artifact_hash_matches_receipt": true
+  },
+  "all_pass": true,
+  "interpretation": "Machine PDF/UA-2 zero-failure result for one source-corrected specimen; human accessibility and production-export evidence remain open."
+}
