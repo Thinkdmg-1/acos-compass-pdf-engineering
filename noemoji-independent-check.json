@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "ua2_failed_rules_exactly_1": true,
+    "ua2_failed_checks_exactly_4": true,
+    "remaining_clause_only_8_2_2": true,
+    "page_count_preserved": true,
+    "geometry_preserved": true,
+    "text_hash_preserved": true,
+    "raster_hash_preserved": true,
+    "artifact_hash_matches_receipt": true
+  },
+  "all_pass": true,
+  "interpretation": "Controlled source-corrected fixture removes the invalid zero-valued ToUnicode mapping and width inconsistency; structure linkage remains unresolved."
+}
