@@ -65,6 +65,10 @@ The PDF Association's current PDF/UA resource states that ISO 14289-2:2024 is av
 
 This confirms a current authorized access path for the PDF/UA-1 and PDF/UA-2 texts, but the full files have not been silently downloaded or accepted under the product flow. The next controlled step remains explicit account/license authorization, file-digest capture, and clause-by-clause mapping against the frozen PFE 611 claim inventory.
 
+#### Public companion evidence (bounded, not a normative substitute)
+
+The PDF Association's January 2024 public WTPDF article records that its "Using Tagged PDF in PDF 2.0" specification was developed in alignment with ISO TC 171 SC 2 WG 9, and identifies the same broad PDF/UA-2 feature areas: annotations, structure-element attributes, namespaces, MathML, Artifact, and related PDF 2.0 features. The article is retained as independent corroboration and teaching context only: <https://pdfa.org/download-area/examples/WTPDF/2024-03-04_BFO-WTPDF-PDFua2.pdf>.
+
 ### ISO 15930-9:2020 — PDF/X-6
 
 Official ISO record: <https://www.iso.org/standard/77103.html>
@@ -80,6 +84,8 @@ Official ISO record: <https://www.iso.org/standard/77103.html>
 
 The current ISO record was rechecked directly. It identifies ISO 15930-9:2020 as Edition 1, published 2020-11, 26 pages, published and under revision, covering complete and partial print-data exchange using PDF 2.0 and identifying ISO/CD 15930-9.3 as the replacement under development. This confirms profile identity and revision status only; it does not provide the PDF/X-6 requirement clauses or a preflight result.
 
+The PDF Association's PDF/X technical index independently identifies PDF/X-6, PDF/X-6p, and PDF/X-6n as ISO 15930-9:2020 profiles using PDF 2.0, distinguishes complete from partial exchange, and records supported color-managed data categories. It links the published standard for purchase and does not provide a no-cost full-text path: <https://pdfa.org/resource/iso-15930-pdfx/>. This is profile corroboration only, not a conformance requirement map.
+
 ### ISO 19005-4:2020 — PDF/A-4
 
 Official ISO record: <https://www.iso.org/standard/71832.html?eu=true>
@@ -94,6 +100,8 @@ Official ISO record: <https://www.iso.org/standard/71832.html?eu=true>
 #### Current public record recheck (2026-10-05)
 
 The current ISO record was rechecked directly. It identifies ISO 19005-4:2020 as Edition 1, published 2020-11, 27 pages, published but under revision, with ISO/DIS 19005-4.2 identified as the forthcoming replacement. The public abstract repeats the PDF 2.0 preservation purpose and the exclusions for conversion processes, rendering implementation, storage conditions, and hardware/operating systems. The draft replacement remains non-current and is not used as a normative source.
+
+The PDF Association's technical resource independently corroborates the PDF/A-4 purpose and limits: PDF 2.0 basis, preservation of static visual page representations, embedded content, and exclusions for conversion, rendering implementation, storage, and hardware. It links purchase of the standard rather than a sponsored no-cost delivery: <https://pdfa.org/resource/iso-19005-4-pdf-a-4/>. This is scope corroboration only, not a substitute for the normative clauses.
 
 ## Browser pagination sources
 
