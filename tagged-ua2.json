@@ -1,0 +1,186 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pfe602-pdf-fixture-lab-2026-10-06/shaping-fixture-tagged.pdf",
+  "size" : 48081
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 1721,
+    "failedRules" : 6,
+    "passedChecks" : 496,
+    "failedChecks" : 10,
+    "tags" : [ "artifact", "metadata", "syntax", "structure", "font" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.11.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "syntax" ],
+      "description" : "The ViewerPreferences dictionary of the document catalog dictionary shall be present and shall contain at least the DisplayDocTitle key with a value of true, as described in ISO 32000-2:2020, Table 147",
+      "object" : "CosDocument",
+      "test" : "DisplayDocTitle == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root",
+        "errorMessage" : "ViewerPreferences dictionary is not present in the document Catalog, or DisplayDocTitle key is set to false or is not present in the ViewerPreferences dictionary (ViewerPreferences = null, DisplayDocTitle = null)",
+        "errorArguments" : [ null, null ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.11.1",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "metadata" ],
+      "description" : "The Catalog dictionary of a conforming file shall contain the Metadata key whose value is a metadata stream as defined in ISO 32000-2:2020, 14.3. The metadata stream dictionary shall contain entry Type with value /Metadata and entry Subtype with value /XML",
+      "object" : "PDDocument",
+      "test" : "containsMetadata == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]",
+        "errorMessage" : "The document catalog dictionary doesn't contain metadata key or metadata stream dictionary does not contain either entry Type with value /Metadata or entry Subtype with value /XML",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.4.5.8",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "font" ],
+      "description" : " If a ToUnicode CMap is present, the Unicode values it specifies shall all be greater than zero (0), but not equal to either U+FEFF or U+FFFE",
+      "object" : "Glyph",
+      "test" : "toUnicode == null || (toUnicode.indexOf(\"\\u0000\") == -1 && toUnicode.indexOf(\"\\uFFFE\") == -1 && toUnicode.indexOf(\"\\uFEFF\") == -1)",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](21 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[3](AAAAAA+ArialUnicodeMS AAAAAA+ArialUnicodeMS 0 0 422134367 0 true)",
+        "errorMessage" : "The glyph has Unicode value 0, U+FEFF or U+FFFE, which is invalid by Unicode standard",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.2.5.2",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "structure" ],
+      "description" : "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace",
+      "object" : "PDStructTreeRoot",
+      "test" : "kidsStandardTypes != 'Document' || firstChildStandardTypeNamespaceURL == 'http://iso.org/pdf2/ssn'",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/StructTreeRoot[0](30 0 obj PDStructTreeRoot)",
+        "errorMessage" : "The structure tree root contains a single Document structure element, but this element is not within the PDF 2.0 namespace (namespace URI = http://iso.org/pdf/ssn)",
+        "errorArguments" : [ "http://iso.org/pdf/ssn" ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "6.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "syntax" ],
+      "description" : "The document catalog dictionary shall include a MarkInfo dictionary containing an entry, Marked, whose value shall be true",
+      "object" : "CosDocument",
+      "test" : "Marked == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root",
+        "errorMessage" : "MarkInfo dictionary is not present in the document catalog, or Marked entry is set to false or is not present in the MarkInfo dictionary (MarkInfo = dictionary(size = 1), Marked = null)",
+        "errorArguments" : [ "dictionary(size = 1)", null ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.2.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 5,
+      "tags" : [ "artifact" ],
+      "description" : "Content that is not considered real shall be an artifact",
+      "object" : "SESimpleContentItem",
+      "test" : "isTaggedContent == true || parentsTags.contains('Artifact') == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](21 0 obj PDSemanticContentStream)/content[2]{mcid:1}/contentItem[0]{mcid:1}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](21 0 obj PDSemanticContentStream)/content[3]{mcid:2}/contentItem[0]{mcid:2}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](21 0 obj PDSemanticContentStream)/content[4]{mcid:3}/contentItem[0]{mcid:3}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](21 0 obj PDSemanticContentStream)/content[5]{mcid:4}/contentItem[0]{mcid:4}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](21 0 obj PDSemanticContentStream)/content[6]{mcid:5}/contentItem[0]{mcid:5}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-2 + Tagged PDF validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791216351615,
+  "finish" : 1791216352002,
+  "duration" : "00:00:00.387",
+  "difference" : 387
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791216351541,
+    "finish" : 1791216352037,
+    "duration" : "00:00:00.496",
+    "difference" : 496
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "nonCompliantPdfaCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
