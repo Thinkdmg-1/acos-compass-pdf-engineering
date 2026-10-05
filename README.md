@@ -8,7 +8,7 @@
 
 The one-page fixture was rendered independently with Poppler `pdftoppm` at 144 DPI to a 1224 × 1584 PNG and at 288 DPI (a 200% inspection render) to a 2448 × 3168 PNG. Both full-page images were inspected. The page visibly contains the heading `PFE Production Fixture`, the subtitle `PDF/A-4 production-path experiment.`, and the line `Precision. Progress. Proof.` on a white page with no clipping, raster corruption, or unexpected overflow visible at this scale.
 
-Because `pdfinfo` reports one page, this covers the complete page set at the two recorded render resolutions. The check does not establish high-contrast behavior, assistive-technology behavior, or PDF/UA conformance.
+Because `pdfinfo` reports one page, this covers the complete page set at the two recorded render resolutions. A grayscale autocontrast rendering of the 288 DPI image was also inspected as a bounded high-contrast proxy; text remained visibly distinguishable. This proxy is not an operating-system high-contrast mode and does not establish assistive-technology behavior or PDF/UA conformance.
 
 ## Checks not executed
 
