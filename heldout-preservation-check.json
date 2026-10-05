@@ -1,0 +1,34 @@
+{
+  "original": {
+    "sha256": "6ce987b67de2dbd72c02fbcb2f8cfba0a546e32ad67871c502307cc8f982bb0c",
+    "pages": 1,
+    "mediabox": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "text_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "text_chars": 77,
+    "raster_sha256": "fcdeeb4d2edb8a62b4b0d9e9b83a67de5ad993a8164a67ccd2737b6aef2ff958"
+  },
+  "tagged": {
+    "sha256": "99feaf3483b1d41757ddbcca9cec237673d4b7f4a6049d0dcbd4b29a326a73ed",
+    "pages": 1,
+    "mediabox": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "text_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "text_chars": 77,
+    "raster_sha256": "fcdeeb4d2edb8a62b4b0d9e9b83a67de5ad993a8164a67ccd2737b6aef2ff958"
+  },
+  "comparisons": {
+    "pages": true,
+    "mediabox": true,
+    "text_sha256": true,
+    "raster_sha256": true
+  }
+}
