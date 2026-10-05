@@ -1,0 +1,12 @@
+{
+  "source_pdf": "reports/pfe602-pdf-fixture-lab-2026-10-06/shaping-fixture-heldout-sans.pdf",
+  "render_png": "/tmp/heldout-sans-1.png",
+  "png_sha256": "82153d438059414c85170aca53d1d587f9c282cb18cf68a3c6f417856bbad745",
+  "observations": {
+    "font_face": "NotoSansMyanmar",
+    "Myanmar_visual_quality": "same heavy/overlapping appearance as NotoSerifMyanmar control",
+    "interpretation": "Changing font face without changing the export/shaping path does not repair the visual defect",
+    "screen_reader": "not assessed"
+  },
+  "disposition": "NEGATIVE CONTROL / VISUAL FAILURE"
+}
