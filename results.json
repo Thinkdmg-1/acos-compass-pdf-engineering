@@ -1,21 +1,62 @@
 {
-  "exam_id": "PFE-Y1-QUAL-2026-10-06-v1",
-  "status": "ATTEMPTED_NOT_PASSED",
-  "hard_veto_rule": "every hard-veto section must pass",
-  "sections": {
-    "written_source_standards_defense": "FAIL_MISSING_AUTHORIZED_NORMATIVE_TEXT_AND_CLAUSE_MAPS",
-    "practical_pdf": "LIMITED_NOT_PASSED",
-    "typography_accessibility": "FAIL_HUMAN_CHECKS_AND_SHAPING_TOOLCHAIN_UNAVAILABLE",
-    "pagination": "LIMITED_PASS_BOUNDED_MODEL_ONLY",
-    "research_methods": "LIMITED_PASS_BOUNDED_PILOT_ONLY"
-  },
-  "year2_entry": false,
-  "source_gate": "CHANGES_REQUIRED",
-  "next_required_evidence": [
-    "authorized normative custody and clause mapping",
-    "PDF/X-6-capable preflight and independent parser reconciliation",
-    "equipped human accessibility review",
-    "shaping-capable font-toolchain rerun",
-    "published pagination reproduction or solver comparison"
+  "independent_check": "PASS",
+  "summary": [
+    {
+      "observed": [
+        true,
+        109,
+        0,
+        375,
+        0
+      ],
+      "profile": "PDF/A-4 validation profile",
+      "report": "production-repaired-4.json"
+    },
+    {
+      "observed": [
+        false,
+        1721,
+        6,
+        310,
+        8
+      ],
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "report": "production-repaired-ua2.json"
+    },
+    {
+      "observed": [
+        false,
+        103,
+        6,
+        1362,
+        276
+      ],
+      "profile": "PDF/A-4 validation profile",
+      "report": "truetype-tagged-4.json"
+    },
+    {
+      "observed": [
+        false,
+        1722,
+        5,
+        2532,
+        7
+      ],
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "report": "truetype-tagged-ua2.json"
+    },
+    {
+      "fixture_sha256": {
+        "production-repaired": "c027477c49ffbb7f055a3c7ed37a804ef3423c3d6c1a0ad4faaa5f1a916f8c73",
+        "truetype-tagged": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6"
+      }
+    },
+    {
+      "profile_inventory_assertions": {
+        "pdfa4_present": true,
+        "pdfua2_present": true,
+        "pdfx6_absent": true
+      }
+    }
   ]
 }
