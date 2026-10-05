@@ -1,0 +1,670 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pdfoxide-pdfx6-2026-10-06/x6-metadata-box-variant-v2.pdf",
+  "size" : 114051
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 102,
+    "failedRules" : 7,
+    "passedChecks" : 423,
+    "failedChecks" : 450,
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.1.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "The file header shall begin at byte zero and shall consist of \"%PDF-2.n\" followed by a single EOL marker, where 'n' is a single digit number between 0 (30h) and 9 (39h)",
+      "object" : "CosDocument",
+      "test" : "headerOffset == 0 && /^%PDF-2\\.[0-9]$/.test(header)",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root",
+        "errorMessage" : "File header %PDF-1.3 (offset = 0) starts at non-zero offset or does not match the pattern %PDF-2.n, where 'n' is a single digit number between 0 and 9",
+        "errorArguments" : [ "%PDF-1.3", "0" ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.2.4.3",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 444,
+      "description" : "DeviceRGB shall only be used if a device independent DefaultRGB colour space has been set when the DeviceRGB colour space is used or if the current transparency blending space, when the DeviceRGB colour space is used, is a device independent RGB-based colour space or the current PDF/A OutputIntent, when the DeviceRGB colour space is used, contains an 'RGB ' destination profile",
+      "object" : "PDDeviceRGB",
+      "test" : "(gPageOutputCS == null ? gDocumentOutputCS == 'RGB ' : gPageOutputCS == 'RGB ') || gTransparencyCS == 'RGB ' || gTransparencyCS == 'CalRGB'",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[67]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[72]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[84]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[85]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[111]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[111]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[120]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[125]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[137]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[138]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[155]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[155]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[164]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[169]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[181]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[182]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[201]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[201]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[210]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[215]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[227]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[228]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[233]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[233]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[242]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[247]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[259]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[260]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[293]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[293]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[302]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[307]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[319]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[320]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[346]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[346]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[355]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[360]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[372]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[373]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[399]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[399]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[408]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[413]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[425]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[426]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[431]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[431]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[440]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[445]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[457]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[458]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[493]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[493]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[502]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[507]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[519]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[520]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[543]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[543]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[552]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[557]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[569]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[570]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[611]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[611]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[620]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[625]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[637]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[638]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[668]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[668]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[677]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[682]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[694]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[695]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[724]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[724]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[733]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[738]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[750]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[751]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[782]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[782]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[791]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[796]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[808]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[809]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[814]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[814]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[823]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[828]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[840]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[841]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[867]/fillCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[867]/strokeCS[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[876]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[881]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[893]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]/operators[894]/colorSpace[0]",
+        "errorMessage" : "DeviceRGB colour space is used without RGB output intent profile and without current transparency blending space being Device-independent RGB",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.1.3",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "File identifiers shall be defined by the ID entry in a PDF file’s trailer dictionary",
+      "object" : "CosDocument",
+      "test" : "lastID != null && lastID.length() > 0",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root",
+        "errorMessage" : "Missing or empty ID in the document trailer",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.7.3",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "The PDF/A version and conformance level of a file shall be specified using the PDF/A Identification extension schema. The PDF/A Identification schema defined in Table 2 uses the namespace URI \"http://www.aiim.org/pdfa/ns/id/\"",
+      "object" : "MainXMPPackage",
+      "test" : "containsPDFAIdentification == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/metadata[0](21 0 obj PDMetadata)/XMPPackage[0]",
+        "errorMessage" : "The document metadata stream doesn't contain PDF/A Identification Schema",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.2.2",
+      "testNumber" : 3,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "A content stream's named resources shall be defined by a resource dictionary, which shall enumerate the named resources needed by the operators in the content stream and the names by which they can be referred to",
+      "object" : "PDContentStream",
+      "test" : "undefinedResourceNames == ''",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](4 0 obj PDPage)/contentStream[0]",
+        "errorMessage" : "A content stream references named resource(s) F2 not defined by a resource dictionary",
+        "errorArguments" : [ "F2" ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.1.3",
+      "testNumber" : 5,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "If a document information dictionary is present, it shall only contain a ModDate entry",
+      "object" : "CosInfo",
+      "test" : "size == 1 && ModDate != null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/trailer[0]/Info[0]",
+        "errorMessage" : "Document information dictionary is present and contains CreationDate,Keywords,Producer,GTS_PDFXVersion,Author,Title,GTS_PDFXConformance,Creator,ModDate,Trapped,Subject key(s), but allowed only ModDate",
+        "errorArguments" : [ "CreationDate,Keywords,Producer,GTS_PDFXVersion,Author,Title,GTS_PDFXConformance,Creator,ModDate,Trapped,Subject" ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.1.3",
+      "testNumber" : 4,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "The Info key shall not be present in the trailer dictionary of PDF/A-4 conforming files unless there exists a PieceInfo entry in the document catalog dictionary",
+      "object" : "CosDocument",
+      "test" : "containsPieceInfo == true || containsInfo == false",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root",
+        "errorMessage" : "The Info key present in the trailer dictionary, but PieceInfo entry does not present in the document catalog dictionary",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-4 validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791218655030,
+  "finish" : 1791218655568,
+  "difference" : 538,
+  "duration" : "00:00:00.538"
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791218654968,
+    "finish" : 1791218655612,
+    "difference" : 644,
+    "duration" : "00:00:00.644"
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "nonCompliantPdfaCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
