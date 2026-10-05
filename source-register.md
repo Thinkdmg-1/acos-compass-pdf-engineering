@@ -4,7 +4,7 @@ This register is the starting inventory for the 995 gate. Each row must be inspe
 
 | ID | Source | Class | Use | Version/status | Required inspection |
 |---|---|---|---|---|---|
-| S-001 | ISO 32000-2:2020, PDF 2.0, with approved errata | NORMATIVE | syntax, graphics, text, rendering, interaction, document interchange | Edition 2, published 2020-12; ISO record says confirmed 2026; Draft Amendment 1.2 is future work | use official ISO identity/status record; obtain authorized text or approved extract; map every PFE 601 claim |
+| S-001 | ISO 32000-2:2020, PDF 2.0, with approved errata | NORMATIVE | syntax, graphics, text, rendering, interaction, document interchange | Edition 2, published 2020-12; ISO record says confirmed 2026; Draft Amendment 1.2 is future work; PDF Association offers a no-cost authorized distribution with Errata Collection 3 | use official ISO identity/status record and the PDF Association distribution; obtain/retain the authorized text or approved extract; map every PFE 601 claim |
 | S-002 | ISO 14289-1:2014, PDF/UA-1 | NORMATIVE | accessible PDF requirements | Edition 2, published 2014-12; official ISO record says reviewed and confirmed 2025/current; based on ISO 32000-1:2008 | map structure, tagging, metadata, alternatives, reading order; do not substitute PDF/UA-2 |
 | S-003 | ISO 14289-2:2024, PDF/UA-2 | NORMATIVE | PDF 2.0 accessibility | Edition 1, published 2024-03; official ISO/OBP sample inspected | record differences from PDF/UA-1 and applicable conformance tests |
 | S-004 | ISO 15930-9:2020, PDF/X-6 | NORMATIVE | PDF 2.0 print exchange and prepress | Edition 1, published 2020-11; ISO marks for revision; CD 15930-9.3 is future work | choose exact published profile before production exercises; track draft separately |
@@ -21,7 +21,7 @@ This register is the starting inventory for the 995 gate. Each row must be inspe
 | S-015 | American Statistical Association p-value statement | PROFESSIONAL GUIDANCE | interpretation and reporting of quantitative evidence | 2016 statement | use with current statistical methods, not as a full statistics text |
 | S-016 | veraPDF validation documentation and test suite | VALIDATOR SCOPE | machine-checkable PDF/A and PDF/UA evidence | official docs and local run inspected 2026-10-05; pinned veraPDF 1.30.2 | pin validator version, profile, command, report, corpus fixture, and human-review boundary |
 | S-017 | Adobe PDF and color-management technical documentation | VENDOR GUIDANCE | implementation behavior and output intents | version/date to verify | never upgrade vendor advice into ISO requirement without corroboration |
-| S-018 | PDF Association standards and technical guidance | INDUSTRY GUIDANCE | standards access and implementation commentary | current page/edition to verify | use as navigation and interpretation; trace normative claims to ISO |
+| S-018 | PDF Association standards and technical guidance | INDUSTRY GUIDANCE / AUTHORIZED DISTRIBUTION | standards access and implementation commentary | current page/edition inspected 2026-10-05; ISO 32000-2:2020 no-cost distribution and Errata Collection 3 are publicly documented | use as navigation and authorized access path; trace normative claims to ISO; record the exact downloaded bundle and digest when obtained |
 
 ## Source-use rules
 

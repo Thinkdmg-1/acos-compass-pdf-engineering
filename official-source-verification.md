@@ -17,6 +17,10 @@ Official ISO record: <https://www.iso.org/cms/%20render/live/en/sites/isoorg/con
 
 **Curriculum use:** PFE 601 is governed by the 2020 edition. Amendment material is tracked as proposed/future and cannot silently change current requirements.
 
+#### Authorized access path recheck (2026-10-05)
+
+The PDF Association's current ISO 32000-2 resource states that ISO 32000-2:2020 is available at no cost through its sponsored distribution and that the distributed copy includes Errata Collection 3. The page identifies the 2020 dated revision as replacing the 2017 edition and links to the no-cost delivery flow: <https://pdfa.org/resource/iso-32000-2>. This resolves the earlier assumption that the core PDF 2.0 text was necessarily paywalled, but it does not mean the repository has silently downloaded or redistributed the document. The next controlled step is to obtain the authorized bundle through that flow, record its file digest and edition metadata, and then perform clause-by-clause extraction against the frozen PFE 601 claim inventory.
+
 ### ISO 14289-2:2024 — PDF/UA-2
 
 Official ISO record: <https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/08/22/82278.html>
@@ -137,4 +141,4 @@ Release page inspected: <https://github.com/veraPDF/veraPDF-library/releases>
 
 ## Gate disposition after verification
 
-The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status, plus a pinned local veraPDF run. The remaining hard-veto work is access to the complete authorized normative texts and a claim-by-claim mapping of the curriculum to those texts. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
+The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status, plus a pinned local veraPDF run. The PDF Association has also been recorded as the current no-cost authorized access path for ISO 32000-2:2020 with Errata Collection 3. The remaining hard-veto work is to obtain and preserve that authorized core text, obtain complete authorized PDF/UA-2, PDF/X-6, and PDF/A-4 texts or valid extracts, and complete the claim-by-claim mappings and human checks. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
