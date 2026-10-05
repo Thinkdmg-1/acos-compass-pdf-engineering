@@ -1,0 +1,107 @@
+{
+  "validator": "veraPDF",
+  "version": "1.30.2",
+  "run_date": "2026-10-05",
+  "reports": [
+    {
+      "report": "cff-untagged-pdfa4.json",
+      "input": "cff-untagged.pdf",
+      "profile": "PDF/A-4 validation profile",
+      "compliant": false,
+      "passedChecks": 1337,
+      "failedChecks": 276,
+      "failedRules": 6,
+      "sha256": "c8fdca37c0aa47e0330c8e57d71cbfd7e850dea48de82d7c68e9199f3ae3c09b"
+    },
+    {
+      "report": "cff-untagged-pdfua2.json",
+      "input": "cff-untagged.pdf",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "compliant": false,
+      "passedChecks": 675,
+      "failedChecks": 257,
+      "failedRules": 5,
+      "sha256": "3abaefcaedeb80c255493bfd786f88c48a144d25ade85638db1a3c8c6eaac178"
+    },
+    {
+      "report": "pfe601-minimal-pdfa4.json",
+      "input": "pfe601-minimal.pdf",
+      "profile": "PDF/A-4 validation profile",
+      "compliant": false,
+      "passedChecks": 58,
+      "failedChecks": 6,
+      "failedRules": 6,
+      "sha256": "2b7106489f520e06400cddd8b53ab72fc7fca422144b6b64cdfb05e2e4fb1b70"
+    },
+    {
+      "report": "pfe601-minimal-pdfua2.json",
+      "input": "pfe601-minimal.pdf",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "compliant": false,
+      "passedChecks": 44,
+      "failedChecks": 7,
+      "failedRules": 7,
+      "sha256": "ced02f25457c00bfacd20dabde364923935e513af0943f3e2249a6ebb97e2606"
+    },
+    {
+      "report": "pfe601-repaired-xref-pdfa4.json",
+      "input": "pfe601-repaired-xref.pdf",
+      "profile": "PDF/A-4 validation profile",
+      "compliant": false,
+      "passedChecks": 58,
+      "failedChecks": 6,
+      "failedRules": 6,
+      "sha256": "5288707aef022a75138b49840949613380f9bc43284a4a877cf1001e86721191"
+    },
+    {
+      "report": "pfe601-repaired-xref-pdfua2.json",
+      "input": "pfe601-repaired-xref.pdf",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "compliant": false,
+      "passedChecks": 44,
+      "failedChecks": 7,
+      "failedRules": 7,
+      "sha256": "13ccd532fc8296eaf6c4792f426932cf51606d79171574030717465a70095472"
+    },
+    {
+      "report": "truetype-tagged-pdfa4.json",
+      "input": "truetype-tagged.pdf",
+      "profile": "PDF/A-4 validation profile",
+      "compliant": false,
+      "passedChecks": 1362,
+      "failedChecks": 276,
+      "failedRules": 6,
+      "sha256": "f25f30d6eb8609daa06e0b431ee60ef526cb8c4e42ee97da9fe810aa05d1148a"
+    },
+    {
+      "report": "truetype-tagged-pdfua2.json",
+      "input": "truetype-tagged.pdf",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "compliant": false,
+      "passedChecks": 2532,
+      "failedChecks": 7,
+      "failedRules": 5,
+      "sha256": "1d04d7bdf8fdeea57b595bbfb9346bada9c46cd72b3346c399666b9336ffceaf"
+    },
+    {
+      "report": "truetype-untagged-pdfa4.json",
+      "input": "truetype-untagged.pdf",
+      "profile": "PDF/A-4 validation profile",
+      "compliant": false,
+      "passedChecks": 875,
+      "failedChecks": 276,
+      "failedRules": 6,
+      "sha256": "d20cda2649c2eda2fcad3b9c56212ab81b780c531ac9de6d6b40b109d5a936d8"
+    },
+    {
+      "report": "truetype-untagged-pdfua2.json",
+      "input": "truetype-untagged.pdf",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "compliant": false,
+      "passedChecks": 679,
+      "failedChecks": 257,
+      "failedRules": 5,
+      "sha256": "cde5bfbb51de6fd79df4c7e870694842314fd08ff4435eada9ac4585efea679b"
+    }
+  ]
+}
