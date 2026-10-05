@@ -11,8 +11,8 @@ A fresh Python process parsed the Markdown source register and claim matrix, ext
 
 ```json
 {
-  "source_register_ids": 22,
-  "claim_matrix_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018", "S-020", "S-021", "S-022"],
+  "source_register_ids": 23,
+  "claim_matrix_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018", "S-020", "S-021", "S-022", "S-023"],
   "missing_source_ids": [],
   "referenced_local_paths": 1,
   "missing_local_paths": [],
