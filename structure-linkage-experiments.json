@@ -1,0 +1,51 @@
+{
+  "purpose": "Bounded PDF/UA-2 structure-linkage alternatives tested against the same five MCID fixture content items.",
+  "validator": "veraPDF 1.30.2 PDF/UA-2 + Tagged PDF validation profile",
+  "variants": [
+    {
+      "name": "direct-parent-array",
+      "file": "shaping-fixture-tagged-repaired.pdf",
+      "failed_rules": 2,
+      "failed_checks": 6,
+      "failed_clauses": [
+        "8.2.2",
+        "8.4.5.8"
+      ],
+      "sha256": "46617af700cae7ba55a0f862916f684d2473531cd6f08fa5083e9975d5e98b9b"
+    },
+    {
+      "name": "indirect-parent-array",
+      "file": "shaping-fixture-tagged-parent-indirect.pdf",
+      "failed_rules": 2,
+      "failed_checks": 6,
+      "failed_clauses": [
+        "8.2.2",
+        "8.4.5.8"
+      ],
+      "sha256": "0da6ec07dec2646ced02662b20a18f1452ce624371e63152ad9a08923955648e"
+    },
+    {
+      "name": "mcr-dictionary",
+      "file": "shaping-fixture-tagged-mcr.pdf",
+      "failed_rules": 2,
+      "failed_checks": 6,
+      "failed_clauses": [
+        "8.2.2",
+        "8.4.5.8"
+      ],
+      "sha256": "cfc6b267f928b497ea7875c1bf513a6b4b6cb0f1d1ae36e7e39cc25defc7baef"
+    },
+    {
+      "name": "mcr-array",
+      "file": "shaping-fixture-tagged-mcrarray.pdf",
+      "failed_rules": 2,
+      "failed_checks": 6,
+      "failed_clauses": [
+        "8.2.2",
+        "8.4.5.8"
+      ],
+      "sha256": "6a388a040dc260239d14e7629f16c83dc267e1573419b4682230d61199844e87"
+    }
+  ],
+  "interpretation": "Changing parent-array indirection or StructElem K representation did not change the validator result. The residual structure-linkage failure is preserved as unresolved; no variant is promoted to conforming status."
+}
