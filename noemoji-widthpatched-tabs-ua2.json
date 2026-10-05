@@ -1,0 +1,96 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pfe602-pdf-fixture-lab-2026-10-06/shaping-fixture-noemoji-widthpatched-tabs-tagged.pdf",
+  "size" : 48649
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 1726,
+    "failedRules" : 1,
+    "passedChecks" : 434,
+    "failedChecks" : 4,
+    "tags" : [ "artifact" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.2.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 4,
+      "tags" : [ "artifact" ],
+      "description" : "Content that is not considered real shall be an artifact",
+      "object" : "SESimpleContentItem",
+      "test" : "isTaggedContent == true || parentsTags.contains('Artifact') == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](4 0 obj PDSemanticContentStream)/content[1]{mcid:0}/contentItem[0]{mcid:0}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](4 0 obj PDSemanticContentStream)/content[2]{mcid:1}/contentItem[0]{mcid:1}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](4 0 obj PDSemanticContentStream)/content[3]{mcid:2}/contentItem[0]{mcid:2}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](4 0 obj PDSemanticContentStream)/content[4]{mcid:3}/contentItem[0]{mcid:3}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-2 + Tagged PDF validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791216921501,
+  "finish" : 1791216922021,
+  "duration" : "00:00:00.520",
+  "difference" : 520
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791216921404,
+    "finish" : 1791216922065,
+    "duration" : "00:00:00.661",
+    "difference" : 661
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "nonCompliantPdfaCount" : 1,
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "successfulJobCount" : 1
+  },
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false
+}}}
