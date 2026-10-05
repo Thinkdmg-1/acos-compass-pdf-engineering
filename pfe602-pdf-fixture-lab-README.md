@@ -132,3 +132,7 @@ A HarfBuzz-shaped outline layer was generated from the same held-out text. The o
 - Visual receipt: [`shaped-semantic-visual-inspection.json`](shaped-semantic-visual-inspection.json)
 
 Both pinned validators report zero failed PDF/UA-2 rules and checks. The visible render matches the shaped outline raster exactly, while the semantic extraction matches the held-out tagged source. Visual inspection shows improved complex-script rendering relative to the ReportLab-only control. This remains a diagnostic outline-plus-text export path: it does not yet prove screen-reader behavior, editable text semantics for the visible outline layer, production font licensing, or a general-purpose export implementation.
+
+### Independent parser extraction check
+
+The combined shaped-semantic PDF was extracted by both pypdf and Poppler. Each parser’s output hash is preserved relative to the held-out tagged source, while their known combining/RTL differences remain visible: pypdf normalizes the line differently, and Poppler retains the combining sequence and directional marks. The raw texts, hashes, and independent receipt are [`shaped-semantic-extraction-check.json`](shaped-semantic-extraction-check.json) and [`shaped-semantic-extraction-independent-check.json`](shaped-semantic-extraction-independent-check.json).
