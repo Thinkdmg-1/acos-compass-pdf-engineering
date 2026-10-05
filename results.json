@@ -1,157 +1,21 @@
 {
-  "adversarial_cases": [
-    {
-      "dynamic_programming": {
-        "cost": 53,
-        "cuts": [
-          1,
-          3,
-          4
-        ],
-        "loads": [
-          3,
-          8,
-          9
-        ]
-      },
-      "greedy": {
-        "cost": 65,
-        "cuts": [
-          2,
-          3,
-          4
-        ],
-        "loads": [
-          9,
-          2,
-          9
-        ]
-      },
-      "heights": [
-        3,
-        6,
-        2,
-        9
-      ],
-      "independent_exact": {
-        "cost": 53,
-        "cuts": [
-          1,
-          3,
-          4
-        ]
-      }
-    },
-    {
-      "dynamic_programming": {
-        "cost": 2,
-        "cuts": [
-          2,
-          4,
-          5
-        ],
-        "loads": [
-          9,
-          9,
-          2
-        ]
-      },
-      "greedy": {
-        "cost": 2,
-        "cuts": [
-          2,
-          4,
-          5
-        ],
-        "loads": [
-          9,
-          9,
-          2
-        ]
-      },
-      "heights": [
-        7,
-        2,
-        6,
-        3,
-        2
-      ],
-      "independent_exact": {
-        "cost": 2,
-        "cuts": [
-          2,
-          4,
-          5
-        ]
-      }
-    },
-    {
-      "dynamic_programming": {
-        "cost": 2,
-        "cuts": [
-          2,
-          5,
-          6
-        ],
-        "loads": [
-          9,
-          9,
-          3
-        ]
-      },
-      "greedy": {
-        "cost": 4,
-        "cuts": [
-          3,
-          5,
-          6
-        ],
-        "loads": [
-          10,
-          8,
-          3
-        ]
-      },
-      "heights": [
-        4,
-        5,
-        1,
-        6,
-        2,
-        3
-      ],
-      "independent_exact": {
-        "cost": 2,
-        "cuts": [
-          2,
-          5,
-          6
-        ]
-      }
-    }
-  ],
-  "algorithms": [
-    "first-fit greedy",
-    "dynamic programming",
-    "independent exhaustive cut-mask oracle"
-  ],
-  "capacity": 10,
-  "dp_matches_exact_oracle": true,
-  "exhaustive_domain": "length 1..7; each height in {2,5,8}",
-  "exhaustive_fixture_count": 3279,
-  "limits": [
-    "No floats, footnotes, columns, spreads, widows/orphans, elastic whitespace, line breaking, or renderer behavior.",
-    "The exhaustive oracle is an independent implementation of the partition search, not an independent published benchmark.",
-    "No integer-programming solver was available; this receipt does not claim an ILP implementation.",
-    "Squared slack is a teaching objective and is not a perceptual quality metric or a page-count optimum."
-  ],
-  "model": "contiguous indivisible positive integer blocks; fixed capacity; final-page slack unpenalized",
-  "objective": "sum of squared unused capacity on non-final pages",
-  "protocol": "PFE604-2026-10-06-v1",
-  "runtime_environment": {
-    "platform": "macOS-15.4.1-x86_64-i386-64bit",
-    "python": "3.9.6"
+  "exam_id": "PFE-Y1-QUAL-2026-10-06-v1",
+  "status": "ATTEMPTED_NOT_PASSED",
+  "hard_veto_rule": "every hard-veto section must pass",
+  "sections": {
+    "written_source_standards_defense": "FAIL_MISSING_AUTHORIZED_NORMATIVE_TEXT_AND_CLAUSE_MAPS",
+    "practical_pdf": "LIMITED_NOT_PASSED",
+    "typography_accessibility": "FAIL_HUMAN_CHECKS_AND_SHAPING_TOOLCHAIN_UNAVAILABLE",
+    "pagination": "LIMITED_PASS_BOUNDED_MODEL_ONLY",
+    "research_methods": "LIMITED_PASS_BOUNDED_PILOT_ONLY"
   },
-  "runtime_seconds_dynamic_programming_on_exhaustive_domain": 0.0334040699999999,
-  "source_sha256": "727511cc0f118275806fbfaf97707323eb8ef2460380d24490dfc1ee73c6aa21"
+  "year2_entry": false,
+  "source_gate": "CHANGES_REQUIRED",
+  "next_required_evidence": [
+    "authorized normative custody and clause mapping",
+    "PDF/X-6-capable preflight and independent parser reconciliation",
+    "equipped human accessibility review",
+    "shaping-capable font-toolchain rerun",
+    "published pagination reproduction or solver comparison"
+  ]
 }
