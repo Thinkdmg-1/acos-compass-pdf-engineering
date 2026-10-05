@@ -1,0 +1,9 @@
+{
+  "pdf_sha256": "a43bda6ac77a68c4070079fd8c7b34245a849644ae8904e62fe720a47d8c9e24",
+  "fonts": [
+    {"resource": "/F4", "subtype": "/Type0", "descendant_basefont": "/AAAAAA+SourceSans3-Bold", "fontfile2_present": true, "decoded_fontfile2_bytes": 19208},
+    {"resource": "/F5", "subtype": "/Type0", "descendant_basefont": "/BAAAAA+SourceSans3-Regular", "fontfile2_present": true, "decoded_fontfile2_bytes": 26564}
+  ],
+  "all_descendant_fontfiles_present": true,
+  "interpretation": "The Rust probe reports F4/F5 as unembedded while independent object inspection finds descendant FontFile2 streams; this is an implementation-resolution conflict, not proof that the font programs are absent."
+}
