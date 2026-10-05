@@ -1,0 +1,21 @@
+{
+  "artifact": "pfe601-minimal.pdf",
+  "sha256": "c542a9c30d30578ac29a4a030d5c02a0e7225463ac0cf8873fc7b72a0634be28",
+  "pdf_header": "%PDF-1.4",
+  "objects_written": 5,
+  "objects_seen_by_regex": 5,
+  "pages": 1,
+  "media_box_pt": [
+    612.0,
+    792.0
+  ],
+  "extracted_text": "PFE 601",
+  "root_type": "/Catalog",
+  "independent_parser": "pypdf",
+  "status": "OBSERVED_AND_VERIFIED_FOR_THIS_FIXTURE",
+  "limits": [
+    "No compression, transparency, Unicode font, tagging, annotations, signatures, encryption, incremental update, or PDF 2.0 feature is exercised.",
+    "The Type1 Helvetica resource is a teaching fixture and is not a production font-embedding recommendation.",
+    "Parser acceptance and text extraction do not establish visual, accessibility, print, archival, or security conformance."
+  ]
+}
