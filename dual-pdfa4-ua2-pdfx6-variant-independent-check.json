@@ -1,0 +1,14 @@
+{
+  "pages_preserved": true,
+  "source_text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e",
+  "variant_text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e",
+  "text_preserved": true,
+  "struct_tree_preserved": true,
+  "output_intents_count": 2,
+  "output_intent_subtypes": [
+    "/GTS_PDFA1",
+    "/GTS_PDFX"
+  ],
+  "x6_info_present": true,
+  "xmp_present": true
+}
