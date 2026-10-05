@@ -19,7 +19,7 @@ This register is the starting inventory for the 995 gate. Each row must be inspe
 | S-013 | Brüggemann-Klein, Klein, Wohlfeil, *Pagination Reconsidered* | PRIMARY RESEARCH | page-turn objective and dynamic programming | 1996 technical report | read full paper before claiming algorithm reproduction |
 | S-014 | Knuth–Plass line-breaking research and TeX sources | PRIMARY RESEARCH / SOFTWARE | line breaking and typesetting algorithms | original papers and implementation versions | reproduce algorithmic assumptions and compare implementations |
 | S-015 | American Statistical Association p-value statement | PROFESSIONAL GUIDANCE | interpretation and reporting of quantitative evidence | 2016 statement | use with current statistical methods, not as a full statistics text |
-| S-016 | veraPDF validation documentation and test suite | VALIDATOR SCOPE | machine-checkable PDF/A and PDF/UA evidence | tool version must be recorded | state exactly what the validator checks and omits |
+| S-016 | veraPDF validation documentation and test suite | VALIDATOR SCOPE | machine-checkable PDF/A and PDF/UA evidence | official docs inspected 2026-10-05; release page identifies veraPDF v1.26.2 | pin validator version, profile, command, report, corpus fixture, and human-review boundary |
 | S-017 | Adobe PDF and color-management technical documentation | VENDOR GUIDANCE | implementation behavior and output intents | version/date to verify | never upgrade vendor advice into ISO requirement without corroboration |
 | S-018 | PDF Association standards and technical guidance | INDUSTRY GUIDANCE | standards access and implementation commentary | current page/edition to verify | use as navigation and interpretation; trace normative claims to ISO |
 

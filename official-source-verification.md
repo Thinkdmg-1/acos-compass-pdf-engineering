@@ -85,6 +85,26 @@ Official technical report: <https://www.w3.org/TR/css-break-3/>
 
 These sources support curriculum shape and research context. They do not certify the learner, replace the standards, or prove completion of a course or degree.
 
+## Validator source
+
+### veraPDF validation model and release evidence
+
+Official validation documentation: <https://docs.verapdf.org/validation/>
+
+CLI profile documentation: <https://docs.verapdf.org/cli/validation/>
+
+Official test corpus: <https://github.com/veraPDF/veraPDF-corpus>
+
+Release page inspected: <https://github.com/veraPDF/veraPDF-library/releases>
+
+- The documentation says the engine formalizes PDF/A and PDF/UA `shall` requirements as runtime validation profiles.
+- The docs explicitly distinguish machine-verifiable PDF/UA checks from human checkpoints and point to the Matterhorn protocol for that boundary.
+- The CLI documentation lists distinct profiles including PDF/A-4, PDF/UA-1, and PDF/UA-2, and explains that profile selection can come from metadata or an explicit command option.
+- The corpus repository describes atomic, self-documented tests for PDF/A, PDF/UA, ISO 32000-1, and ISO 32000-2.
+- The release page currently identifies veraPDF v1.26.2; this version is recorded as source evidence, not as a completed local validation run.
+
+**Curriculum use:** PFE 611/PFE 614 must record the exact veraPDF version, profile, command, report, test fixture, and human inspection protocol. A validator pass is machine evidence only and cannot establish full PDF/UA conformance alone.
+
 ## Gate disposition after verification
 
-The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status. The remaining hard-veto work is access to the complete authorized normative texts and a claim-by-claim mapping of the curriculum to those texts. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
+The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status. The remaining hard-veto work is access to the complete authorized normative texts, a claim-by-claim mapping of the curriculum to those texts, and a local veraPDF run. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
