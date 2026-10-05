@@ -47,7 +47,7 @@ The source set cannot pass at 995 if any of these remain unresolved:
 ## Current disposition
 
 **Target:** 995/1000.  
-**Current state:** `CHANGES_REQUIRED` pending completion of the source-by-source register and independent source challenge.  
-**Reason:** the curriculum source spine is strong, but several listed standards are identified at family level and some university material is teaching material rather than controlling technical authority. The repository must not call the source set 995 until the register below has been completed and checked.
+**Current state:** `CHANGES_REQUIRED`; the conservative provisional scorecard is 780/1000 and is not a release score.  
+**Reason:** the curriculum source spine is strong, the public identity/status and validator evidence has been independently challenged, but complete authorized normative text and clause-by-clause mappings are still missing. The repository must not call the source set 995 until those mappings and the remaining human/production checks are complete.
 
 This disposition is deliberate. It preserves the distinction between an ambitious curriculum and a completed source gate.

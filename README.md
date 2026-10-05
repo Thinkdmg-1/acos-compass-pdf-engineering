@@ -15,6 +15,7 @@ The curriculum is intentionally stronger than a production checklist. It require
 - `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
 - `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
 - `sources/independent-source-challenge.md` — second-path identity, version, scope, and conflict challenge for the source register.
+- `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
 - `evidence/foundation-study.md` — actual completed foundation study.
 - `evidence/independent-challenge.md` — independent technical challenge and limits.
 - `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
