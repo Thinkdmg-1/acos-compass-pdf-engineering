@@ -1,0 +1,95 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pdfoxide-pdfx6-2026-10-06/dual-pdfa4-ua2-pdfx6-header20-variant.pdf",
+  "size" : 40028
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 107,
+    "failedRules" : 2,
+    "passedChecks" : 1652,
+    "failedChecks" : 2,
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.1.3",
+      "testNumber" : 5,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "If a document information dictionary is present, it shall only contain a ModDate entry",
+      "object" : "CosInfo",
+      "test" : "size == 1 && ModDate != null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/trailer[0]/Info[0]",
+        "errorMessage" : "Document information dictionary is present and contains GTS_PDFXVersion,GTS_PDFXConformance key(s), but allowed only ModDate",
+        "errorArguments" : [ "GTS_PDFXVersion,GTS_PDFXConformance" ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-4:2020",
+      "clause" : "6.1.3",
+      "testNumber" : 4,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "The Info key shall not be present in the trailer dictionary of PDF/A-4 conforming files unless there exists a PieceInfo entry in the document catalog dictionary",
+      "object" : "CosDocument",
+      "test" : "containsPieceInfo == true || containsInfo == false",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root",
+        "errorMessage" : "The Info key present in the trailer dictionary, but PieceInfo entry does not present in the document catalog dictionary",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-4 validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791219481195,
+  "finish" : 1791219481643,
+  "duration" : "00:00:00.448",
+  "difference" : 448
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791219481122,
+    "finish" : 1791219481670,
+    "duration" : "00:00:00.548",
+    "difference" : 548
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "nonCompliantPdfaCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
