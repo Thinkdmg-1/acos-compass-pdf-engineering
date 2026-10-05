@@ -1,0 +1,39 @@
+{
+  "pdf_sha256": "94b813e0ec456579a21a9bdb23be03a9150fb8fa355bd52d80da45e77af6eee4",
+  "fonts": {
+    "/F1": {
+      "subtype": "/Type1",
+      "has_tounicode": false
+    },
+    "/F2+0": {
+      "subtype": "/TrueType",
+      "has_tounicode": true,
+      "stream_sha256": "4a42ae1a3c9a5c82a57a01efd4affcd30340046f9420ab854599e956474d74b9",
+      "bytes": 1894,
+      "begincmap": 1,
+      "bfchar_blocks": 1,
+      "bfrange_blocks": 0,
+      "sample": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<< /Registry (AAAAAA+ArialUnicodeMS)\n/Ordering (AAAAAA+ArialUnicodeMS)\n/Supplement 0\n>> def\n/CMapName /AAAAAA+ArialUnicodeMS def\n/CMapType 2 def\n1 begincodespaceran"
+    },
+    "/F3+0": {
+      "subtype": "/TrueType",
+      "has_tounicode": true,
+      "stream_sha256": "890b309bd4d07a188cfe6c81dbea20d9db5e30a5e0e5b32dfd2dad24b706e53e",
+      "bytes": 1918,
+      "begincmap": 1,
+      "bfchar_blocks": 1,
+      "bfrange_blocks": 0,
+      "sample": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<< /Registry (AAAAAA+NotoSerifMyanmar-Black)\n/Ordering (AAAAAA+NotoSerifMyanmar-Black)\n/Supplement 0\n>> def\n/CMapName /AAAAAA+NotoSerifMyanmar-Black def\n/CMapType 2"
+    },
+    "/F4+0": {
+      "subtype": "/TrueType",
+      "has_tounicode": true,
+      "stream_sha256": "89cf504285871f179dd97b0e1cc4dc031f405cd31b5e08d5da22e04122938678",
+      "bytes": 1891,
+      "begincmap": 1,
+      "bfchar_blocks": 1,
+      "bfrange_blocks": 0,
+      "sample": "/CIDInit /ProcSet findresource begin\n12 dict begin\nbegincmap\n/CIDSystemInfo\n<< /Registry (AAAAAA+NotoSansOriya)\n/Ordering (AAAAAA+NotoSansOriya)\n/Supplement 0\n>> def\n/CMapName /AAAAAA+NotoSansOriya def\n/CMapType 2 def\n1 begincodespacerange\n"
+    }
+  }
+}
