@@ -1,0 +1,54 @@
+{
+  "original": {
+    "sha256": "2b668a09aabf10fae25679dd18b51a305f07905042af8b5acd8a1ad92ddb84e5",
+    "pages": 1,
+    "mediabox": [
+      0.0,
+      0.0,
+      792.0,
+      612.0
+    ],
+    "text_chars": 273,
+    "text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e",
+    "raster_sha256": "c64d0955a0d3818fc6ebaaf6a93052dc0dd81cafa2a8a34267e6722c8bb1448b",
+    "catalog_keys": [
+      "/Lang",
+      "/MarkInfo",
+      "/Metadata",
+      "/Pages",
+      "/StructTreeRoot",
+      "/Type",
+      "/ViewerPreferences"
+    ]
+  },
+  "experimental": {
+    "sha256": "68b9fb2e89c450284c1a8294faa96ac0e1e03020a552ad3b94ab6cdfdfb8000a",
+    "pages": 1,
+    "mediabox": [
+      0.0,
+      0.0,
+      792.0,
+      612.0
+    ],
+    "text_chars": 273,
+    "text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e",
+    "raster_sha256": "c64d0955a0d3818fc6ebaaf6a93052dc0dd81cafa2a8a34267e6722c8bb1448b",
+    "catalog_keys": [
+      "/Lang",
+      "/MarkInfo",
+      "/Metadata",
+      "/OutputIntents",
+      "/Pages",
+      "/StructTreeRoot",
+      "/Type",
+      "/Version",
+      "/ViewerPreferences"
+    ]
+  },
+  "comparisons": {
+    "page_count_equal": true,
+    "geometry_equal": true,
+    "text_hash_equal": true,
+    "raster_hash_equal": true
+  }
+}
