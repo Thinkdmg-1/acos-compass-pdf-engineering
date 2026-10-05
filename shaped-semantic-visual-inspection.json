@@ -1,0 +1,14 @@
+{
+  "render":"shaped-semantic-render-144dpi.png",
+  "sha256":"c1e23f0524249d02b4b0e71c237bf9a425377ba72a59da1dec139013bb6e3779",
+  "size_px":[1224,1584],
+  "observations":{
+    "page_renders":"yes",
+    "text_clipping":"not observed",
+    "Myanmar":"visually improved relative to the ReportLab-only control; no obvious glyph overlap in this render",
+    "Oriya":"visually present and legible in this render",
+    "semantic_layer":"independently validated as invisible tagged text",
+    "human_accessibility":"not assessed by this image inspection"
+  },
+  "disposition":"OBSERVED / IMPROVED DIAGNOSTIC EXPORT / HUMAN REVIEW REQUIRED"
+}
