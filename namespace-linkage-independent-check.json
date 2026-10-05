@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "nonstruct-content-tag_exists": true,
+    "nonstruct-content-tag_hash": true,
+    "nonstruct-content-tag_reported_state": true,
+    "remove-document-namespace_exists": true,
+    "remove-document-namespace_hash": true,
+    "remove-document-namespace_reported_state": true,
+    "child-namespace_exists": true,
+    "child-namespace_hash": true,
+    "child-namespace_reported_state": true,
+    "span-content-tag_exists": true,
+    "span-content-tag_hash": true,
+    "span-content-tag_reported_state": true
+  },
+  "all_pass": true,
+  "interpretation": "Namespace and tag-name changes did not resolve the structure-linkage failure. The child-namespace variant is equivalent to the controlled one-rule state; the others introduce additional failures and are retained as negative controls."
+}
