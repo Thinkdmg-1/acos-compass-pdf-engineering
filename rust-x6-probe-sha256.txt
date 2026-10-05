@@ -1,0 +1,4 @@
+0dfdc987f8dd422b1bbcede2decda8de3ebc18c6250cbbce9ca3e825f284e9d8  /Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pdfoxide-pdfx6-2026-10-06/../pfe602-pdf-fixture-lab-2026-10-06/shaping-fixture-heldout-shaped-semantic-tagged.pdf
+991bab1bd510f72582c615d826c56df23bf27daa83108ec1e5c2fe0758fd03e0  /tmp/pdfoxide-probe-20261006-v2/Cargo.lock
+f73fbd1255016a0840838b8b1d8c39333ca5f51a76f2ca20ac433061a1549213  /tmp/pdfoxide-probe-20261006-v2/src/main.rs
+52b9dae88e8d5e28424e33363f6a7ea734add0056f79ff68e7646207808916c3  /tmp/pdf_oxide-0.3.78-patched-20261006/src/converters/pdf_to_ir.rs
