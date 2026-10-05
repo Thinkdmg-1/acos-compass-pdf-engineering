@@ -29,6 +29,7 @@ The curriculum is intentionally stronger than a production checklist. It require
 - `reports/pfe601-rerun-2026-10-06/` — source-level rerun receipt for the object-model and xref-repair labs.
 - `evidence/pfe602-font-capability-2026-10-06.md` — installed-font metadata and shaping-toolchain boundary for PFE 602.
 - `reports/css-pagination-rerun-2026-10-06/` — independent pypdf/Poppler rerun of the frozen Chrome pagination artifact.
+- `evidence/pfe604-color-profile-receipt-2026-10-06.md` — ICC profile inventory and output-intent inspection with print-color boundaries.
 - `reports/verapdf-runtime-capability-2026-10-06/` — fresh veraPDF launcher check showing the current Java-runtime boundary.
 - `labs/` — executable exercises and saved results.
 - `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
