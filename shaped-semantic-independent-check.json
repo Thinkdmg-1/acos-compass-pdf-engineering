@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "ua2_1_30_2_zero_failed_rules": true,
+    "ua2_1_30_2_zero_failed_checks": true,
+    "ua2_1_30_2_expected_rules": true,
+    "ua2_1_30_2_expected_checks": true,
+    "ua2_1_28_2_zero_failed_rules": true,
+    "ua2_1_28_2_zero_failed_checks": true,
+    "ua2_1_28_2_expected_rules": true,
+    "ua2_1_28_2_expected_checks": true,
+    "semantic_text_preserved": true,
+    "semantic_geometry_preserved": true,
+    "outline_raster_equal": true,
+    "outline_has_no_text": true,
+    "combined_hash_matches": true
+  },
+  "all_pass": true,
+  "interpretation": "HarfBuzz-shaped visible outline artifact plus invisible tagged semantic text passes both pinned PDF/UA-2 validators; visual and semantic layers are independently preserved, but this remains a diagnostic export path."
+}
