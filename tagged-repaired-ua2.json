@@ -1,0 +1,118 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pfe602-pdf-fixture-lab-2026-10-06/shaping-fixture-tagged-repaired.pdf",
+  "size" : 48722
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 1725,
+    "failedRules" : 2,
+    "passedChecks" : 476,
+    "failedChecks" : 6,
+    "tags" : [ "artifact", "font" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.2.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 5,
+      "tags" : [ "artifact" ],
+      "description" : "Content that is not considered real shall be an artifact",
+      "object" : "SESimpleContentItem",
+      "test" : "isTaggedContent == true || parentsTags.contains('Artifact') == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](22 0 obj PDSemanticContentStream)/content[1]{mcid:0}/contentItem[0]{mcid:0}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](22 0 obj PDSemanticContentStream)/content[2]{mcid:1}/contentItem[0]{mcid:1}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](22 0 obj PDSemanticContentStream)/content[3]{mcid:2}/contentItem[0]{mcid:2}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](22 0 obj PDSemanticContentStream)/content[4]{mcid:3}/contentItem[0]{mcid:3}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](22 0 obj PDSemanticContentStream)/content[5]{mcid:4}/contentItem[0]{mcid:4}",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.4.5.8",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "font" ],
+      "description" : " If a ToUnicode CMap is present, the Unicode values it specifies shall all be greater than zero (0), but not equal to either U+FEFF or U+FFFE",
+      "object" : "Glyph",
+      "test" : "toUnicode == null || (toUnicode.indexOf(\"\\u0000\") == -1 && toUnicode.indexOf(\"\\uFFFE\") == -1 && toUnicode.indexOf(\"\\uFEFF\") == -1)",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](22 0 obj PDSemanticContentStream)/operators[47]/usedGlyphs[3](AAAAAA+ArialUnicodeMS AAAAAA+ArialUnicodeMS 0 0 235162442 0 true)",
+        "errorMessage" : "The glyph has Unicode value 0, U+FEFF or U+FFFE, which is invalid by Unicode standard",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-2 + Tagged PDF validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791216367855,
+  "finish" : 1791216368264,
+  "duration" : "00:00:00.409",
+  "difference" : 409
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791216367790,
+    "finish" : 1791216368297,
+    "duration" : "00:00:00.507",
+    "difference" : 507
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "nonCompliantPdfaCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
