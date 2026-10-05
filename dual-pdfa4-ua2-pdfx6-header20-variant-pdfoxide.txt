@@ -1,0 +1,10 @@
+level=X6
+is_compliant=false
+detected_level=Some(X6)
+errors=2
+ERROR XFONT-001 Font 'F4' must be embedded clause=Some("6.3.5")
+ERROR XFONT-001 Font 'F5' must be embedded clause=Some("6.3.5")
+warnings=2
+WARN XMETA-004 Trapped key should be present in Info dictionary clause=Some("6.7.5")
+WARN XANNOT-001 Link annotation should have appearance stream clause=None
+stats pages=1 fonts=2 embedded_fonts=0 images=0 annotations=1
