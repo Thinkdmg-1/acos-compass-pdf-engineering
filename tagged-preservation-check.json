@@ -1,0 +1,53 @@
+{
+  "original": {
+    "sha256": "94b813e0ec456579a21a9bdb23be03a9150fb8fa355bd52d80da45e77af6eee4",
+    "pages": 1,
+    "mediabox": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "text_sha256": "aced2e8b99f6c0b315625513987d492a6ec65d9b22cec49fc7c95a0fbae1e388",
+    "text_chars": 47,
+    "raster_sha256": "ac38e0c10f7f9babf4e610df5d41e736cd0342e9bed4591968741fdb1dd3dae7",
+    "catalog_keys": [
+      "/PageMode",
+      "/Pages",
+      "/Type"
+    ],
+    "marked": false,
+    "has_struct_tree": false
+  },
+  "tagged_repaired": {
+    "sha256": "46617af700cae7ba55a0f862916f684d2473531cd6f08fa5083e9975d5e98b9b",
+    "pages": 1,
+    "mediabox": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "text_sha256": "aced2e8b99f6c0b315625513987d492a6ec65d9b22cec49fc7c95a0fbae1e388",
+    "text_chars": 47,
+    "raster_sha256": "ac38e0c10f7f9babf4e610df5d41e736cd0342e9bed4591968741fdb1dd3dae7",
+    "catalog_keys": [
+      "/Lang",
+      "/MarkInfo",
+      "/Metadata",
+      "/PageMode",
+      "/Pages",
+      "/StructTreeRoot",
+      "/Type",
+      "/ViewerPreferences"
+    ],
+    "marked": true,
+    "has_struct_tree": true
+  },
+  "comparisons": {
+    "page_count_equal": true,
+    "geometry_equal": true,
+    "text_hash_equal": true,
+    "raster_hash_equal": true
+  }
+}
