@@ -1,51 +1,66 @@
-# PFE 602 shaped-text PDF fixture lab — 2026-10-06
+# ACOS Compass: doctoral PDF engineering curriculum
 
-**Status:** EXECUTED / PDF EXTRACTION DIVERGENCE PRESERVED / NOT ACCESSIBLE
+This repository is the durable learning home for Echo's Compass. It turns the three-failure recovery rule into a repeatable curriculum for PDF engineering: standards study, university coursework, controlled laboratories, independent challenge, qualifying examinations, candidacy, and dissertation research.
 
-This lab takes the disposable HarfBuzz/fontTools shaping work one layer closer to PDF export. A temporary ReportLab 4.0.1 path generated a one-page fixture using Arial Unicode plus extracted faces from the installed Myanmar and Oriya collections. The fixture is retained as a deliberately untagged diagnostic specimen, not as a production or accessibility artifact.
+The curriculum is intentionally stronger than a production checklist. It requires a learner to understand the PDF object model, typography and shaping, layout algorithms, accessibility, color science, print production, preservation, reproducible software, research methods, and original contribution. A polished export does not count as doctoral evidence.
 
-## Custody
+## Repository map
 
-- Fixture: [`shaping-fixture.pdf`](shaping-fixture.pdf)
-- SHA-256: `94b813e0ec456579a21a9bdb23be03a9150fb8fa355bd52d80da45e77af6eee4`
-- Generator: ReportLab 4.0.1
-- Independent parser: pypdf 6.19.0
-- Independent text path: Poppler `pdftotext`
-- Machine receipt: [`results.json`](results.json)
-- Independent receipt: [`independent-check.json`](independent-check.json)
-- ToUnicode inspection: [`tounicode-inspection.json`](tounicode-inspection.json)
-- ToUnicode checker: [`tounicode-independent-check.json`](tounicode-independent-check.json)
-- Reproducer: [`make-fixture.py`](make-fixture.py)
+- `curriculum/doctoral-curriculum.md` — four-year, 60-credit doctoral-equivalent sequence and gates.
+- `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
+- `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
+- `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
+- `sources/source-register.md` — source inventory and required inspections.
+- `sources/official-source-verification.md` — official ISO status and scope checks.
+- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
+- `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
+- `sources/independent-source-challenge.md` — second-path identity, version, scope, and conflict challenge for the source register.
+- `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
+- `evidence/foundation-study.md` — actual completed foundation study.
+- `evidence/independent-challenge.md` — independent technical challenge and limits.
+- `evidence/pfe611-accessibility-review-2026-10-05.md` — structured tagged-PDF review with completed checks and unavailable human checks separated.
+- `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
+- `evidence/standards-access-recheck-2026-10-06.md` — current sponsored-access, public-model, and errata recheck with custody boundaries.
+- `evidence/arlington-object-model-lab-2026-10-06.md` — pinned Arlington TSV inspection and independent catalog/structure comparison.
+- `evidence/pdf2normrefs-graph-lab-2026-10-06.md` — pinned PDF 2.0 normative-reference graph traversal and integrity receipt.
+- `evidence/public-errata-profile-recheck-2026-10-06.md` — current PDF/A-4 and PDF/X-6 errata, revision, and copyright-boundary receipt.
+- `evidence/pdf20-examples-lab-2026-10-06.md` — dual-reader inspection of public PDF 2.0 examples and deliberate edge cases.
+- `evidence/entry-diagnostic-2026-10-06.md` — five-part entry diagnostic classification and next-gate boundaries.
+- `reports/pfe604-pagination-lab-2026-10-06/` — bounded greedy/dynamic-programming pagination lab with an independent exhaustive oracle.
+- `reports/year1-qualifying-exam-2026-10-06/` — Year 1 qualifying-exam attempt with section dispositions and remediation requirements.
+- `reports/pfe601-rerun-2026-10-06/` — source-level rerun receipt for the object-model and xref-repair labs.
+- `evidence/pfe602-font-capability-2026-10-06.md` — installed-font metadata and shaping-toolchain boundary for PFE 602.
+- `reports/pfe602-shaping-lab-2026-10-06/` — disposable complex-script shaping lab with independent assertions and explicit PDF-export limits.
+- `reports/pfe602-pdf-fixture-lab-2026-10-06/` — untagged shaped-text PDF fixture showing independent extraction divergence and missing-glyph boundaries.
+- `reports/css-pagination-rerun-2026-10-06/` — independent pypdf/Poppler rerun of the frozen Chrome pagination artifact.
+- `evidence/pfe604-color-profile-receipt-2026-10-06.md` — ICC profile inventory and output-intent inspection with print-color boundaries.
+- `reports/pfe605-pilot-2026-10-06/` — frozen analysis protocol, exploratory baseline, and executed font/tag follow-up pilot.
+- `reports/verapdf-runtime-capability-2026-10-06/` — fresh veraPDF launcher check showing the current Java-runtime boundary.
+- `reports/verapdf-runtime-rerun-2026-10-06/` — fresh veraPDF 1.30.2 PDF/A-4 and PDF/UA-2 runs using a portable Temurin runtime.
+- `reports/verapdf-rerun-independent-check-2026-10-06/` — separate parser/assertion check of fresh validator reports and profile claims.
+- `reports/pdfoxide-pdfx6-2026-10-06/` — PDF Oxide PDF/X-6 capability probe preserving its installed API conflict.
+- `reports/pfe611-tagged-repair-2026-10-06/` — controlled PDF/UA-2 metadata/namespace repair with fresh validator comparison.
+  - includes failed and ablated variants plus one bounded machine-pass copy; no human conformance claim.
+  - includes an independent pypdf/Poppler text, geometry, and raster preservation check.
+  - includes fresh PDF/A-4 and WTPDF cross-profile checks.
+  - includes an experimental combined PDF/A-4 + PDF/UA-2 machine-pass receipt with independent preservation check.
+- `labs/` — executable exercises and saved results.
+- `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
+- `reports/production-pdfa4-2026-10-05/` — separately authored office-export experiment with preserved initial failures and a bounded post-export PDF/A-4 repair pass; PDF/UA-2 remains failed.
+- `reports/profile-test-plan-2026-10-05/` — declared next-step plan for authorized normative-text custody, profile tests, and human accessibility review.
+- `reports/human-review-partial-2026-10-05/` — bounded 144/288 DPI visual review receipt; explicitly not a PDF/UA conformance review.
+- `reports/preflight-capability-inventory-2026-10-05/` — fresh executable inventory showing why PDF/X-6 preflight remains unexecuted in this environment.
+- `reports/repository-integrity-2026-10-05/` — independent source-ID, path, package, and release-state consistency receipt.
+- `governance/completion-audit-2026-10-05.md` — current requirement-by-requirement completion audit and hard-veto decision.
 
-## Observed divergence
+## Evidence state
 
-| Content | pypdf extraction | Poppler extraction | Interpretation |
-|---|---|---|---|
-| Combining Latin | combining line is not preserved as the same extracted string | `é` is present | extraction behavior differs across parsers |
-| Hebrew | returns visual-order `םולש` | returns the Hebrew run with directional marks | logical/visual order cannot be inferred from one parser |
-| Myanmar/Oriya | text is present | text is present | presence does not prove correct shaping or ToUnicode mapping |
-| Emoji ZWJ | missing-glyph NULs plus joiner | joiner-only output | font coverage and extraction are incomplete |
+The repository currently contains a foundation recovery slice. It does not claim a PhD, completed coursework, qualifying-exam passage, candidacy, dissertation, or universal PDF conformance. Future work must advance through the gates in the curriculum and update the evidence state explicitly.
 
-A separate 144 DPI Poppler raster was also generated during the run (`ac38e0c10f7f9babf4e610df5d41e736cd0342e9bed4591968741fdb1dd3dae7`) but is not treated as a visual-quality or accessibility pass.
+## Operating rule
 
-## Independent checks
+When three failures occur on the same capability, stop repeating the unchanged approach. Return to the curriculum, identify the smallest falsifiable deficiency, complete the relevant study and exercise, test an unfamiliar case, obtain independent challenge, and only then retry the production task.
 
-The separate checker passes all seven assertions: fixture hash, page count, parser disagreement, missing-glyph evidence, combining-sequence observation, RTL-mark observation, and the absence of a structure tree.
+## Sources
 
-## Meaning and limits
-
-This is a useful failure artifact: it demonstrates why shaping-layer output cannot be promoted directly to PDF semantic correctness. The fixture is untagged, generated by a renderer path that does not establish complex-script PDF conformance, and has no PDF/UA, screen-reader, keyboard, or production proof. A separate object-level inspection confirms three embedded TrueType subsets have ToUnicode CMaps while the Helvetica title font does not; the independent ToUnicode checker passes five assertions. Presence of a CMap does not prove that its mappings preserve logical order or shaping semantics. The next required experiment is a tagged PDF produced by a shaping-aware export path, followed by independent parser, raster, and validator checks.
-
-## Bounded tagged-repair experiment
-
-A minimal tagged variant was constructed from the same fixture without changing page geometry, rendered pixels, or extracted-text hash. It adds document language and marked-content metadata, a minimal structure tree, a parent-tree entry, and an artifact wrapper for the empty content block. This is a diagnostic repair specimen, not a conforming production PDF.
-
-- Repair source: [`tagged-repair.py`](tagged-repair.py)
-- Variant: [`shaping-fixture-tagged-repaired.pdf`](shaping-fixture-tagged-repaired.pdf)
-- Variant SHA-256: `46617af700cae7ba55a0f862916f684d2473531cd6f08fa5083e9975d5e98b9b`
-- Fresh veraPDF PDF/UA-2 receipt: [`tagged-repaired-ua2.json`](tagged-repaired-ua2.json)
-- Validator stderr: [`tagged-repaired-ua2.stderr`](tagged-repaired-ua2.stderr)
-- Preservation receipt: [`tagged-preservation-check.json`](tagged-preservation-check.json)
-- Independent bounded-state checker: [`tagged-independent-check.py`](tagged-independent-check.py) / [`tagged-independent-check.json`](tagged-independent-check.json)
-
-The repair reduced the PDF/UA-2 result to exactly 2 failed rules and 6 failed checks. The remaining clauses are ISO 14289-2:2024 8.2.2 (the five MCID content items are still not recognized as tagged real content) and 8.4.5.8 (one ToUnicode mapping contains Unicode value 0 in the missing-glyph sequence). The independent checker passes its eight assertions because these failures are expected and explicitly preserved. Page count, geometry, extracted-text hash, and raster hash remain equal to the original. No human screen-reader test, production export proof, or PDF/X-6 conformance is implied.
+The source register distinguishes standards, primary research, university teaching material, validator documentation, and informative guidance. The 995 target is a hard source-quality gate, not a decorative claim. A score is recorded only after source identity, authority, version, scope, access, applicability, and limitations are evidenced.
