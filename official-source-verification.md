@@ -25,7 +25,7 @@ Official Online Browsing Platform sample: <https://www.iso.org/obp/ui?_escaped_f
 
 - Edition 1, published March 2024.
 - The scope is construction of accessible digital documents using PDF 2.0 as specified by ISO 32000-2.
-- The sample exposes the conformance section and requirements for logical structure, artifacts, text representation, annotations, forms, metadata, navigation, and actions.
+- The public preview exposes the table of contents and section headings for 1 Scope, 2 Normative references, 5 Version identification, 6 Conformity requirements, 7 Accessible PDF, and 8 File format requirements. Section 8 lists logical structure, artifacts, text representation, real content without textual semantics, text string objects, optional content, intra-document destinations, annotations, forms, metadata, navigation, and actions.
 - The official scope explicitly excludes conversion processes, implementation or presentation design, storage methods, and hardware/operating systems.
 - ISO states that PDF/UA-2 is a companion to ISO 32000-2 and does not replace PDF/UA-1, which is based on ISO 32000-1.
 
