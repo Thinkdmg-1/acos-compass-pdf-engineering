@@ -1,0 +1,38 @@
+{
+  "source": {
+    "pages": 1,
+    "text_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "struct_root": true,
+    "trim": null,
+    "art": null,
+    "metadata": true,
+    "output_intents": false
+  },
+  "variant": {
+    "pages": 1,
+    "text_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "struct_root": true,
+    "trim": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "art": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "metadata": true,
+    "output_intents": true
+  },
+  "checks": {
+    "pages_preserved": true,
+    "text_hash_preserved": true,
+    "struct_root_preserved": true,
+    "x6_fields_present": true
+  },
+  "all_pass": true,
+  "interpretation": "Structure-preserving clone retains semantic structure, page count, and extraction while adding implementation-facing X6 fields. Raster equality is recorded separately."
+}
