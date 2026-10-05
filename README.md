@@ -10,7 +10,7 @@ ValueError: Unknown PDF/X level: '6'. Use 1a_2001, 3_2002, 4
 
 The exact exception, package version, fixture hashes, and PDF/X-4 control-call representations are preserved in [`results.json`](results.json). The control call demonstrates that the package can enter its PDF/X validation API; it does not turn the PDF/X-4 control into a PDF/X-6 result.
 
-This is an independent capability boundary, not a PDF/X-6 conformance result. The tool cannot be used to claim PDF/X-6 preflight from this environment. The public capability claim and the installed API behavior are recorded as a conflict for future investigation. A materially different Rust binding attempt is preserved in [`rust-binding-attempt.md`](rust-binding-attempt.md); the host has no Rust toolchain, so that path stopped before dependency resolution without being misreported as an API failure.
+This is an independent capability boundary, not a PDF/X-6 conformance result. The tool cannot be used to claim PDF/X-6 preflight from this environment. The public capability claim and the installed API behavior are recorded as a conflict for future investigation. A materially different Rust binding attempt is preserved in [`rust-binding-attempt.md`](rust-binding-attempt.md); the host has no Rust toolchain, so that path stopped before dependency resolution without being misreported as an API failure. A disposable release-binary check is preserved in [`cli-release-attempt.md`](cli-release-attempt.md); the CLI runs but exposes no validation command.
 
 Sources inspected:
 
