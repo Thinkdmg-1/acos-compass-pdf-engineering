@@ -21,7 +21,7 @@
 | Tagged-PDF machine checks | `evidence/pfe611-accessibility-review-2026-10-05.md`, veraPDF reports | Object-level structure observations and validator failures are preserved. | **PROVEN / LIMITED** |
 | Human accessibility checks | `reports/profile-test-plan-2026-10-05/README.md` | Keyboard, screen-reader, visual, and second-reviewer checks are specified but not executed in an equipped environment. | **MISSING** |
 | Independent lab challenge | `evidence/independent-audit-2026-10-05.md` | Separate parser, geometry, font, hash, and raster checks are preserved; scope limits are explicit. | **PROVEN / LIMITED** |
-| Public repository publication | GitHub repository, latest commit `0afb128` | Latest test plan is visible in the public repository. | **PROVEN** |
+| Public repository publication | GitHub repository, latest commit `93ab94a` | Latest test plan is visible in the public repository. | **PROVEN** |
 | Markdown-only handoff package | `outputs/ACOS-Compass-MD-University-Study.zip` | 17 entries, all `.md`; SHA-256 `1b30a3455587d94ed4289019900b7272d036d9f7f502703fc831deb83cd887e5`. | **PROVEN** |
 | 995/1000 source gate | `governance/source-quality-gate.md`, `sources/provisional-scorecard.md` | Conservative provisional score is 796/1000. Hard veto remains active because normative text, clause maps, PDF/X-6 preflight, and human checks are incomplete. | **NOT ACHIEVED** |
 
