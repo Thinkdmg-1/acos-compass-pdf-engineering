@@ -1,0 +1,51 @@
+{
+  "purpose": "Bounded namespace and marked-content-tag experiments after Adobe PDF structure-tree reading.",
+  "validator": "veraPDF 1.30.2 PDF/UA-2 + Tagged PDF validation profile",
+  "variants": [
+    {
+      "name": "nonstruct-content-tag",
+      "file": "shaping-fixture-noemoji-nonstruct-tagged.pdf",
+      "failed_rules": 3,
+      "failed_checks": 6,
+      "failed_clauses": [
+        "8.2.2",
+        "8.11.1",
+        "Table 5. Document-content"
+      ],
+      "sha256": "ddb1f7766b62d8092b9f73f9bf039e208c75a4d1c39826c87a9619f90d36d852"
+    },
+    {
+      "name": "remove-document-namespace",
+      "file": "shaping-fixture-noemoji-widthpatched-nonsnamespace-tagged.pdf",
+      "failed_rules": 2,
+      "failed_checks": 5,
+      "failed_clauses": [
+        "8.2.2",
+        "8.2.5.2"
+      ],
+      "sha256": "6b7943beea59ed036b5906b91051642b497a88c91b8567195646762c52b03405"
+    },
+    {
+      "name": "child-namespace",
+      "file": "shaping-fixture-noemoji-widthpatched-childns-tagged.pdf",
+      "failed_rules": 1,
+      "failed_checks": 4,
+      "failed_clauses": [
+        "8.2.2"
+      ],
+      "sha256": "71e59142dcc51093c822acd51d7cfffc03e9ee5d0341233e1de05e0e22b60a6e"
+    },
+    {
+      "name": "span-content-tag",
+      "file": "shaping-fixture-noemoji-widthpatched-span-tagged.pdf",
+      "failed_rules": 2,
+      "failed_checks": 8,
+      "failed_clauses": [
+        "8.2.2",
+        "Table 5. Document-Span"
+      ],
+      "sha256": "677c05c2aec469394ed9660afdad3655aabed33ae6c05d96ad3fbc644d4bb5e8"
+    }
+  ],
+  "interpretation": "Namespace and tag-name changes did not resolve the structure-linkage failure. The child-namespace variant is equivalent to the controlled one-rule state; the others introduce additional failures and are retained as negative controls."
+}
