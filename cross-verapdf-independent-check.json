@@ -1,0 +1,44 @@
+{
+  "checks": {
+    "primary_1_30_2_zero_failed_rules": true,
+    "primary_1_30_2_zero_failed_checks": true,
+    "primary_1_30_2_expected_passed_rules": true,
+    "primary_1_30_2_expected_passed_checks": true,
+    "heldout_1_28_2_zero_failed_rules": true,
+    "heldout_1_28_2_zero_failed_checks": true,
+    "heldout_1_28_2_expected_passed_rules": true,
+    "heldout_1_28_2_expected_passed_checks": true,
+    "primary_1_28_2_zero_failed_rules": true,
+    "primary_1_28_2_zero_failed_checks": true,
+    "primary_1_28_2_expected_passed_rules": true,
+    "primary_1_28_2_expected_passed_checks": true
+  },
+  "details": {
+    "primary_1_30_2": {
+      "file": "noemoji-nested-ua2.json",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "passedRules": 1727,
+      "failedRules": 0,
+      "passedChecks": 470,
+      "failedChecks": 0
+    },
+    "heldout_1_28_2": {
+      "file": "heldout-verapdf1282-ua2.json",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "passedRules": 1723,
+      "failedRules": 0,
+      "passedChecks": 667,
+      "failedChecks": 0
+    },
+    "primary_1_28_2": {
+      "file": "noemoji-verapdf1282-ua2.json",
+      "profile": "PDF/UA-2 + Tagged PDF validation profile",
+      "passedRules": 1723,
+      "failedRules": 0,
+      "passedChecks": 478,
+      "failedChecks": 0
+    }
+  },
+  "all_pass": true,
+  "interpretation": "Two pinned veraPDF releases independently report zero PDF/UA-2 failed rules and checks for both the corrected specimen and the held-out case. This corroborates machine validation only."
+}
