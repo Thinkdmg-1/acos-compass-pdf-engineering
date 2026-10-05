@@ -117,3 +117,18 @@ A 144 DPI render of the held-out machine-pass PDF was inspected as pixels. The p
 ### Font-face negative control
 
 A second held-out render used NotoSansMyanmar instead of NotoSerifMyanmar while keeping the same ReportLab export path. The Myanmar line retained the same heavy/overlapping appearance. This negative control indicates that the observed visual defect belongs to the export/shaping path, not simply the selected Myanmar face. It is preserved in [`shaping-fixture-heldout-sans.pdf`](shaping-fixture-heldout-sans.pdf), [`heldout-sans-render-144dpi.png`](heldout-sans-render-144dpi.png), and [`heldout-sans-visual-control.json`](heldout-sans-visual-control.json).
+
+### Shaping-aware visual plus semantic experiment
+
+A HarfBuzz-shaped outline layer was generated from the same held-out text. The outline layer is wrapped as Artifact content so it does not replace semantic text. It is combined with an invisible, tagged semantic text layer copied from the independently passing held-out structure. This produces a visual-plus-semantic diagnostic export.
+
+- Outline generator: [`make-shaped-outline-fixture.py`](make-shaped-outline-fixture.py)
+- Layer combiner: [`combine-shaped-semantic.py`](combine-shaped-semantic.py)
+- Combined output: [`shaping-fixture-heldout-shaped-semantic-tagged.pdf`](shaping-fixture-heldout-shaped-semantic-tagged.pdf)
+- veraPDF 1.30.2: [`shaped-semantic-ua2.json`](shaped-semantic-ua2.json)
+- veraPDF 1.28.2: [`shaped-semantic-verapdf1282-ua2.json`](shaped-semantic-verapdf1282-ua2.json)
+- Independent check: [`shaped-semantic-independent-check.json`](shaped-semantic-independent-check.json)
+- Preservation receipt: [`shaped-semantic-preservation-check.json`](shaped-semantic-preservation-check.json)
+- Visual receipt: [`shaped-semantic-visual-inspection.json`](shaped-semantic-visual-inspection.json)
+
+Both pinned validators report zero failed PDF/UA-2 rules and checks. The visible render matches the shaped outline raster exactly, while the semantic extraction matches the held-out tagged source. Visual inspection shows improved complex-script rendering relative to the ReportLab-only control. This remains a diagnostic outline-plus-text export path: it does not yet prove screen-reader behavior, editable text semantics for the visible outline layer, production font licensing, or a general-purpose export implementation.
