@@ -1,0 +1,28 @@
+{
+  "source": "pfe601-minimal.pdf",
+  "corrupt": "pfe601-corrupt-xref.pdf",
+  "repaired": "pfe601-repaired-xref.pdf",
+  "corrupt_sha256": "aa3160c5d212115dde9c5662bc0109e4102a8ab9f3dc5c65ca5a087769688b75",
+  "repaired_sha256": "77c3a4d5ade50d73ff3daa9cc1e2211ee5ed7273f55d9ccea20437bc3b54d550",
+  "parser_recovery": {
+    "parser_recovered": true,
+    "pages": 1,
+    "text": "PFE 601"
+  },
+  "independent_object_offsets": {
+    "1": 15,
+    "2": 64,
+    "3": 121,
+    "4": 247,
+    "5": 317
+  },
+  "repaired_pages": 1,
+  "repaired_text": "PFE 601",
+  "strict_reopen": true,
+  "status": "OBSERVED_AND_VERIFIED_FOR_THIS_FIXTURE",
+  "limits": [
+    "The exercise uses a five-object teaching file and does not represent all cross-reference streams, hybrid-reference files, incremental updates, encryption, or damaged stream recovery.",
+    "A parser's ability to recover malformed xref data is not proof that the source file is valid or safely repaired.",
+    "A rebuilt xref does not validate the document's semantics, accessibility, rendering, print, archive, or security properties."
+  ]
+}
