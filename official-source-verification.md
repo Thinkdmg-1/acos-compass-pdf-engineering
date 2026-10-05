@@ -59,6 +59,12 @@ Official ISO record: <https://www.iso.org/cms/%20render/live/en/sites/isoorg/con
 
 **Curriculum use:** PFE 611 keeps PDF/UA-1 and PDF/UA-2 separate. The official records establish the edition distinction and PDF foundation; complete requirement-by-requirement comparison still requires authorized standard text.
 
+#### Sponsored access path recheck for PDF/UA (2026-10-05)
+
+The PDF Association's current PDF/UA resource states that ISO 14289-2:2024 is available at no cost through its sponsored PDF/UA bundle and identifies the bundle contents as ISO 14289-1, ISO 14289-2, and ISO/TS 32005: <https://pdfa.org/iso-14289-2-pdfua-2/>. The current product page lists the bundle at $0.00 and includes additional tagged-PDF guidance, but requires the delivery flow: <https://www.pdfa-inc.org/product/pdf-ua-bundle/>. The resource page also exposes informative scope boundaries: PDF/UA-2 is a companion to ISO 32000-2, does not by itself guarantee content accessibility, and does not cover all color/contrast, ECMAScript, or cognitive-accessibility cases.
+
+This confirms a current authorized access path for the PDF/UA-1 and PDF/UA-2 texts, but the full files have not been silently downloaded or accepted under the product flow. The next controlled step remains explicit account/license authorization, file-digest capture, and clause-by-clause mapping against the frozen PFE 611 claim inventory.
+
 ### ISO 15930-9:2020 — PDF/X-6
 
 Official ISO record: <https://www.iso.org/standard/77103.html>
@@ -143,4 +149,4 @@ Release page inspected: <https://github.com/veraPDF/veraPDF-library/releases>
 
 ## Gate disposition after verification
 
-The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status, plus a pinned local veraPDF run. The PDF Association has also been recorded as the current no-cost authorized access path for ISO 32000-2:2020 with Errata Collection 3. The remaining hard-veto work is to obtain and preserve that authorized core text, obtain complete authorized PDF/UA-2, PDF/X-6, and PDF/A-4 texts or valid extracts, and complete the claim-by-claim mappings and human checks. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
+The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status, plus a pinned local veraPDF run. The PDF Association has also been recorded as the current no-cost authorized access path for ISO 32000-2:2020 and the PDF/UA bundle. The remaining hard-veto work is to obtain and preserve those authorized files or valid extracts, obtain complete authorized PDF/X-6 and PDF/A-4 texts or valid extracts, and complete the claim-by-claim mappings and human checks. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
