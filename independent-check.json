@@ -1,14 +1,12 @@
 {
   "checks": {
-    "tool_versions": true,
-    "font_hashes": true,
-    "font_table_inspection": true,
-    "combining_composition": true,
-    "hebrew_rtl_clusters": true,
-    "myanmar_detected": true,
-    "oriya_detected": true,
-    "emoji_boundary": true,
-    "result_sha256": true
+    "fixture_hash": true,
+    "single_page": true,
+    "two_extractors_disagree": true,
+    "pypdf_reveals_missing_glyphs": true,
+    "poppler_preserves_combining_sequence": true,
+    "poppler_reports_rtl_marks": true,
+    "fixture_untagged": true
   },
   "all_pass": true
 }
