@@ -19,7 +19,9 @@ Official ISO record: <https://www.iso.org/cms/%20render/live/en/sites/isoorg/con
 
 #### Authorized access path recheck (2026-10-05)
 
-The PDF Association's current ISO 32000-2 resource states that ISO 32000-2:2020 is available at no cost through its sponsored distribution and that the distributed copy includes Errata Collection 3. The page identifies the 2020 dated revision as replacing the 2017 edition and links to the no-cost delivery flow: <https://pdfa.org/resource/iso-32000-2>. This resolves the earlier assumption that the core PDF 2.0 text was necessarily paywalled, but it does not mean the repository has silently downloaded or redistributed the document. The next controlled step is to obtain the authorized bundle through that flow, record its file digest and edition metadata, and then perform clause-by-clause extraction against the frozen PFE 601 claim inventory.
+The PDF Association's current ISO 32000-2 resource states that ISO 32000-2:2020 is available at no cost through its sponsored distribution and that the distributed copy includes Errata Collection 3. The current sponsored product page identifies the copy as updated with Errata Collection 3 on 2026-06-11, lists the five related ISO extensions in the bundle page, and links an End User License Agreement: <https://www.pdfa-inc.org/product/iso-32000-22020-document-management-portable-document-format-part-2-pdf-2-0-sponsored/>. The resource page identifies the 2020 dated revision as replacing the 2017 edition and links the no-cost delivery flow: <https://pdfa.org/resource/iso-32000-2>.
+
+This resolves the earlier assumption that the core PDF 2.0 text was necessarily paywalled, but the full file has not been silently downloaded, accepted into the repository, or redistributed. The product page requires an explicit cart/account flow under its EULA. The next controlled step is to obtain the authorized document through that flow when the account/license action is explicitly authorized, record its file digest and edition metadata, and then perform clause-by-clause extraction against the frozen PFE 601 claim inventory.
 
 ### ISO 14289-2:2024 — PDF/UA-2
 
