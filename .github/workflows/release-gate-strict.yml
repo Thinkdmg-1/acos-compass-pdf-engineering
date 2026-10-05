@@ -1,0 +1,19 @@
+name: ACOS strict release gate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fail-closed-governance-strict:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Run exact hard-gate release gate
+        run: python3 governance/release_gate_check_strict.py
+      - name: Check patch whitespace
+        run: git diff --check
