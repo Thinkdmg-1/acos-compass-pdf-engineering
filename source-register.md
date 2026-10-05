@@ -9,8 +9,8 @@ This register is the starting inventory for the 995 gate. Each row must be inspe
 | S-003 | ISO 14289-2:2024, PDF/UA-2 | NORMATIVE | PDF 2.0 accessibility | Edition 1, published 2024-03; official ISO/OBP sample inspected | record differences from PDF/UA-1 and applicable conformance tests |
 | S-004 | ISO 15930-9:2020, PDF/X-6 | NORMATIVE | PDF 2.0 print exchange and prepress | Edition 1, published 2020-11; ISO marks for revision; CD 15930-9.3 is future work | choose exact published profile before production exercises; track draft separately |
 | S-005 | ISO 19005-4:2020, PDF/A-4 | NORMATIVE | PDF 2.0 long-term preservation | Edition 1, published 2020-11; ISO marks for revision; DIS 19005-4.2 is future work | map embedded resources, metadata, identifiers, prohibited features, and profile status |
-| S-006 | W3C CSS Paged Media Level 3 | NORMATIVE WEB SPEC | page size, margins, page context | current Recommendation/draft status to verify | separate CSS behavior from PDF conformance |
-| S-007 | W3C CSS Fragmentation Level 3 | NORMATIVE WEB SPEC | breaks, widows, orphans, fragmentation | current status to verify | test browser implementation against specification |
+| S-006 | W3C CSS Paged Media Level 3 | NORMATIVE WEB SPEC | page size, margins, page context | Working Draft, 2023-09-14; not a W3C Recommendation | separate CSS behavior from PDF conformance; inspect page boxes, fragmentation, overflow limits |
+| S-007 | W3C CSS Fragmentation Level 3 | NORMATIVE WEB SPEC | breaks, widows, orphans, fragmentation | Candidate Recommendation dated 2018-12-04; page states it is draft/work in progress and may be replaced or obsoleted | test browser implementation against the specification and record unsupported/ambiguous cases |
 | S-008 | WCAG 2.2 | NORMATIVE WEB ACCESSIBILITY | web accessibility and text spacing | Recommendation 2024 | map only applicable web claims; do not substitute for PDF/UA |
 | S-009 | MIT 6.813/6.831 | UNIVERSITY TEACHING | typography, layout, color, accessibility, research methods | Spring 2017 materials | record reading scope and pedagogical limitations |
 | S-010 | MIT MAS.962 Digital Typography | UNIVERSITY GRADUATE TEACHING | typography systems and assignments | Fall 1997 materials | complete and document assignments; distinguish adapted work |
@@ -30,4 +30,5 @@ This register is the starting inventory for the 995 gate. Each row must be inspe
 - S-013 through S-015 provide research evidence and methodological guidance; their dates and assumptions remain visible.
 - S-016 through S-018 describe tools or industry practice; they cannot silently replace the controlling standard.
 - Every claim must name the source ID and state whether it is a fact, interpretation, local experiment, or proposed curriculum rule.
+- W3C Working Draft language is treated as specification evidence for the browser-printing module, never as an ISO or W3C Recommendation-level conformance requirement.
 - The score remains `CHANGES_REQUIRED` until the register is filled with actual inspected locations, version data, checksums where possible, and an independent challenge.

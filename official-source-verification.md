@@ -53,6 +53,28 @@ Official ISO record: <https://www.iso.org/standard/71832.html?eu=true>
 
 **Curriculum use:** PFE 614 tests the declared PDF/A profile and records whether the current or future draft is being discussed. It never labels a draft as a conformance target.
 
+## Browser pagination sources
+
+### W3C CSS Paged Media Level 3
+
+Official technical report: <https://www.w3.org/TR/css-page-3/>
+
+- The published page is a Working Draft dated 14 September 2023, not a W3C Recommendation.
+- The module describes page context, page boxes, page size, orientation, margins, and fragmentation for paged output.
+- It explicitly states that content can fall outside the page box and that handling of such overflow is outside the specification.
+
+**Curriculum use:** PFE 615 treats this as browser-printing specification evidence. It does not convert CSS behavior into PDF, PDF/UA, PDF/X, or PDF/A conformance.
+
+### W3C CSS Fragmentation Module Level 3
+
+Official technical report: <https://www.w3.org/TR/css-break-3/>
+
+- The published page identifies itself as a Candidate Recommendation dated 4 December 2018.
+- The status section calls it a draft/work in progress that may be updated, replaced, or obsoleted.
+- The abstract and model define fragmentation across pages, columns, and regions, including break controls, widows, and orphans.
+
+**Curriculum use:** PFE 615 records the exact browser and print pathway used for every fixture and keeps unsupported or divergent implementation behavior visible.
+
 ## University and research sources
 
 - MIT OCW identifies MAS.962 Digital Typography as graduate material and supplies a syllabus, calendar, assignments, and downloadable course package: <https://ocw.mit.edu/courses/mas-962-digital-typography-fall-1997/>.
