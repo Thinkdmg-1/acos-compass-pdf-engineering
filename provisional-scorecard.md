@@ -23,7 +23,7 @@ This score follows the frozen rubric in `governance/source-quality-gate.md`. Poi
 ## Required path to 995
 
 1. Obtain authorized access to the current ISO normative texts or approved extracts.
-2. Map every C-001 through C-014 standards-based claim to exact clauses, definitions, exceptions, and applicability conditions.
+2. Map every C-001 through C-016 standards-based claim to exact clauses, definitions, exceptions, and applicability conditions.
 3. Have an independent reviewer repeat the mappings and challenge edition/supersession decisions.
 4. Complete the human accessibility review and a declared production-condition PDF/X/PDF/A fixture.
 5. Re-score each factor, preserve dissent, and apply the hard-veto test before any release decision.
