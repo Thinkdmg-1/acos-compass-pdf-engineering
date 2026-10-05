@@ -64,6 +64,10 @@ Official ISO record: <https://www.iso.org/standard/77103.html>
 
 **Curriculum use:** PFE 613 declares the exact PDF/X profile and production condition before preflight. It records the published profile and tracks the draft replacement separately.
 
+#### Current public record recheck (2026-10-05)
+
+The current ISO record was rechecked directly. It identifies ISO 15930-9:2020 as Edition 1, published 2020-11, 26 pages, published and under revision, covering complete and partial print-data exchange using PDF 2.0 and identifying ISO/CD 15930-9.3 as the replacement under development. This confirms profile identity and revision status only; it does not provide the PDF/X-6 requirement clauses or a preflight result.
+
 ### ISO 19005-4:2020 — PDF/A-4
 
 Official ISO record: <https://www.iso.org/standard/71832.html?eu=true>
@@ -74,6 +78,10 @@ Official ISO record: <https://www.iso.org/standard/71832.html?eu=true>
 - The draft replacement is not the current published standard.
 
 **Curriculum use:** PFE 614 tests the declared PDF/A profile and records whether the current or future draft is being discussed. It never labels a draft as a conformance target.
+
+#### Current public record recheck (2026-10-05)
+
+The current ISO record was rechecked directly. It identifies ISO 19005-4:2020 as Edition 1, published 2020-11, 27 pages, published but under revision, with ISO/DIS 19005-4.2 identified as the forthcoming replacement. The public abstract repeats the PDF 2.0 preservation purpose and the exclusions for conversion processes, rendering implementation, storage conditions, and hardware/operating systems. The draft replacement remains non-current and is not used as a normative source.
 
 ## Browser pagination sources
 
