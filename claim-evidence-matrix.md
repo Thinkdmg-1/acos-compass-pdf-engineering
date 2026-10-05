@@ -29,3 +29,5 @@ The frozen claim IDs and release conditions are defined in [`frozen-claim-invent
 ## Admission rule
 
 Only `OBSERVED` or `IMPLEMENTED STUDY` rows can support a current claim, and only within the stated scope. `PROPOSED`, `MISSING`, and `PROPOSED STUDY TOPIC` rows cannot support a conformance or mastery statement. The current matrix therefore keeps the overall source gate `CHANGES_REQUIRED`.
+
+| Combined PDF/A-4 + PDF/UA-2 + PDF/X-6 conformance | `reports/pdfoxide-pdfx6-2026-10-06/dual-pdfa4-ua2-pdfx6-variant.md`, pinned veraPDF JSON, Rust probe output | Structure and PDF/UA-2 pass, but PDF/A-4 and Rust X6 checks fail; this is a boundary experiment only. | Do not claim simultaneous conformance. |
