@@ -1,28 +1,19 @@
-# Repository integrity receipt
+# PDF Oxide PDF/X-6 capability probe — 2026-10-06
 
-**Date:** 2026-10-05; rerun after the public PDF/UA-2 companion recheck
-**Purpose:** independently check that the source register, claim matrix, local evidence paths, Markdown handoff package, and release-state records are internally consistent. This is a repository-integrity check, not a standards-conformance or 995 score.
+**Status:** `PDF/X-6 UNTESTED / TOOL CAPABILITY GAP`
 
-## Frozen method
+A current open-source candidate, PDF Oxide `0.3.78`, was installed into a temporary target directory and exercised against both declared fixtures. Its public documentation states that PDF/X-6 is supported, but the installed Python API rejected the requested level before validation:
 
-A fresh Python process parsed the Markdown source register and claim matrix, extracted every `S-###` reference, checked referenced local paths, reopened the handoff ZIP, enumerated its entries, calculated its SHA-256, and searched the source-quality gate for the declared release state. The ZIP was then checked with assertions for exactly 17 entries, all ending in `.md`.
-
-## Receipt
-
-```json
-{
-  "source_register_ids": 23,
-  "claim_matrix_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018", "S-020", "S-021", "S-022", "S-023"],
-  "missing_source_ids": [],
-  "referenced_local_paths": 1,
-  "missing_local_paths": [],
-  "package_entries": 17,
-  "package_non_markdown": [],
-  "package_sha256": "1b30a3455587d94ed4289019900b7272d036d9f7f502703fc831deb83cd887e5",
-  "gate_state": "CHANGES_REQUIRED"
-}
+```text
+ValueError: Unknown PDF/X level: '6'. Use 1a_2001, 3_2002, 4
 ```
 
-## Interpretation
+The exact exception, package version, fixture hashes, and PDF/X-4 control-call representations are preserved in [`results.json`](results.json). The control call demonstrates that the package can enter its PDF/X validation API; it does not turn the PDF/X-4 control into a PDF/X-6 result.
 
-All source IDs used by the claim matrix resolve to the source register, the checked local path resolves, and the handoff package is Markdown-only with the recorded digest. These checks remove repository-linkage uncertainty; they do not remove the hard veto for missing authorized normative text, clause mappings, PDF/X-6 preflight, or human accessibility review.
+This is an independent capability boundary, not a PDF/X-6 conformance result. The tool cannot be used to claim PDF/X-6 preflight from this environment. The public capability claim and the installed API behavior are recorded as a conflict for future investigation. A materially different Rust binding attempt is preserved in [`rust-binding-attempt.md`](rust-binding-attempt.md); the host has no Rust toolchain, so that path stopped before dependency resolution without being misreported as an API failure.
+
+Sources inspected:
+
+- [PDF Oxide PDF/X documentation](https://pdf.oxide.fyi/r/docs/compliance/pdf-x)
+- [PDF Oxide PDF/X Rust source](https://docs.rs/pdf_oxide/latest/src/pdf_oxide/compliance/pdf_x/mod.rs.html)
+- [PDF Association PDF/X index](https://pdfa.org/resource/iso-15930-pdfx/)
