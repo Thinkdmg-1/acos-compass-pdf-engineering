@@ -4,11 +4,11 @@ This register is the starting inventory for the 995 gate. Each row must be inspe
 
 | ID | Source | Class | Use | Version/status | Required inspection |
 |---|---|---|---|---|---|
-| S-001 | ISO 32000-2:2020, PDF 2.0, with approved errata | NORMATIVE | syntax, graphics, text, rendering, interaction, document interchange | 2020 edition; errata must be checked at access date | obtain authorized text or approved extract; map every PFE 601 claim |
-| S-002 | ISO 14289-1, PDF/UA-1 | NORMATIVE | accessible PDF requirements | edition and corrigenda to verify | map structure, tagging, metadata, alternatives, reading order |
-| S-003 | ISO 14289-2:2024, PDF/UA-2 | NORMATIVE | PDF 2.0 accessibility | 2024 edition | record differences from PDF/UA-1 and applicable conformance tests |
-| S-004 | ISO 15930 series, PDF/X | NORMATIVE | print exchange and prepress | edition depends on declared workflow | choose exact profile before production exercises |
-| S-005 | ISO 19005 series, PDF/A | NORMATIVE | long-term preservation | profile-specific | map embedded resources, metadata, identifiers, and prohibited features |
+| S-001 | ISO 32000-2:2020, PDF 2.0, with approved errata | NORMATIVE | syntax, graphics, text, rendering, interaction, document interchange | Edition 2, published 2020-12; ISO record says confirmed 2026; Draft Amendment 1.2 is future work | use official ISO identity/status record; obtain authorized text or approved extract; map every PFE 601 claim |
+| S-002 | ISO 14289-1, PDF/UA-1 | NORMATIVE | accessible PDF requirements | edition and corrigenda to verify | map structure, tagging, metadata, alternatives, reading order; do not substitute PDF/UA-2 |
+| S-003 | ISO 14289-2:2024, PDF/UA-2 | NORMATIVE | PDF 2.0 accessibility | Edition 1, published 2024-03; official ISO/OBP sample inspected | record differences from PDF/UA-1 and applicable conformance tests |
+| S-004 | ISO 15930-9:2020, PDF/X-6 | NORMATIVE | PDF 2.0 print exchange and prepress | Edition 1, published 2020-11; ISO marks for revision; CD 15930-9.3 is future work | choose exact published profile before production exercises; track draft separately |
+| S-005 | ISO 19005-4:2020, PDF/A-4 | NORMATIVE | PDF 2.0 long-term preservation | Edition 1, published 2020-11; ISO marks for revision; DIS 19005-4.2 is future work | map embedded resources, metadata, identifiers, prohibited features, and profile status |
 | S-006 | W3C CSS Paged Media Level 3 | NORMATIVE WEB SPEC | page size, margins, page context | current Recommendation/draft status to verify | separate CSS behavior from PDF conformance |
 | S-007 | W3C CSS Fragmentation Level 3 | NORMATIVE WEB SPEC | breaks, widows, orphans, fragmentation | current status to verify | test browser implementation against specification |
 | S-008 | WCAG 2.2 | NORMATIVE WEB ACCESSIBILITY | web accessibility and text spacing | Recommendation 2024 | map only applicable web claims; do not substitute for PDF/UA |
