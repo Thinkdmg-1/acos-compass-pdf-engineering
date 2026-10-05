@@ -1,0 +1,2 @@
+Oct 05, 2026 12:12:05 PM org.verapdf.gf.model.impl.pd.GFPDStructTreeNode checkChildrenParent
+WARNING: The value of P key of struct element 28 0 obj is different from the actual parent struct element 32 0 obj
