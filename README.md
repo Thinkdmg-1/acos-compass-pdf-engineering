@@ -18,6 +18,7 @@ The curriculum is intentionally stronger than a production checklist. It require
 - `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
 - `evidence/foundation-study.md` — actual completed foundation study.
 - `evidence/independent-challenge.md` — independent technical challenge and limits.
+- `evidence/pfe611-accessibility-review-2026-10-05.md` — structured tagged-PDF review with completed checks and unavailable human checks separated.
 - `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
 - `labs/` — executable exercises and saved results.
 - `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
