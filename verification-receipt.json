@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-05",
+  "scope": "Study record and local recovery skill",
+  "skill_validation": {"validator": "Bundled skill-creator quick_validate.py", "result": "Skill is valid!", "dependency_issue": "Initial invocation lacked PyYAML; resolved using an isolated work-directory dependency, without changing the bundled runtime"},
+  "rendered_record": {"desktop_viewport_px": [1100, 950], "mobile_viewport_px": [390, 844], "desktop_horizontal_overflow": false, "mobile_horizontal_overflow": false, "h1_count": 1, "link_count": 25, "visual_inspection": "Top viewport rendered and inspected; full-document visual or accessibility acceptance not claimed"},
+  "independent_exercise_challenge": "See Independent-Challenge.md",
+  "release_boundary": "Learning evidence only; no corrected Caliber release, physical print proof, or formal PDF conformance certification"
+}

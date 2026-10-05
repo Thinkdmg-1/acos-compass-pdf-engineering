@@ -1,0 +1,13 @@
+{
+  "mission": "Execute advanced PDF self-study under Jeff's ACOS Compass standards after repeated failure",
+  "authority": "Direct user instructions in this conversation, October 5, 2026",
+  "scope": "Study, coursework exercises, controlled experiments and retained learning. Company-facing Caliber production is suspended during this education task.",
+  "sequence": [
+    {"inputs": "Recovered author addendum and Compass computational contract", "method": "Establish learning authority and preserve distinctions between learning stages", "output": "Standing three-failure recovery skill", "verify": "Read against user's exact instruction and validate skill structure", "stop": "Do not change live ACOS/Asgard configuration"},
+    {"inputs": "MIT graduate typography assignments, design readings and doctoral experiment-method readings; university pagination paper", "method": "Read actual teaching/research materials, answer exercises and critique source limitations", "output": "Source-linked study record", "verify": "Separate read material, worked exercise and untested competence", "stop": "No degree, course credit or mastery claim from reading"},
+    {"inputs": "Unit definitions, pagination constraints and controlled PDF specimens", "method": "Apply knowledge to synthetic exercises, falsifiable hypotheses and independent extraction", "output": "Exercise solutions and raw receipts", "verify": "Dynamic programming against exhaustive enumeration; page units against PDF boxes and second parser; font/tag observations against raster render", "stop": "Quarantine contradictions and do not generalize local behavior"},
+    {"inputs": "Observed results and source critique", "method": "Write scoped transferable lessons and return-to-work criteria", "output": "Learning record and reusable recovery procedure", "verify": "Independent challenge of reasoning and evidence boundaries", "stop": "A demonstrated narrow competency must not promote all PDF capability to mastery"}
+  ],
+  "measurements": {"pdf_page": "points, UserUnit=1, tolerance 0.01 pt", "css": "96 reference px/in for print mapping; 72 pt/in", "pagination": "integer synthetic height units, capacity and keep constraints fixed before solution", "raster": "pinned renderer and resolution only"},
+  "completion": "Study material inspected, exercises executed, failures and limits recorded, standing recovery procedure saved. Broader mastery remains evidence-dependent."
+}

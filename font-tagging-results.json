@@ -1,0 +1,179 @@
+{
+  "exports": [
+    {
+      "id": "cff-untagged",
+      "fontFormat": "woff",
+      "taggedRequested": false,
+      "fonts": [
+        {
+          "family": "Specimen",
+          "status": "loaded"
+        },
+        {
+          "family": "Specimen",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "truetype-untagged",
+      "fontFormat": "ttf",
+      "taggedRequested": false,
+      "fonts": [
+        {
+          "family": "Specimen",
+          "status": "loaded"
+        },
+        {
+          "family": "Specimen",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "truetype-tagged",
+      "fontFormat": "ttf",
+      "taggedRequested": true,
+      "fonts": [
+        {
+          "family": "Specimen",
+          "status": "loaded"
+        },
+        {
+          "family": "Specimen",
+          "status": "loaded"
+        }
+      ]
+    }
+  ],
+  "inspection": [
+    {
+      "case": "cff-untagged",
+      "pages": 1,
+      "page_pt": [
+        792.0,
+        612.0
+      ],
+      "tag_tree": false,
+      "marked": "None",
+      "language": "None",
+      "outline_items": 0,
+      "font_resources": [
+        {
+          "subtype": "/Type3",
+          "font_name": "/AAAAAA+SourceSans3-Bold",
+          "embedded_program": false,
+          "embedded_type3_glyphs": true,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/Type3",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": false,
+          "embedded_type3_glyphs": true,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/Type3",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": false,
+          "embedded_type3_glyphs": true,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/Type3",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": false,
+          "embedded_type3_glyphs": true,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/Type3",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": false,
+          "embedded_type3_glyphs": true,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/Type3",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": false,
+          "embedded_type3_glyphs": true,
+          "to_unicode": true
+        }
+      ],
+      "extracted_text": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0"
+    },
+    {
+      "case": "truetype-tagged",
+      "pages": 1,
+      "page_pt": [
+        792.0,
+        612.0
+      ],
+      "tag_tree": true,
+      "marked": "{'/Type': '/MarkInfo', '/Marked': True}",
+      "language": "en",
+      "outline_items": 2,
+      "font_resources": [
+        {
+          "subtype": "/CIDFontType2",
+          "font_name": "/AAAAAA+SourceSans3-Bold",
+          "embedded_program": true,
+          "embedded_type3_glyphs": false,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/CIDFontType2",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": true,
+          "embedded_type3_glyphs": false,
+          "to_unicode": true
+        }
+      ],
+      "extracted_text": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0"
+    },
+    {
+      "case": "truetype-untagged",
+      "pages": 1,
+      "page_pt": [
+        792.0,
+        612.0
+      ],
+      "tag_tree": false,
+      "marked": "None",
+      "language": "None",
+      "outline_items": 0,
+      "font_resources": [
+        {
+          "subtype": "/CIDFontType2",
+          "font_name": "/AAAAAA+SourceSans3-Bold",
+          "embedded_program": true,
+          "embedded_type3_glyphs": false,
+          "to_unicode": true
+        },
+        {
+          "subtype": "/CIDFontType2",
+          "font_name": "/BAAAAA+SourceSans3-Regular",
+          "embedded_program": true,
+          "embedded_type3_glyphs": false,
+          "to_unicode": true
+        }
+      ],
+      "extracted_text": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0"
+    }
+  ],
+  "raster_comparison": {
+    "size": [
+      1400,
+      1082
+    ],
+    "cff_vs_ttf_mean_abs_channel_delta": [
+      0.6828782677581199,
+      0.6545940058093478,
+      0.5992084763665171
+    ],
+    "tagged_vs_untagged_ttf_equal": true
+  },
+  "interpretation": "Empirical on pinned local Chromium and Poppler only. Tag-tree presence does not establish correct semantics or conformance."
+}

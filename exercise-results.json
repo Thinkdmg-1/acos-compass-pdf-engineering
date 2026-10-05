@@ -1,0 +1,166 @@
+{
+  "purpose": "Worked university-study exercises; synthetic examples are not client performance metrics",
+  "preserved_failure": {
+    "first_execution": "Character assertion failed because extraction inserted a line break before digits",
+    "diagnosis": "The assertion conflated semantic characters with line layout",
+    "repair": "Apply NFKC for ligatures and normalize whitespace for this semantic-preservation test",
+    "boundary": "This normalization cannot verify original spacing or reading order"
+  },
+  "typography_units": [
+    {
+      "css_px": 1056,
+      "css_inches": 11.0,
+      "predicted_pt": 792.0
+    },
+    {
+      "css_px": 816,
+      "css_inches": 8.5,
+      "predicted_pt": 612.0
+    },
+    {
+      "font_css_px": 24,
+      "font_pt": 18.0,
+      "one_em_css_px": 24
+    }
+  ],
+  "geometry_independent_measurements": [
+    {
+      "file": "cff-untagged.pdf",
+      "pypdf_pt": [
+        792.0,
+        612.0
+      ],
+      "pdfplumber_pt": [
+        792,
+        612
+      ],
+      "user_unit": 1,
+      "sha256": "55e66f3adfacca9862c8f39b479698757bc75f0fae2b2a3a5c1a449383934352",
+      "normalized_character_check": true
+    },
+    {
+      "file": "truetype-untagged.pdf",
+      "pypdf_pt": [
+        792.0,
+        612.0
+      ],
+      "pdfplumber_pt": [
+        792,
+        612
+      ],
+      "user_unit": 1,
+      "sha256": "f15751d6e3799b79f479ef80c5a1878c2459c1309b85711caf4e83004e6c1544",
+      "normalized_character_check": true
+    },
+    {
+      "file": "truetype-tagged.pdf",
+      "pypdf_pt": [
+        792.0,
+        612.0
+      ],
+      "pdfplumber_pt": [
+        792,
+        612
+      ],
+      "user_unit": 1,
+      "sha256": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6",
+      "normalized_character_check": true
+    }
+  ],
+  "pagination": {
+    "model": "Contiguous indivisible block adaptation, not reproduction of the paper algorithm",
+    "objective": "Squared spare capacity on non-final pages; zero penalty for final page",
+    "unit": "synthetic integer height",
+    "exhaustive_fixture_count": 1092,
+    "dp_matches_independent_enumeration": true,
+    "worked_examples": [
+      {
+        "heights": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "capacity": 10,
+        "cost": 1,
+        "cuts": [
+          3,
+          4
+        ],
+        "feasible": true
+      },
+      {
+        "heights": [
+          7,
+          2,
+          6,
+          3,
+          2
+        ],
+        "capacity": 10,
+        "cost": 2,
+        "cuts": [
+          2,
+          4,
+          5
+        ],
+        "feasible": true
+      },
+      {
+        "heights": [
+          4,
+          5,
+          1,
+          6,
+          2,
+          3
+        ],
+        "capacity": 10,
+        "cost": 2,
+        "cuts": [
+          2,
+          5,
+          6
+        ],
+        "feasible": true
+      },
+      {
+        "heights": [
+          10,
+          10,
+          10
+        ],
+        "capacity": 10,
+        "cost": 0,
+        "cuts": [
+          1,
+          2,
+          3
+        ],
+        "feasible": true
+      },
+      {
+        "heights": [
+          11
+        ],
+        "capacity": 10,
+        "cost": null,
+        "cuts": [],
+        "feasible": false
+      }
+    ],
+    "limits": "No floats, citation ordering, elastic whitespace, multi-column balancing, or subjective quality claim"
+  },
+  "course_reading_answers": {
+    "typography": [
+      "Tighter leading makes the text field darker",
+      "Oldstyle and lining figures correspond to lowercase/uppercase treatment",
+      "100em paragraphs are not justified by the reading",
+      "Poor pair spacing can cause character recognition errors"
+    ],
+    "layout": "Whitespace grouping applies proximity",
+    "experiment_design": "Uncontrolled variables can affect measured outcomes",
+    "experiment_analysis": "A p-value is not the probability a hypothesis is true; significance is not effect size; challenge the course simplifications with ASA guidance",
+    "accessibility": "Walking and riding in a crowded moving subway are situational impairments; chronic conditions are a different classification"
+  }
+}
