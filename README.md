@@ -10,6 +10,9 @@ The curriculum is intentionally stronger than a production checklist. It require
 - `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
 - `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
 - `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
+- `sources/source-register.md` — source inventory and required inspections.
+- `sources/official-source-verification.md` — official ISO status and scope checks.
+- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
 - `evidence/foundation-study.md` — actual completed foundation study.
 - `evidence/independent-challenge.md` — independent technical challenge and limits.
 - `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
