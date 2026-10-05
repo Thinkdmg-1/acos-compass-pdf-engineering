@@ -1,0 +1,159 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/pdf-engineering/truetype-tagged.pdf",
+  "size" : 25323
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 1718,
+    "failedRules" : 5,
+    "passedChecks" : 2532,
+    "failedChecks" : 7,
+    "tags" : [ "artifact", "metadata", "syntax", "structure", "table" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "WTPDF1.0",
+      "clause" : "8.2.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "artifact" ],
+      "description" : "Content that is not considered real shall be an artifact",
+      "object" : "SESimpleContentItem",
+      "test" : "isTaggedContent == true || parentsTags.contains('Artifact') == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](2 0 obj PDPage)/contentStream[0](7 0 obj PDSemanticContentStream)/content[0]/contentItem[0]",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 32005:2023",
+      "clause" : "Table 5. Table-content",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "structure", "table" ],
+      "description" : "<Table> shall not contain content items",
+      "object" : "SETable",
+      "test" : "hasContentItems == false",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/StructTreeRoot[0](9 0 obj PDStructTreeRoot)/K[0](10 0 obj SEDocument Document)/K[0](11 0 obj SENonStruct NonStruct)/K[3](25 0 obj SENonStruct NonStruct)/K[1](28 0 obj SETable Table)",
+        "errorMessage" : "<Table> contains content item(s)",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "WTPDF1.0",
+      "clause" : "8.8",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 3,
+      "tags" : [ "syntax" ],
+      "description" : "All destinations whose target lies within the current document shall be structure destinations",
+      "object" : "PDDestination",
+      "test" : "isStructDestination == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/Outlines[0](outline 54 0)/Dest[0]",
+        "errorMessage" : "Destination in Outline item, OpenAction or Link annotation is not a structure destination",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/Outlines[1](outline 55 0)/Dest[0]",
+        "errorMessage" : "Destination in Outline item, OpenAction or Link annotation is not a structure destination",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/Outlines[2](outline 56 0)/Dest[0]",
+        "errorMessage" : "Destination in Outline item, OpenAction or Link annotation is not a structure destination",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "WTPDF1.0",
+      "clause" : "8.11.1",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "metadata" ],
+      "description" : "The Catalog dictionary of a conforming file shall contain the Metadata key whose value is a metadata stream as defined in ISO 32000-2:2020, 14.3. The metadata stream dictionary shall contain entry Type with value /Metadata and entry Subtype with value /XML",
+      "object" : "PDDocument",
+      "test" : "containsMetadata == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]",
+        "errorMessage" : "The document catalog dictionary doesn't contain metadata key or metadata stream dictionary does not contain either entry Type with value /Metadata or entry Subtype with value /XML",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "WTPDF1.0",
+      "clause" : "8.2.5.2",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "structure" ],
+      "description" : "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace",
+      "object" : "PDStructTreeRoot",
+      "test" : "kidsStandardTypes != 'Document' || firstChildStandardTypeNamespaceURL == 'http://iso.org/pdf2/ssn'",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/StructTreeRoot[0](9 0 obj PDStructTreeRoot)",
+        "errorMessage" : "The structure tree root contains a single Document structure element, but this element is not within the PDF 2.0 namespace (namespace URI = http://iso.org/pdf/ssn)",
+        "errorArguments" : [ "http://iso.org/pdf/ssn" ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "WTPDF 1.0 Accessibility validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791215079906,
+  "finish" : 1791215080399,
+  "difference" : 493,
+  "duration" : "00:00:00.493"
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791215079834,
+    "finish" : 1791215080433,
+    "difference" : 599,
+    "duration" : "00:00:00.599"
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "nonCompliantPdfaCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
