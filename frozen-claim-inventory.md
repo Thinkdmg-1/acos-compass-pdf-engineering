@@ -21,6 +21,7 @@
 | C-013 | A successful parser read or raster render does not establish archival, accessibility, or print conformance. | All modules | LOCAL EXPERIMENT + VALIDATOR SCOPE | S-016 | VERIFIED LIMITED PRINCIPLE | Preserve failures and independent challenge |
 | C-014 | Reproducible PDF research requires pinned inputs, environment, commands, outputs, hashes, and limitation records. | PFE 605/PFE 615 | UNIVERSITY TEACHING + PROPOSED RULE | S-009/S-011/S-015 | IMPLEMENTED STUDY / LIMITED | Independent committee-style methods challenge |
 | C-015 | A doctoral-equivalent curriculum is not an awarded PhD, institutional enrollment, or dissertation defense. | Governance | PROPOSED RULE | ACOS Compass governance | VERIFIED GOVERNANCE BOUNDARY | Never remove the boundary without institutional evidence |
+| C-016 | A controlled post-export repair can satisfy veraPDF PDF/A-4 for the recorded office-export fixture. | PFE 614/PFE 615 | LOCAL EXPERIMENT + VALIDATOR | S-016 and reports/production-pdfa4-2026-10-05/ | IMPLEMENTED STUDY / LIMITED | Repeat on declared production files, independently review, and do not transfer the result to PDF/UA-2, PDF/X, or human accessibility |
 
 ## Gate interpretation
 

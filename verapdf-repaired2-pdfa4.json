@@ -1,0 +1,63 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/work/pdfa-fixture/fixture-repaired2.pdf",
+  "size" : 18759
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 109,
+    "failedRules" : 0,
+    "passedChecks" : 375,
+    "failedChecks" : 0,
+    "ruleSummaries" : [ ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-4 validation profile",
+  "statement" : "PDF file is compliant with Validation Profile requirements.",
+  "compliant" : true
+} ],"processingTime":{
+  "start" : 1791209601680,
+  "finish" : 1791209602055,
+  "difference" : 375,
+  "duration" : "00:00:00.375"
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791209601600,
+    "finish" : 1791209602079,
+    "difference" : 479,
+    "duration" : "00:00:00.479"
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "nonCompliantPdfaCount" : 0,
+    "compliantPdfaCount" : 1,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
