@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "pdf_hash_matches": true,
+    "three_true_type_maps": true,
+    "all_maps_have_cmap": true,
+    "font_without_map_recorded": true,
+    "map_streams_distinct": true
+  },
+  "all_pass": true
+}
