@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "direct-parent-array_exists": true,
+    "direct-parent-array_hash": true,
+    "direct-parent-array_residual_state": true,
+    "indirect-parent-array_exists": true,
+    "indirect-parent-array_hash": true,
+    "indirect-parent-array_residual_state": true,
+    "mcr-dictionary_exists": true,
+    "mcr-dictionary_hash": true,
+    "mcr-dictionary_residual_state": true,
+    "mcr-array_exists": true,
+    "mcr-array_hash": true,
+    "mcr-array_residual_state": true
+  },
+  "all_pass": true,
+  "interpretation": "Changing parent-array indirection or StructElem K representation did not change the validator result. The residual structure-linkage failure is preserved as unresolved; no variant is promoted to conforming status."
+}
