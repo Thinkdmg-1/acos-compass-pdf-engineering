@@ -75,3 +75,9 @@
 The objective is not complete. The decisive missing evidence is authorized access to the controlling normative standard text and clause-by-clause mapping for PDF 2.0, PDF/UA-2, PDF/A-4, and PDF/X-6. Separate unresolved production gates are PDF/X-6 preflight and equipped human accessibility review. Public identity pages, abstracts, previews, technical indexes, validator output, and local experiments cannot substitute for those requirements.
 
 The next allowed state transition is defined in `reports/profile-test-plan-2026-10-05/README.md`: obtain authorized text and custody receipts, run the declared profile and human checks, preserve complete reports, and then rerun this audit. Until those artifacts exist, the repository must remain `INCOMPLETE / CHANGES_REQUIRED`.
+
+## 2026-10-06 — dual-profile interaction experiment
+
+| Area | Evidence | State |
+|---|---|---|
+| Structure-preserving PDF/A-4 + PDF/UA-2 + PDF/X-6 implementation variant | `reports/pdfoxide-pdfx6-2026-10-06/dual-pdfa4-ua2-pdfx6-variant.md` records a clone of the existing PDF/A-4 + PDF/UA-2 machine-pass specimen with a second `/GTS_PDFX` output intent, X6 identifiers, and page-box additions. Independent pypdf checks preserve pages, extracted-text SHA, `/StructTreeRoot`, and both output intents. veraPDF 1.30.2 and 1.28.2 both pass PDF/UA-2 (0 failed rules/checks). veraPDF PDF/A-4 fails 3 rules/checks: Info/PieceInfo, Info-key restrictions, and PDF-2.n header. The Rust PDF/X-6 implementation probe rejects two unembedded fonts under 6.3.5 and reports Trapped/annotation warnings. | Evidence retained; dual-profile candidate fails. No combined conformance claim. |
