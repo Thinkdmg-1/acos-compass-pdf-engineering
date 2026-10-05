@@ -1,58 +1,725 @@
 {
-  "comparisons": {
-    "geometry_equal": true,
-    "page_count_equal": true,
-    "raster_hash_equal": true,
-    "text_hash_equal": true
+  "tool_versions": {
+    "fontTools": "4.60.2",
+    "uharfbuzz": "0.51.7"
   },
-  "final": {
-    "bytes": 34802,
-    "catalog_keys": [
-      "/Lang",
-      "/MarkInfo",
-      "/Metadata",
-      "/Pages",
-      "/StructTreeRoot",
-      "/Type",
-      "/ViewerPreferences"
-    ],
-    "mediabox": [
-      0.0,
-      0.0,
-      792.0,
-      612.0
-    ],
-    "pages": 1,
-    "raster_bytes": 91465,
-    "raster_sha256": "c64d0955a0d3818fc6ebaaf6a93052dc0dd81cafa2a8a34267e6722c8bb1448b",
-    "sha256": "2b668a09aabf10fae25679dd18b51a305f07905042af8b5acd8a1ad92ddb84e5",
-    "text_chars": 273,
-    "text_preview": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0",
-    "text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e"
+  "fonts": {
+    "myanmar": {
+      "path": "/System/Library/Fonts/NotoSerifMyanmar.ttc",
+      "sha256": "ba99aa062aac7a52ee36ba641fe1984176637852f3fcd2317f6d9d022e6cd737",
+      "fc_query": [
+        "Noto Serif Myanmar,Noto Serif Myanmar Blk",
+        "Black,Regular",
+        "my|mnw|shn"
+      ],
+      "faces": [
+        {
+          "index": 0,
+          "cmap": {
+            "glyph_names": 741,
+            "cmap_codepoints": 239,
+            "tables": [
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "cmap",
+              "glyf",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "meta",
+              "name",
+              "post"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Noto Serif Myanmar Blk",
+            "subfamily": "Regular"
+          }
+        },
+        {
+          "index": 1,
+          "cmap": {
+            "glyph_names": 741,
+            "cmap_codepoints": 239,
+            "tables": [
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "cmap",
+              "glyf",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "meta",
+              "name",
+              "post"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Noto Serif Myanmar",
+            "subfamily": "Bold"
+          }
+        },
+        {
+          "index": 2,
+          "cmap": {
+            "glyph_names": 741,
+            "cmap_codepoints": 239,
+            "tables": [
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "cmap",
+              "glyf",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "meta",
+              "name",
+              "post"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Noto Serif Myanmar ExtBd",
+            "subfamily": "Regular"
+          }
+        },
+        {
+          "index": 3,
+          "cmap": {
+            "glyph_names": 741,
+            "cmap_codepoints": 239,
+            "tables": [
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "cmap",
+              "glyf",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "meta",
+              "name",
+              "post"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Noto Serif Myanmar ExtLt",
+            "subfamily": "Regular"
+          }
+        }
+      ]
+    },
+    "oriya": {
+      "path": "/System/Library/Fonts/NotoSansOriya.ttc",
+      "sha256": "5cdd527c8ffa2f2d403ae700d4955294156edc8b75d258e7e8f6079229dcc6ee",
+      "fc_query": [
+        "Noto Sans Oriya,नोटो सैंस उडिया,ନୋଟୋ ସାନ୍ସ ଓରିୟା",
+        "Regular,रेग्युलर,ରେଗ୍ୟୁଲର୍",
+        "or"
+      ],
+      "faces": [
+        {
+          "index": 0,
+          "cmap": {
+            "glyph_names": 671,
+            "cmap_codepoints": 151,
+            "tables": [
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "cmap",
+              "cvt ",
+              "fpgm",
+              "glyf",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "meta",
+              "name",
+              "post",
+              "prep"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Noto Sans Oriya",
+            "subfamily": "Regular"
+          }
+        },
+        {
+          "index": 1,
+          "cmap": {
+            "glyph_names": 671,
+            "cmap_codepoints": 151,
+            "tables": [
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "cmap",
+              "cvt ",
+              "fpgm",
+              "glyf",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "meta",
+              "name",
+              "post",
+              "prep"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Noto Sans Oriya",
+            "subfamily": "Bold"
+          }
+        }
+      ]
+    },
+    "korean": {
+      "path": "/System/Library/Fonts/AppleSDGothicNeo.ttc",
+      "sha256": "0452cde17bbdfe71106680879df943034a003c537c95a4137bab124b3cfa4b66",
+      "fc_query": [
+        "Apple SD Gothic Neo,Apple SD 산돌고딕 Neo",
+        "Regular,일반체",
+        "bg|de|fj|ho|ia|ig|ik|io|ko|kum|nds|nr|om|os|ru|sel|ss|st|sw|ts|uz|vo|xh|yap|zu|kj|kwm|lg|ms|ng|rn|rw|sn|za|bem|mhr|wae"
+      ],
+      "faces": [
+        {
+          "index": 0,
+          "cmap": {
+            "glyph_names": 18662,
+            "cmap_codepoints": 23517,
+            "tables": [
+              "BASE",
+              "CFF ",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "VORG",
+              "cmap",
+              "feat",
+              "head",
+              "hhea",
+              "hmtx",
+              "maxp",
+              "meta",
+              "morx",
+              "name",
+              "post",
+              "vhea",
+              "vmtx"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Apple SD Gothic Neo",
+            "subfamily": "Regular"
+          }
+        },
+        {
+          "index": 1,
+          "cmap": {
+            "glyph_names": 18662,
+            "cmap_codepoints": 23517,
+            "tables": [
+              "CFF ",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "VORG",
+              "bsln",
+              "cmap",
+              "feat",
+              "head",
+              "hhea",
+              "hmtx",
+              "maxp",
+              "meta",
+              "morx",
+              "name",
+              "post",
+              "vhea",
+              "vmtx"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": ".Apple SD Gothic NeoI",
+            "subfamily": "Regular"
+          }
+        },
+        {
+          "index": 2,
+          "cmap": {
+            "glyph_names": 18662,
+            "cmap_codepoints": 23517,
+            "tables": [
+              "BASE",
+              "CFF ",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "VORG",
+              "cmap",
+              "feat",
+              "head",
+              "hhea",
+              "hmtx",
+              "maxp",
+              "meta",
+              "morx",
+              "name",
+              "post",
+              "vhea",
+              "vmtx"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Apple SD Gothic Neo",
+            "subfamily": "Medium"
+          }
+        },
+        {
+          "index": 3,
+          "cmap": {
+            "glyph_names": 18662,
+            "cmap_codepoints": 23517,
+            "tables": [
+              "CFF ",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "OS/2",
+              "VORG",
+              "bsln",
+              "cmap",
+              "feat",
+              "head",
+              "hhea",
+              "hmtx",
+              "maxp",
+              "meta",
+              "morx",
+              "name",
+              "post",
+              "vhea",
+              "vmtx"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": ".Apple SD Gothic NeoI",
+            "subfamily": "Medium"
+          }
+        }
+      ]
+    },
+    "unicode": {
+      "path": "/Library/Fonts/Arial Unicode.ttf",
+      "sha256": "876af2cd4854644e7f3e7feb2f688997fdb3343c6df6693611209c9dfb47ccec",
+      "fc_query": [
+        "Arial Unicode MS",
+        "Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta",
+        "aa|ab|af|ar|as|ast|av|ay|az-az|ba|bm|be|bg|bh|bho|bi|bin|bn|br|bs|bua|ca|ce|ch|chm|co|cs|cv|cy|da|de|el|en|eo|es|et|eu|fi|fj|fo|fr|ff|fur|fy|ga|gd|gl|gn|gu|gv|ha|haw|he|hi|ho|hr|hu|hy|ia|ig|id|ie|ik|io|is|it|ja|ka|kaa|ki|kk|kl|kn|ko|kok|ku-ir|kum|kv|ky|la|lb|lez|ln|lo|lt|lv|mg|mh|mi|ml|mr|mt|nb|nds|ne|nl|nn|no|nr|nso|ny|oc|om|or|os|pa|pl|ps-af|ps-pk|pt|rm|ru|sa|sah|se|sel|sh|shs|sk|sl|sm|sma|smj|smn|sms|sq|sr|ss|st|sv|sw|ta|te|tg|th|tk|tn|to|tr|ts|tt|tw|tyv|ug|uk|ur|uz|ve|vi|vo|vot|wa|wen|wo|xh|yap|yi|zh-cn|zh-sg|zh-tw|zu|ak|an|ber-dz|crh|csb|ee|fat|fil|hne|hsb|ht|hz|kab|kj|ku-iq|ku-tr|kwm|lg|li|mai|mn-mn|ms|na|ng|nv|ota|pa-pk|pap-an|pap-aw|qu|quz|rn|rw|sc|sd|sg|sn|ty|za|lah|brx|doi|anp|bhb|hif|mag|raj|the|agr|ayc|bem|ckb|cmn|dsb|hak|lij|lzh|mfe|mhr|miq|mjw|nan|nhn|niu|rif|sgs|szl|tcy|tpi|unm|wae|yuw"
+      ],
+      "faces": [
+        {
+          "index": 0,
+          "cmap": {
+            "glyph_names": 50377,
+            "cmap_codepoints": 38917,
+            "tables": [
+              "DSIG",
+              "GDEF",
+              "GPOS",
+              "GSUB",
+              "GlyphOrder",
+              "LTSH",
+              "OS/2",
+              "cmap",
+              "cvt ",
+              "fpgm",
+              "gasp",
+              "glyf",
+              "hdmx",
+              "head",
+              "hhea",
+              "hmtx",
+              "loca",
+              "maxp",
+              "name",
+              "post",
+              "prep"
+            ],
+            "has_GSUB": true,
+            "has_GPOS": true,
+            "family": "Arial Unicode MS",
+            "subfamily": "Regular"
+          }
+        }
+      ]
+    }
   },
-  "original": {
-    "bytes": 25323,
-    "catalog_keys": [
-      "/Lang",
-      "/MarkInfo",
-      "/Outlines",
-      "/Pages",
-      "/StructTreeRoot",
-      "/Type",
-      "/ViewerPreferences"
-    ],
-    "mediabox": [
-      0.0,
-      0.0,
-      792.0,
-      612.0
-    ],
-    "pages": 1,
-    "raster_bytes": 91465,
-    "raster_sha256": "c64d0955a0d3818fc6ebaaf6a93052dc0dd81cafa2a8a34267e6722c8bb1448b",
-    "sha256": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6",
-    "text_chars": 273,
-    "text_preview": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0",
-    "text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e"
+  "samples": {
+    "combining_latin": {
+      "font": "unicode",
+      "text": "é",
+      "codepoints": [
+        "U+0065",
+        "U+0301"
+      ],
+      "nfc_codepoints": [
+        "U+00E9"
+      ],
+      "harfbuzz": {
+        "direction": "ltr",
+        "script": "Latn",
+        "language": "c",
+        "glyphs": [
+          {
+            "gid": 171,
+            "cluster": 0,
+            "flags": 0
+          }
+        ],
+        "positions": [
+          {
+            "x_advance": 1139,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          }
+        ]
+      }
+    },
+    "hebrew": {
+      "font": "unicode",
+      "text": "שלום",
+      "codepoints": [
+        "U+05E9",
+        "U+05DC",
+        "U+05D5",
+        "U+05DD"
+      ],
+      "nfc_codepoints": [
+        "U+05E9",
+        "U+05DC",
+        "U+05D5",
+        "U+05DD"
+      ],
+      "harfbuzz": {
+        "direction": "rtl",
+        "script": "Hebr",
+        "language": "c",
+        "glyphs": [
+          {
+            "gid": 1167,
+            "cluster": 3,
+            "flags": 0
+          },
+          {
+            "gid": 1159,
+            "cluster": 2,
+            "flags": 0
+          },
+          {
+            "gid": 1166,
+            "cluster": 1,
+            "flags": 0
+          },
+          {
+            "gid": 1179,
+            "cluster": 0,
+            "flags": 0
+          }
+        ],
+        "positions": [
+          {
+            "x_advance": 1217,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 647,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 991,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 1434,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          }
+        ]
+      }
+    },
+    "myanmar": {
+      "font": "myanmar",
+      "text": "မြန်မာ",
+      "codepoints": [
+        "U+1019",
+        "U+103C",
+        "U+1014",
+        "U+103A",
+        "U+1019",
+        "U+102C"
+      ],
+      "nfc_codepoints": [
+        "U+1019",
+        "U+103C",
+        "U+1014",
+        "U+103A",
+        "U+1019",
+        "U+102C"
+      ],
+      "harfbuzz": {
+        "direction": "ltr",
+        "script": "Mymr",
+        "language": "c",
+        "glyphs": [
+          {
+            "gid": 203,
+            "cluster": 0,
+            "flags": 0
+          },
+          {
+            "gid": 77,
+            "cluster": 0,
+            "flags": 0
+          },
+          {
+            "gid": 71,
+            "cluster": 2,
+            "flags": 1
+          },
+          {
+            "gid": 408,
+            "cluster": 2,
+            "flags": 1
+          },
+          {
+            "gid": 77,
+            "cluster": 4,
+            "flags": 0
+          },
+          {
+            "gid": 373,
+            "cluster": 4,
+            "flags": 0
+          }
+        ],
+        "positions": [
+          {
+            "x_advance": 194,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 628,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 598,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 0,
+            "y_advance": 0,
+            "x_offset": 23,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 628,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 401,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          }
+        ]
+      }
+    },
+    "oriya": {
+      "font": "oriya",
+      "text": "ଓଡ଼ିଆ",
+      "codepoints": [
+        "U+0B13",
+        "U+0B21",
+        "U+0B3C",
+        "U+0B3F",
+        "U+0B06"
+      ],
+      "nfc_codepoints": [
+        "U+0B13",
+        "U+0B21",
+        "U+0B3C",
+        "U+0B3F",
+        "U+0B06"
+      ],
+      "harfbuzz": {
+        "direction": "ltr",
+        "script": "Orya",
+        "language": "c",
+        "glyphs": [
+          {
+            "gid": 17,
+            "cluster": 0,
+            "flags": 0
+          },
+          {
+            "gid": 69,
+            "cluster": 1,
+            "flags": 0
+          },
+          {
+            "gid": 56,
+            "cluster": 1,
+            "flags": 0
+          },
+          {
+            "gid": 8,
+            "cluster": 4,
+            "flags": 0
+          }
+        ],
+        "positions": [
+          {
+            "x_advance": 1309,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 1317,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 0,
+            "y_advance": 0,
+            "x_offset": 3,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 1681,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          }
+        ]
+      }
+    },
+    "emoji_zwj": {
+      "font": "unicode",
+      "text": "👩🏽‍💻",
+      "codepoints": [
+        "U+1F469",
+        "U+1F3FD",
+        "U+200D",
+        "U+1F4BB"
+      ],
+      "nfc_codepoints": [
+        "U+1F469",
+        "U+1F3FD",
+        "U+200D",
+        "U+1F4BB"
+      ],
+      "harfbuzz": {
+        "direction": "ltr",
+        "script": null,
+        "language": "c",
+        "glyphs": [
+          {
+            "gid": 0,
+            "cluster": 0,
+            "flags": 0
+          },
+          {
+            "gid": 0,
+            "cluster": 0,
+            "flags": 0
+          },
+          {
+            "gid": 3,
+            "cluster": 0,
+            "flags": 0
+          },
+          {
+            "gid": 0,
+            "cluster": 0,
+            "flags": 0
+          }
+        ],
+        "positions": [
+          {
+            "x_advance": 2048,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 2048,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 0,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          },
+          {
+            "x_advance": 2048,
+            "y_advance": 0,
+            "x_offset": 0,
+            "y_offset": 0
+          }
+        ]
+      }
+    }
   }
 }
