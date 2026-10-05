@@ -1,0 +1,11 @@
+{
+  "chrome_version": "154.0.8037.93",
+  "html_sha256": "5bb34cd179e16791c838b8994088615da00d35dad2b9a163355e6ef319059e47",
+  "pdf_sha256": "2bccbb6f923c72bd34c884e4df137c6bb65f52cc08a8a43396de66ed94efff9f",
+  "page_count": 4,
+  "page_size": "594.96 x 841.92 pts (A4)",
+  "form_feed_count": 4,
+  "contains_forced_page": true,
+  "contains_overflow_probe": true,
+  "text_len": 1419
+}

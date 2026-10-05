@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>CSS pagination fixture</title>
+<style>
+  @page { size: A4 portrait; margin: 18mm 16mm 20mm; }
+  :root { font: 12pt/1.4 Georgia, serif; }
+  body { margin: 0; color: #111; }
+  h1 { font: 700 24pt/1.1 Arial, sans-serif; margin: 0 0 10mm; }
+  h2 { break-after: avoid; page-break-after: avoid; margin: 0 0 4mm; }
+  .section { break-inside: avoid; page-break-inside: avoid; margin: 0 0 12mm; }
+  .forced { break-before: page; page-break-before: always; }
+  p { orphans: 3; widows: 3; margin: 0 0 5mm; }
+  .overflow-probe { height: 355mm; border: 1px solid #777; padding: 2mm; box-sizing: border-box; }
+</style>
+<h1>CSS Paged Media fixture</h1>
+<section class="section"><h2>Section one</h2><p>Page boxes, margins, and type are declared in CSS. This paragraph is intentionally short so the heading and body remain a unit.</p></section>
+<section class="section"><h2>Section two</h2><p>The second section tests break-inside avoidance and widow/orphan controls. The browser is responsible for resolving the fragmentation when the page fills.</p></section>
+<section class="forced"><h2>Forced page</h2><p>This heading begins after an explicit page break.</p></section>
+<section class="section"><h2>Overflow probe</h2><div class="overflow-probe">This element is taller than one page. The W3C page specification leaves content outside the page box to user-agent handling. This fixture records what the browser actually emits.</div></section>
