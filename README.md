@@ -1,30 +1,68 @@
-# Public WTPDF companion evidence — 2026-10-05
+# Profile and human-review test plan
 
-## Source identity
+**Date frozen:** 2026-10-05  
+**Status:** `PLANNED / NOT EXECUTED`  
+**Purpose:** define the smallest reproducible next study cycle for the unresolved PDF/X-6, PDF/A-4, and human PDF/UA checks without treating public summaries or a single validator run as conformance evidence.
 
-- Title: *The PDF Association’s work to advance accessibility*
-- Public source: <https://pdfa.org/download-area/examples/WTPDF/2024-03-04_BFO-WTPDF-PDFua2.pdf>
-- Publisher: PDF Association
-- Public document date shown in the source: January 19, 2024
-- Source type: public companion and development-context document, not the ISO normative text
+## Inputs and custody
 
-## Frozen inspection method
+The test requires three declared inputs before execution:
 
-The source was inspected through the authoritative public PDF resource and its extracted text view. Relevant observations were recorded without treating the companion document as a substitute for ISO 14289-2:2024.
+1. An authorized copy or permitted extract of ISO 15930-9:2020 (PDF/X-6), with edition, license boundary, file digest, and clause locations recorded.
+2. An authorized copy or permitted extract of ISO 19005-4:2020 (PDF/A-4), with edition, license boundary, file digest, and clause locations recorded.
+3. A declared production fixture set: source file, export application/version, fonts and font licenses, linked assets, color profiles, and export settings, each hashed or otherwise recoverable.
 
-## Bounded observations
+The existing local teaching fixture and its reports remain useful for method rehearsal. They cannot stand in for the declared production set.
 
-- The document describes the development of “Using Tagged PDF in PDF 2.0” in alignment with ISO TC 171 SC 2 WG 9.
-- It identifies PDF/UA-2 as building on PDF 2.0 and calls out annotations, structure-element attributes, namespaces, MathML, and the Artifact structure element as major feature areas.
-- It describes the public specification as intended to align with the forthcoming ISO standard, which makes it useful as development-context corroboration but does not make it the controlling ISO publication.
-- It identifies the Matterhorn Protocol, tagged-PDF best-practice material, and the PDF/UA Reference Suite as adjacent implementation resources.
+## Execution order
 
-## Boundary and recovery note
+### A. Normative extraction
 
-The direct `curl` retrieval attempt from this environment returned HTTP 403, so no local PDF binary or local digest is claimed from that attempt. The public source URL and the inspected content remain recoverable. A future run may preserve the binary through an authorized browser download, then record `pdfinfo`, extracted-text, and SHA-256 receipts. Until then, this record supports only the bounded corroboration claims above.
+Freeze the claim inventory before reading the clauses. For every claim, record the exact clause, requirement verb, exceptions, applicability condition, profile part, and an independent reviewer’s interpretation. A public profile index may corroborate identity and scope; it cannot fill a missing requirement clause.
 
-The same URL was opened in the controlled Chrome PDF viewer. The viewer rendered the four-page document and visibly exposed the document title, page count, first-page title, PDF Association mark, and January 19, 2024 date. A viewer download action was attempted, but no resulting local file was found in the bounded download search, so browser preview evidence is recorded separately from binary custody.
+**Stop condition:** stop and mark the row unresolved if the authorized text, clause context, or profile applicability cannot be inspected.
 
-## Release interpretation
+### B. PDF/A-4 preflight
 
-This evidence can support source-context and independent-corroboration notes. It cannot support a clause-level PDF/UA-2 conformance claim, a complete standards map, or a 995 release decision.
+Run the declared production fixture through a pinned validator and one independent parser. Record command, validator version, profile identifier, exit status, complete machine report, and parser observations. Repeat after any repair from the original source, preserving both bytes and hashes.
+
+Required measurements:
+
+- PDF/A profile and revision selected;
+- metadata and output-intent presence and values;
+- embedded-font and embedded-file status;
+- object-level parser warnings;
+- byte hash before and after repair;
+- page count, media boxes, and rendered pixel dimensions.
+
+**Stop condition:** a pass from one validator alone is insufficient; any disagreement between validator and parser remains open until explained.
+
+### C. PDF/X-6 preflight
+
+Use a preflight engine that explicitly supports ISO 15930-9:2020 PDF/X-6. Record the selected profile, profile version, color-management settings, output intent, page geometry, font/resource embedding, transparency/overprint findings, and all errors and warnings. Preserve the complete report and a screenshot or export of the profile-selection screen when the interface is graphical.
+
+**Stop condition:** the local veraPDF profile inventory does not list PDF/X-6, so a veraPDF result must never be labeled a PDF/X-6 result. Without a PDF/X-capable engine and authorized requirement map, the profile remains `UNTESTED`.
+
+### D. Human PDF/UA review
+
+Run the tagged fixture through three independent human checks: keyboard traversal, screen-reader reading order/announcements, and visual inspection at 200% and in a high-contrast setting. Record operating system, assistive technology/version, browser or viewer/version, test script, reviewer, date, and each observed defect with page/object location.
+
+A second reviewer repeats the script on a held-out page or a separately exported copy. Disagreements are preserved and adjudicated against the authorized PDF/UA text.
+
+**Stop condition:** machine validation and human checks must agree on the disposition. If the environment cannot run the assistive-technology check, report `UNAVAILABLE`; do not convert that absence into a pass.
+
+## Independent verification
+
+The measurements are checked by a different method where practical:
+
+- validator output versus parser/object inspection;
+- reported page count versus Poppler or viewer count;
+- file hash from two independent reads;
+- profile selection versus the report’s profile identifier;
+- human reading order versus structure-tree inspection.
+
+A repeated run of the same command is a reproducibility check, not independent corroboration.
+
+## Release rule
+
+This plan does not authorize a conformance statement. A profile claim can be promoted only when the authorized normative mapping, a complete machine report, independent parser evidence, and the required human checks are all present and mutually consistent. Until then the matrix status remains `CHANGES_REQUIRED`, and the source-quality gate remains below the 995 target.
