@@ -1,16 +1,42 @@
-# PDF preflight capability inventory
+# ACOS Compass: doctoral PDF engineering curriculum
 
-**Date:** 2026-10-05  
-**Purpose:** independently determine whether the current host can execute the required PDF/X-6 preflight step.
+This repository is the durable learning home for Echo's Compass. It turns the three-failure recovery rule into a repeatable curriculum for PDF engineering: standards study, university coursework, controlled laboratories, independent challenge, qualifying examinations, candidacy, and dissertation research.
 
-## Method
+The curriculum is intentionally stronger than a production checklist. It requires a learner to understand the PDF object model, typography and shaping, layout algorithms, accessibility, color science, print production, preservation, reproducible software, research methods, and original contribution. A polished export does not count as doctoral evidence.
 
-A fresh shell checked the executable search path for `verapdf`, `veraPDF`, Ghostscript (`gs`), `qpdf`, MuPDF (`mutool`), `pdfcpu`, `cpdf`, callas, and pdfToolbox. It also searched installed Adobe InDesign resource trees for a standalone preflight executable. Paths and search results were recorded rather than inferred from application names.
+## Repository map
 
-## Result
+- `curriculum/doctoral-curriculum.md` — four-year, 60-credit doctoral-equivalent sequence and gates.
+- `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
+- `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
+- `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
+- `sources/source-register.md` — source inventory and required inspections.
+- `sources/official-source-verification.md` — official ISO status and scope checks.
+- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
+- `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
+- `sources/independent-source-challenge.md` — second-path identity, version, scope, and conflict challenge for the source register.
+- `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
+- `evidence/foundation-study.md` — actual completed foundation study.
+- `evidence/independent-challenge.md` — independent technical challenge and limits.
+- `evidence/pfe611-accessibility-review-2026-10-05.md` — structured tagged-PDF review with completed checks and unavailable human checks separated.
+- `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
+- `labs/` — executable exercises and saved results.
+- `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
+- `reports/production-pdfa4-2026-10-05/` — separately authored office-export experiment with preserved initial failures and a bounded post-export PDF/A-4 repair pass; PDF/UA-2 remains failed.
+- `reports/profile-test-plan-2026-10-05/` — declared next-step plan for authorized normative-text custody, profile tests, and human accessibility review.
+- `reports/human-review-partial-2026-10-05/` — bounded 144/288 DPI visual review receipt; explicitly not a PDF/UA conformance review.
+- `reports/preflight-capability-inventory-2026-10-05/` — fresh executable inventory showing why PDF/X-6 preflight remains unexecuted in this environment.
+- `reports/repository-integrity-2026-10-05/` — independent source-ID, path, package, and release-state consistency receipt.
+- `governance/completion-audit-2026-10-05.md` — current requirement-by-requirement completion audit and hard-veto decision.
 
-All checked command-line tools were unavailable. Adobe InDesign resource directories were present, but the bounded resource search found no standalone PDF/X preflight executable or callable profile runner. The installed application presence is therefore not treated as a PDF/X-6 validation capability.
+## Evidence state
 
-## Release interpretation
+The repository currently contains a foundation recovery slice. It does not claim a PhD, completed coursework, qualifying-exam passage, candidacy, dissertation, or universal PDF conformance. Future work must advance through the gates in the curriculum and update the evidence state explicitly.
 
-No PDF/X-6 preflight was executed. This receipt confirms the capability boundary only; it is not evidence that the fixture passes or fails PDF/X-6. The claim remains `UNTESTED` until an engine that explicitly supports ISO 15930-9:2020 PDF/X-6 is authorized and available, with its profile selection and complete report preserved.
+## Operating rule
+
+When three failures occur on the same capability, stop repeating the unchanged approach. Return to the curriculum, identify the smallest falsifiable deficiency, complete the relevant study and exercise, test an unfamiliar case, obtain independent challenge, and only then retry the production task.
+
+## Sources
+
+The source register distinguishes standards, primary research, university teaching material, validator documentation, and informative guidance. The 995 target is a hard source-quality gate, not a decorative claim. A score is recorded only after source identity, authority, version, scope, access, applicability, and limitations are evidenced.
