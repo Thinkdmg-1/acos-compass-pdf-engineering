@@ -23,6 +23,7 @@ The curriculum is intentionally stronger than a production checklist. It require
 - `evidence/standards-access-recheck-2026-10-06.md` — current sponsored-access, public-model, and errata recheck with custody boundaries.
 - `evidence/arlington-object-model-lab-2026-10-06.md` — pinned Arlington TSV inspection and independent catalog/structure comparison.
 - `evidence/pdf2normrefs-graph-lab-2026-10-06.md` — pinned PDF 2.0 normative-reference graph traversal and integrity receipt.
+- `evidence/public-errata-profile-recheck-2026-10-06.md` — current PDF/A-4 and PDF/X-6 errata, revision, and copyright-boundary receipt.
 - `labs/` — executable exercises and saved results.
 - `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
 - `reports/production-pdfa4-2026-10-05/` — separately authored office-export experiment with preserved initial failures and a bounded post-export PDF/A-4 repair pass; PDF/UA-2 remains failed.
