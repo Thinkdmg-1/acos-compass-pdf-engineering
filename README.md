@@ -1,39 +1,28 @@
-# PFE 602 complex-script shaping lab — 2026-10-06
+# Repository integrity receipt
 
-**Status:** EXECUTED / DEMONSTRATED SHAPING / PDF EXPORT STILL UNVERIFIED
+**Date:** 2026-10-05; rerun after the public PDF/UA-2 companion recheck
+**Purpose:** independently check that the source register, claim matrix, local evidence paths, Markdown handoff package, and release-state records are internally consistent. This is a repository-integrity check, not a standards-conformance or 995 score.
 
-## Frozen question
+## Frozen method
 
-Can a disposable OpenType shaping path expose the difference between Unicode normalization, script direction, glyph substitution/positioning, and font coverage for representative PFE 602 cases?
+A fresh Python process parsed the Markdown source register and claim matrix, extracted every `S-###` reference, checked referenced local paths, reopened the handoff ZIP, enumerated its entries, calculated its SHA-256, and searched the source-quality gate for the declared release state. The ZIP was then checked with assertions for exactly 17 entries, all ending in `.md`.
 
-## Inputs and tools
+## Receipt
 
-- Runtime: temporary Python target directory `/tmp/acos-font-lab-20261006`.
-- `fontTools` 4.60.2 for font-table/cmap inspection.
-- `uharfbuzz` 0.51.7 for HarfBuzz shaping.
-- Independent host checks: `fc-query` font metadata and SHA-256 of each system font resource.
-- Fonts were referenced in place and were not copied into the repository:
-  - `/System/Library/Fonts/NotoSerifMyanmar.ttc`
-  - `/System/Library/Fonts/NotoSansOriya.ttc`
-  - `/Library/Fonts/Arial Unicode.ttf`
-- The executable source is [`run.py`](run.py); the machine-readable receipt is [`results.json`](results.json), SHA-256 `fd814b205eac4752fb9203dd909877399bc5891f91c8c2d9edc65d20614ccce8`.
+```json
+{
+  "source_register_ids": 25,
+  "claim_matrix_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018", "S-020", "S-021", "S-022", "S-023", "S-024", "S-025"],
+  "missing_source_ids": [],
+  "referenced_local_paths": 1,
+  "missing_local_paths": [],
+  "package_entries": 17,
+  "package_non_markdown": [],
+  "package_sha256": "1b30a3455587d94ed4289019900b7272d036d9f7f502703fc831deb83cd887e5",
+  "gate_state": "CHANGES_REQUIRED"
+}
+```
 
-## Observed results
+## Interpretation
 
-| Sample | Shaping observation | Interpretation |
-|---|---|---|
-| `e` + combining acute | 2 input code points normalize to 1 NFC code point and shape to 1 glyph | normalization and shaping can change representation; they are not PDF extraction evidence |
-| Hebrew `שלום` | HarfBuzz detects Hebrew/RTL and returns clusters in descending logical order | direction and cluster order must be retained by layout/export paths |
-| Myanmar `မြန်မာ` | HarfBuzz detects Myanmar and returns nontrivial clusters with GSUB/GPOS-capable font tables | script shaping is not equivalent to code-point iteration |
-| Oriya `ଓଡ଼ିଆ` | HarfBuzz detects Oriya and returns 4 glyphs for 5 input code points with grouped clusters | glyph count is not a character count; clusters carry mapping information |
-| `👩🏽‍💻` with Arial Unicode | the selected font returns missing glyph IDs for the unsupported emoji sequence | fallback and color-font handling remain separate unresolved requirements |
-
-The full glyph IDs, clusters, advances, font hashes, table lists, and `fc-query` metadata are retained in `results.json`.
-
-## Independent challenge
-
-[`independent-check.py`](independent-check.py) is a separate parser/assertion path. It verifies the result hash, tool-version fields, font digests, script/direction detections, cluster properties, and the explicit emoji missing-glyph boundary. Its receipt is [`independent-check.json`](independent-check.json).
-
-## Scope and limits
-
-This lab demonstrates a shaping-capable text path and advances the PFE 602 shaping prerequisite. It does not prove CoreText, DirectWrite, browser, LaTeX, or PDF-export equivalence; it does not prove ToUnicode correctness, tagging, visual raster fidelity, font licensing, or screen-reader behavior. A PDF fixture containing these strings and an independent PDF parser/render comparison remain required before making a PDF semantic or production claim.
+All source IDs used by the claim matrix resolve to the source register, the checked local path resolves, and the handoff package is Markdown-only with the recorded digest. These checks remove repository-linkage uncertainty; they do not remove the hard veto for missing authorized normative text, clause mappings, PDF/X-6 preflight, or human accessibility review.
