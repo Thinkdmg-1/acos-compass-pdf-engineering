@@ -1,42 +1,61 @@
-# Controlled tagged-PDF repair experiment — 2026-10-06
+# ACOS Compass: doctoral PDF engineering curriculum
 
-Status: EXECUTED / NON-CONFORMING
+This repository is the durable learning home for Echo's Compass. It turns the three-failure recovery rule into a repeatable curriculum for PDF engineering: standards study, university coursework, controlled laboratories, independent challenge, qualifying examinations, candidacy, and dissertation research.
 
-This experiment copied the tagged TrueType fixture and changed only document-level metadata and namespace structures. The original fixture remains untouched. The repair script is repair.py; the repaired PDF is truetype-tagged-metadata-repaired.pdf; the fresh veraPDF report is verapdf-ua2.json.
+The curriculum is intentionally stronger than a production checklist. It requires a learner to understand the PDF object model, typography and shaping, layout algorithms, accessibility, color science, print production, preservation, reproducible software, research methods, and original contribution. A polished export does not count as doctoral evidence.
 
-## Changes
+## Repository map
 
-- added catalog /Lang and confirmed /MarkInfo /Marked true;
-- confirmed /ViewerPreferences /DisplayDocTitle true;
-- added an XMP metadata stream with PDF/UA identification and dc:title;
-- added a PDF 2.0 structure namespace dictionary to /StructTreeRoot /Namespaces and referenced it from the /Document structure element.
+- `curriculum/doctoral-curriculum.md` — four-year, 60-credit doctoral-equivalent sequence and gates.
+- `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
+- `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
+- `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
+- `sources/source-register.md` — source inventory and required inspections.
+- `sources/official-source-verification.md` — official ISO status and scope checks.
+- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
+- `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
+- `sources/independent-source-challenge.md` — second-path identity, version, scope, and conflict challenge for the source register.
+- `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
+- `evidence/foundation-study.md` — actual completed foundation study.
+- `evidence/independent-challenge.md` — independent technical challenge and limits.
+- `evidence/pfe611-accessibility-review-2026-10-05.md` — structured tagged-PDF review with completed checks and unavailable human checks separated.
+- `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
+- `evidence/standards-access-recheck-2026-10-06.md` — current sponsored-access, public-model, and errata recheck with custody boundaries.
+- `evidence/arlington-object-model-lab-2026-10-06.md` — pinned Arlington TSV inspection and independent catalog/structure comparison.
+- `evidence/pdf2normrefs-graph-lab-2026-10-06.md` — pinned PDF 2.0 normative-reference graph traversal and integrity receipt.
+- `evidence/public-errata-profile-recheck-2026-10-06.md` — current PDF/A-4 and PDF/X-6 errata, revision, and copyright-boundary receipt.
+- `evidence/pdf20-examples-lab-2026-10-06.md` — dual-reader inspection of public PDF 2.0 examples and deliberate edge cases.
+- `evidence/entry-diagnostic-2026-10-06.md` — five-part entry diagnostic classification and next-gate boundaries.
+- `reports/pfe604-pagination-lab-2026-10-06/` — bounded greedy/dynamic-programming pagination lab with an independent exhaustive oracle.
+- `reports/year1-qualifying-exam-2026-10-06/` — Year 1 qualifying-exam attempt with section dispositions and remediation requirements.
+- `reports/pfe601-rerun-2026-10-06/` — source-level rerun receipt for the object-model and xref-repair labs.
+- `evidence/pfe602-font-capability-2026-10-06.md` — installed-font metadata and shaping-toolchain boundary for PFE 602.
+- `reports/css-pagination-rerun-2026-10-06/` — independent pypdf/Poppler rerun of the frozen Chrome pagination artifact.
+- `evidence/pfe604-color-profile-receipt-2026-10-06.md` — ICC profile inventory and output-intent inspection with print-color boundaries.
+- `reports/pfe605-pilot-2026-10-06/` — frozen analysis protocol, exploratory baseline, and executed font/tag follow-up pilot.
+- `reports/verapdf-runtime-capability-2026-10-06/` — fresh veraPDF launcher check showing the current Java-runtime boundary.
+- `reports/verapdf-runtime-rerun-2026-10-06/` — fresh veraPDF 1.30.2 PDF/A-4 and PDF/UA-2 runs using a portable Temurin runtime.
+- `reports/verapdf-rerun-independent-check-2026-10-06/` — separate parser/assertion check of fresh validator reports and profile claims.
+- `reports/pdfoxide-pdfx6-2026-10-06/` — PDF Oxide PDF/X-6 capability probe preserving its installed API conflict.
+- `reports/pfe611-tagged-repair-2026-10-06/` — controlled PDF/UA-2 metadata/namespace repair with fresh validator comparison.
+  - includes failed and ablated variants plus one bounded machine-pass copy; no human conformance claim.
+- `labs/` — executable exercises and saved results.
+- `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
+- `reports/production-pdfa4-2026-10-05/` — separately authored office-export experiment with preserved initial failures and a bounded post-export PDF/A-4 repair pass; PDF/UA-2 remains failed.
+- `reports/profile-test-plan-2026-10-05/` — declared next-step plan for authorized normative-text custody, profile tests, and human accessibility review.
+- `reports/human-review-partial-2026-10-05/` — bounded 144/288 DPI visual review receipt; explicitly not a PDF/UA conformance review.
+- `reports/preflight-capability-inventory-2026-10-05/` — fresh executable inventory showing why PDF/X-6 preflight remains unexecuted in this environment.
+- `reports/repository-integrity-2026-10-05/` — independent source-ID, path, package, and release-state consistency receipt.
+- `governance/completion-audit-2026-10-05.md` — current requirement-by-requirement completion audit and hard-veto decision.
 
-## Fresh comparison
+## Evidence state
 
-| Artifact | PDF/UA-2 rules passed/failed | Checks passed/failed | Result |
-|---|---:|---:|---|
-| Original truetype-tagged.pdf | 1722 / 5 | 2532 / 7 | non-compliant |
-| Repaired copy | 1724 / 3 | 2540 / 5 | non-compliant |
+The repository currently contains a foundation recovery slice. It does not claim a PhD, completed coursework, qualifying-exam passage, candidacy, dissertation, or universal PDF conformance. Future work must advance through the gates in the curriculum and update the evidence state explicitly.
 
-The remaining fresh failures are:
+## Operating rule
 
-- 8.2.2: content not considered real is not marked as an artifact;
-- Table 5: the Table contains content items;
-- 8.8: in-document destinations are not structure destinations.
+When three failures occur on the same capability, stop repeating the unchanged approach. Return to the curriculum, identify the smallest falsifiable deficiency, complete the relevant study and exercise, test an unfamiliar case, obtain independent challenge, and only then retry the production task.
 
-Original digest: d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6
-Repaired digest: 1d0f61ae957c6519da7e22460179cb81cceb0236b24d1f7743e96a79525e8813
+## Sources
 
-This is a controlled repair result for one fixture. It does not establish PDF/UA-2 conformance, screen-reader behavior, keyboard behavior, or a general repair recipe. Human accessibility checks remain unavailable.
-
-## Isolated outline ablation
-
-A separate ablation removed the catalog Outlines entry from the repaired copy, without changing page content or the structure tree. Its PDF/UA-2 result was 1,725 rules passed and 2 failed, with 2 failed checks; removing Outlines eliminated 8.8. It remains non-compliant because artifact marking and table-content structure still fail. This is diagnostic evidence only: removing navigation is a product regression and is not accepted as a production repair.
-
-## Final bounded machine-pass variant
-
-The reproducible [`final-repair.py`](final-repair.py) applies the complete sequence to the metadata-repaired copy: it removes the invalid outline tree, removes the stray integer child from the Table structure element, and wraps only the initial page-background paint in Artifact marked content. The fresh report is [`variant-combined-artifact-repair-ua2.json`](variant-combined-artifact-repair-ua2.json), with stderr in the neighboring capture.
-
-Result: **compliant**, 1,727 rules passed and 0 failed; 2,539 checks passed and 0 failed. Repaired PDF digest: `2b668a09aabf10fae25679dd18b51a305f07905042af8b5acd8a1ad92ddb84e5`.
-
-This is a machine-validator pass for one deliberately repaired copy. It does not prove that the source export is compliant, that removing outlines is acceptable for the product, that the remaining content order is usable to a person, or that PDF/UA-2 is satisfied under human review. The original fixture, failed repairs, and destructive ablations remain preserved.
+The source register distinguishes standards, primary research, university teaching material, validator documentation, and informative guidance. The 995 target is a hard source-quality gate, not a decorative claim. A score is recorded only after source identity, authority, version, scope, access, applicability, and limitations are evidenced.
