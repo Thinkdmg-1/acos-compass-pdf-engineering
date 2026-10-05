@@ -109,3 +109,11 @@ The held-out case independently passes PDF/UA-2 at **1,727/0 rules and 657/0 che
 ### Cross-version validator corroboration
 
 The source-corrected machine-pass specimen and the held-out machine-pass specimen were independently rerun through veraPDF 1.28.2 in addition to the pinned 1.30.2 runtime. Both releases reported zero PDF/UA-2 failed rules and zero failed checks for both artifacts. The exact pass counts differ because the validation models contain different rule/check inventories; the independent receipt [`cross-verapdf-independent-check.json`](cross-verapdf-independent-check.json) records the version-specific counts. This corroborates machine validation only and does not replace human accessibility review or production-condition testing.
+
+### Independent visual inspection
+
+A 144 DPI render of the held-out machine-pass PDF was inspected as pixels. The page renders on one page with generous margins and no obvious clipping. The Myanmar line appears visually heavy/overlapping at this fixture size, so the visual result is **not** accepted as a typography or production-quality pass. The PNG and observation receipt are [`heldout-render-144dpi.png`](heldout-render-144dpi.png) and [`heldout-visual-inspection.json`](heldout-visual-inspection.json). This inspection does not assess screen-reader or keyboard behavior.
+
+### Font-face negative control
+
+A second held-out render used NotoSansMyanmar instead of NotoSerifMyanmar while keeping the same ReportLab export path. The Myanmar line retained the same heavy/overlapping appearance. This negative control indicates that the observed visual defect belongs to the export/shaping path, not simply the selected Myanmar face. It is preserved in [`shaping-fixture-heldout-sans.pdf`](shaping-fixture-heldout-sans.pdf), [`heldout-sans-render-144dpi.png`](heldout-sans-render-144dpi.png), and [`heldout-sans-visual-control.json`](heldout-sans-visual-control.json).
