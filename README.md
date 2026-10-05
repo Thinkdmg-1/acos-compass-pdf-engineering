@@ -1,32 +1,51 @@
-# Experimental combined PDF/A-4 and PDF/UA-2 machine pass — 2026-10-06
+# Controlled tagged-PDF repair experiment — 2026-10-06
 
-**Status:** EXECUTED / PROFILE-SCOPED MACHINE PASS
+Status: EXECUTED / NON-CONFORMING
 
-This experiment starts from the bounded PDF/UA-2 repair copy and adds the minimum document-level metadata required for a PDF/A-4 validator run. It is a separate experimental artifact; the original tagged fixture and the earlier repair variants remain preserved.
+This experiment copied the tagged TrueType fixture and changed only document-level metadata and namespace structures. The original fixture remains untouched. The repair script is repair.py; the repaired PDF is truetype-tagged-metadata-repaired.pdf; the fresh veraPDF report is verapdf-ua2.json.
 
-## Controlled changes
+## Changes
 
-- set the PDF header and catalog version to PDF 2.0;
-- omitted the document information dictionary, which PDF/A-4 disallows here;
-- added a deterministic trailer identifier;
-- copied the embedded sRGB output intent and ICC profile semantics from the separately repaired PDF/A-4 fixture;
-- added XMP identification for PDF/A-4 (`pdfaid:part=4`, `pdfaid:rev=2020`) and PDF/UA-2 (`pdfuaid:part=2`, `pdfuaid:rev=2024`).
+- added catalog /Lang and confirmed /MarkInfo /Marked true;
+- confirmed /ViewerPreferences /DisplayDocTitle true;
+- added an XMP metadata stream with PDF/UA identification and dc:title;
+- added a PDF 2.0 structure namespace dictionary to /StructTreeRoot /Namespaces and referenced it from the /Document structure element.
 
-The repair source is [`repair.py`](repair.py), and the resulting bytes are [`combined-pdfa4-ua2.pdf`](combined-pdfa4-ua2.pdf), SHA-256 `68b9fb2e89c450284c1a8294faa96ac0e1e03020a552ad3b94ab6cdfdfb8000a`.
+## Fresh comparison
 
-## Fresh veraPDF 1.30.2 results
-
-| Profile | Rules passed/failed | Checks passed/failed | Result |
+| Artifact | PDF/UA-2 rules passed/failed | Checks passed/failed | Result |
 |---|---:|---:|---|
-| PDF/A-4 | 109 / 0 | 1,635 / 0 | **Compliant** |
-| PDF/UA-2 + Tagged PDF | 1,727 / 0 | 2,539 / 0 | **Compliant** |
+| Original truetype-tagged.pdf | 1722 / 5 | 2532 / 7 | non-compliant |
+| Repaired copy | 1724 / 3 | 2540 / 5 | non-compliant |
 
-The JSON receipts and stderr captures are [`4.json`](4.json), [`4.stderr`](4.stderr), [`ua2.json`](ua2.json), and [`ua2.stderr`](ua2.stderr). The run used the pinned repository veraPDF 1.30.2 launcher and the recorded portable Temurin JRE from the parent runtime receipt.
+The remaining fresh failures are:
 
-## Independent preservation check
+- 8.2.2: content not considered real is not marked as an artifact;
+- Table 5: the Table contains content items;
+- 8.8: in-document destinations are not structure destinations.
 
-[`independent-check.json`](independent-check.json) uses a separate pypdf and Poppler path. Relative to the bounded PDF/UA-2 repair copy, it found equal page count, MediaBox, extracted-text digest, and 144 DPI raster digest. The experimental copy adds `/OutputIntents` and `/Version` as expected for PDF/A-4 metadata; it does not establish unchanged navigation, because the earlier bounded repair had already removed `/Outlines`.
+Original digest: d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6
+Repaired digest: 1d0f61ae957c6519da7e22460179cb81cceb0236b24d1f7743e96a79525e8813
 
-## Limits and release meaning
+This is a controlled repair result for one fixture. It does not establish PDF/UA-2 conformance, screen-reader behavior, keyboard behavior, or a general repair recipe. Human accessibility checks remain unavailable.
 
-This is one deliberately repaired specimen and two profile-scoped machine-validator passes. It does not prove that the source export is compliant, that the outline removal is an acceptable product decision, that a production exporter will reproduce the result, or that screen-reader, keyboard, visual, color-management, or second-reviewer checks pass. PDF/X-6 remains untested because the available validators do not expose a usable PDF/X-6 profile and the installed PDF Oxide API rejected level `6`. The repository therefore remains `INCOMPLETE / CHANGES_REQUIRED` under the 995 source gate.
+## Isolated outline ablation
+
+A separate ablation removed the catalog Outlines entry from the repaired copy, without changing page content or the structure tree. Its PDF/UA-2 result was 1,725 rules passed and 2 failed, with 2 failed checks; removing Outlines eliminated 8.8. It remains non-compliant because artifact marking and table-content structure still fail. This is diagnostic evidence only: removing navigation is a product regression and is not accepted as a production repair.
+
+## Final bounded machine-pass variant
+
+The reproducible [`final-repair.py`](final-repair.py) applies the complete sequence to the metadata-repaired copy: it removes the invalid outline tree, removes the stray integer child from the Table structure element, and wraps only the initial page-background paint in Artifact marked content. The fresh report is [`variant-combined-artifact-repair-ua2.json`](variant-combined-artifact-repair-ua2.json), with stderr in the neighboring capture.
+
+Result: **compliant**, 1,727 rules passed and 0 failed; 2,539 checks passed and 0 failed. Repaired PDF digest: `2b668a09aabf10fae25679dd18b51a305f07905042af8b5acd8a1ad92ddb84e5`.
+
+This is a machine-validator pass for one deliberately repaired copy. It does not prove that the source export is compliant, that removing outlines is acceptable for the product, that the remaining content order is usable to a person, or that PDF/UA-2 is satisfied under human review. The original fixture, failed repairs, and destructive ablations remain preserved.
+
+The independent [user-facing check](independent-check/README.md) found equal page count, MediaBox, extracted-text digest, and 144 DPI raster digest between the original and machine-pass copies. The catalog-key difference is limited to the intentionally removed Outlines entry plus the added repair metadata. This supports a bounded geometry/text/raster-preservation statement while leaving navigation and human accessibility unresolved.
+
+A cross-profile run found that the final copy is not PDF/A-4 compliant (6 rules failed) and not WTPDF 1.0 Accessibility compliant (1 rule failed). The original fails PDF/A-4 with the same 6-rule count and WTPDF with 5 failed rules. The PDF/UA-2 zero-failure result is therefore profile-specific and must not be generalized to adjacent profiles.
+
+
+## Experimental combined PDF/A-4 + PDF/UA-2 copy
+
+The [`pdfa4-ua2-experiment/`](pdfa4-ua2-experiment/) directory preserves a separate metadata repair that passes fresh veraPDF 1.30.2 PDF/A-4 (109/0 rules, 1,635/0 checks) and PDF/UA-2 (1,727/0 rules, 2,539/0 checks). A separate pypdf/Poppler comparison preserves equal page count, geometry, extracted-text digest, and 144 DPI raster digest against the bounded PDF/UA-2 repair copy. This remains a profile-scoped machine result for one experimental artifact; it does not supply human accessibility evidence, production-export proof, or PDF/X-6 coverage.
