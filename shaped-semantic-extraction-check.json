@@ -1,0 +1,19 @@
+{
+  "shaping-fixture-heldout-nested-widthpatched-tagged.pdf": {
+    "pypdf_text": "PFE 602 held-out case\n\u05d4\u05d3\u05d2\u05d1\u05d0\n\u1019\u103c\u1014\u103a\u1019\u102c \u1005\u1019\u103a\u1038\u101e\u1015\u103a\n\u0b13\u0b21\u0b3c\u0b3f\u0b06 \u0b2a\u0b30\u0b40\u0b15\u0b4d\u0b37\u0b3e\nPlain fallback text\n",
+    "pypdf_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "poppler_text": "PFE 602 held-out case\n\nA\u030a / \u202b\u05d4\u05d3\u05d2\u05d1\u05d0\u202c\n\n\u1019\u103c\u1014\u103a\u1019\u102c \u1005\u1019\u103a\u1038\u101e\u1015\u103a\n\n\u0b13\u0b21\u0b3c\u0b3f\u0b06 \u0b2a\u0b30\u0b40\u0b15\u0b4d\u0b37\u0b3e\n\nPlain fallback text\n\f",
+    "poppler_sha256": "b83830794518a848ef7cd9c003061f6325b6869d1d7e33485ed5ba18f89f10c4"
+  },
+  "shaping-fixture-heldout-shaped-semantic-tagged.pdf": {
+    "pypdf_text": "PFE 602 held-out case\n\u05d4\u05d3\u05d2\u05d1\u05d0\n\u1019\u103c\u1014\u103a\u1019\u102c \u1005\u1019\u103a\u1038\u101e\u1015\u103a\n\u0b13\u0b21\u0b3c\u0b3f\u0b06 \u0b2a\u0b30\u0b40\u0b15\u0b4d\u0b37\u0b3e\nPlain fallback text\n",
+    "pypdf_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "poppler_text": "PFE 602 held-out case\n\nA\u030a / \u202b\u05d4\u05d3\u05d2\u05d1\u05d0\u202c\n\n\u1019\u103c\u1014\u103a\u1019\u102c \u1005\u1019\u103a\u1038\u101e\u1015\u103a\n\n\u0b13\u0b21\u0b3c\u0b3f\u0b06 \u0b2a\u0b30\u0b40\u0b15\u0b4d\u0b37\u0b3e\n\nPlain fallback text\n\f",
+    "poppler_sha256": "b83830794518a848ef7cd9c003061f6325b6869d1d7e33485ed5ba18f89f10c4"
+  },
+  "comparisons": {
+    "pypdf_equal": true,
+    "poppler_equal": true,
+    "combined_pypdf_poppler_equal": false
+  }
+}
