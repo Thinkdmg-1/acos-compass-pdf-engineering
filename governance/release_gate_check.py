@@ -25,11 +25,21 @@ score = read_governed("sources/provisional-scorecard.md")
 inventory = read_governed("sources/frozen-claim-inventory.md")
 matrix = read_governed("sources/claim-evidence-matrix.md")
 expected_claims = {f"C-{i:03d}" for i in range(1, 17)}
+expected_hard_gates = {
+    "Authorized normative custody",
+    "Clause mappings",
+    "PDF/X-6 preflight",
+    "Human accessibility",
+    "Production equivalence",
+    "Doctoral completion",
+}
+hard_gate_names = {line.split("|", 2)[1].strip() for line in hard.splitlines() if line.startswith("| ") and "| OPEN" in line}
 
 checks = {
     "gate_is_changes_required": "CHANGES_REQUIRED" in gate and "CHANGES_REQUIRED" in hard,
     "provisional_score_is_796": bool(re.search(r"\| \*\*796\*\* \|", score)),
     "hard_gate_rows_remain_open": hard.count("| OPEN") >= 6,
+    "hard_gate_names_exact": hard_gate_names == expected_hard_gates,
     "authorization_dependency_explicit": "authorization" in hard.lower() and "EULA" in read_governed("evidence/standards-authorization-pending-2026-10-06.md"),
     "pdfx6_dependency_explicit": "PDF/X-6" in hard and "authorized tool/runtime dependency" in hard,
     "human_review_dependency_explicit": "human accessibility" in hard.lower() and "second reviewer" in hard.lower(),
