@@ -1,28 +1,22 @@
-# Repository integrity receipt
+# PFE 604 pagination lab receipt — 2026-10-06
 
-**Date:** 2026-10-05; rerun after PFE 605 publication
-**Purpose:** independently check that the source register, claim matrix, local evidence paths, Markdown handoff package, and release-state records are internally consistent. This is a repository-integrity check, not a standards-conformance or 995 score.
+**Protocol:** `PFE604-2026-10-06-v1`  
+**Status:** `EXECUTED / BOUNDED`
 
-## Frozen method
+This is a reproducible teaching experiment for one narrow pagination model: contiguous indivisible positive integer blocks, a fixed page capacity, and a cost equal to squared unused capacity on non-final pages. It compares first-fit greedy packing with a dynamic-programming solver and an independently written exhaustive cut-mask oracle.
 
-A fresh Python process parsed the Markdown source register and claim matrix, extracted every `S-###` reference, checked referenced local paths, reopened the handoff ZIP, enumerated its entries, calculated its SHA-256, and searched the source-quality gate for the declared release state. The ZIP was then checked with assertions for exactly 17 entries, all ending in `.md`.
+## Execution
 
-## Receipt
+- Source: [`labs/pfe604_pagination.py`](../../labs/pfe604_pagination.py)
+- Exact command: `python3 labs/pfe604_pagination.py`
+- Exhaustive domain: lengths 1 through 7; each block height in `{2, 5, 8}`; capacity `10`.
+- Exhaustive fixtures: `3,279`.
+- Result: dynamic-programming cost matched the independent oracle on all fixtures; the selected dynamic-programming cuts were re-scored independently.
+- Adversarial fixtures include `(3, 6, 2, 9)`, where greedy cost is `65` and dynamic-programming/exact cost is `53`, and `(4, 5, 1, 6, 2, 3)`, where greedy cost is `4` and dynamic-programming/exact cost is `2`.
+- The complete machine-readable receipt is [`results.json`](results.json), including runtime, environment, fixture outputs, and source digest.
 
-```json
-{
-  "source_register_ids": 19,
-  "claim_matrix_ids": ["S-001", "S-002", "S-003", "S-004", "S-005", "S-006", "S-007", "S-008", "S-009", "S-010", "S-011", "S-012", "S-013", "S-014", "S-015", "S-016", "S-017", "S-018"],
-  "missing_source_ids": [],
-  "referenced_local_paths": 1,
-  "missing_local_paths": [],
-  "package_entries": 17,
-  "package_non_markdown": [],
-  "package_sha256": "1b30a3455587d94ed4289019900b7272d036d9f7f502703fc831deb83cd887e5",
-  "gate_state": "CHANGES_REQUIRED"
-}
-```
+## Independent checks and limits
 
-## Interpretation
+The exhaustive oracle uses a separate cut-mask enumeration rather than the dynamic-programming recurrence. Equal-cost partitions can have different cut locations; verification therefore compares objective values and independently re-scores the dynamic-programming partition instead of requiring identical tie-breaking.
 
-All source IDs used by the claim matrix resolve to the source register, the checked local path resolves, and the handoff package is Markdown-only with the recorded digest. These checks remove repository-linkage uncertainty; they do not remove the hard veto for missing authorized normative text, clause mappings, PDF/X-6 preflight, or human accessibility review.
+This does not reproduce Knuth–Plass, an integer-programming solver, or a published pagination benchmark. No solver library was available in the declared environment, so no ILP implementation is claimed. The model excludes line breaking, elastic whitespace, floats, footnotes, columns, spreads, widows/orphans, renderer behavior, and subjective reading quality. The result supports only the bounded algorithmic claim stated above.
