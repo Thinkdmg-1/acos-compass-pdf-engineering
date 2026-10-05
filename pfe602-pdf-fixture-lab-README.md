@@ -105,3 +105,7 @@ A fresh held-out fixture was generated after the nested repair was chosen. It us
 - Independent checker: [`heldout-independent-check.py`](heldout-independent-check.py) / [`heldout-independent-check.json`](heldout-independent-check.json)
 
 The held-out case independently passes PDF/UA-2 at **1,727/0 rules and 657/0 checks**. Page count, MediaBox, extracted-text hash, and raster hash remain equal to its source fixture. This demonstrates transfer for the stated fixture family only; it is not a universal repair claim or human accessibility result.
+
+### Cross-version validator corroboration
+
+The source-corrected machine-pass specimen and the held-out machine-pass specimen were independently rerun through veraPDF 1.28.2 in addition to the pinned 1.30.2 runtime. Both releases reported zero PDF/UA-2 failed rules and zero failed checks for both artifacts. The exact pass counts differ because the validation models contain different rule/check inventories; the independent receipt [`cross-verapdf-independent-check.json`](cross-verapdf-independent-check.json) records the version-specific counts. This corroborates machine validation only and does not replace human accessibility review or production-condition testing.
