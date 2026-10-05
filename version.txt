@@ -1,0 +1,7 @@
+veraPDF 1.30.2
+Built: Wed Jun 03 10:55:00 EDT 2026
+Developed and released by the veraPDF Consortium.
+Funded by the PREFORMA project.
+Released under the GNU General Public License v3
+and the Mozilla Public License v2 or later.
+
