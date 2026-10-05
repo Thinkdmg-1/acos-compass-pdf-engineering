@@ -31,6 +31,17 @@ Official Online Browsing Platform sample: <https://www.iso.org/obp/ui?_escaped_f
 
 **Curriculum use:** PFE 611 must test the applicable version explicitly. Presence of a structure tree or a validator result cannot be promoted to PDF/UA-2 conformance without the complete requirement set and human review.
 
+#### Public-preview inspection record (2026-10-05)
+
+The official ISO Online Browsing Platform preview was inspected directly at the URL above. The accessible preview exposed the following material before the paywall boundary:
+
+- Introduction: PDF/UA is concerned with machine-readable text in a declared language, semantic structures, logical reading order, and descriptive metadata such as image alternatives.
+- Scope clauses 1 and 2: PDF/UA-2 specifies use of PDF 2.0 to construct accessible digital documents; it excludes conversion processes, presentation implementation details, physical storage, hardware/operating systems, and content-specific requirements beyond programmatic access and textual representation.
+- Normative references: ISO 14289-1, ISO 32000-2:2020, ISO/TS 32005:2023, DPUB-ARIA 1.0, and PDF Declarations are named.
+- Terms 3.1–3.7: assistive technology, PDF 1.7 namespace, PDF 2.0 namespace, real content, structure attribute, unique PDF 1.7 element, and artifact marked content sequence are exposed.
+
+The preview then states that only informative sections are publicly available and that the full content requires purchase. This is stronger direct evidence for identity, scope, normative references, and terminology than an abstract, but it is still insufficient for a complete clause-by-clause conformance map. Clauses 5–8 remain uninspected from the authorized full text.
+
 ### ISO 14289-1:2014 — PDF/UA-1
 
 Official ISO record: <https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/06/45/64599.html>
