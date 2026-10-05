@@ -10,7 +10,7 @@
 | C-002 | PDF 2.0 defines the document syntax and interchange model used by the object-model labs. | PFE 601 | NORMATIVE | S-001 | PROPOSED STUDY | Authorized syntax clauses, exceptions, and independent challenge |
 | C-003 | A PDF page depends on an object graph, resources, content streams, and cross-reference data. | PFE 601 labs | NORMATIVE + LOCAL EXPERIMENT | S-001 | LIMITED IMPLEMENTED STUDY | Authorized clause mapping; retain lab as illustration only |
 | C-004 | PDF/UA-2 is the accessibility companion for PDF 2.0 and covers logical structure, artifacts, text, annotations, forms, metadata, navigation, and actions. | PFE 611 | NORMATIVE | S-003 | OBSERVED / LIMITED | Complete authorized standard and conformance map |
-| C-005 | PDF/UA-1 and PDF/UA-2 are distinct profiles with different PDF foundations. | PFE 611 | NORMATIVE | S-002/S-003 | MISSING | Independently inspect PDF/UA-1 identity and compare editions |
+| C-005 | PDF/UA-1 and PDF/UA-2 are distinct profiles with different PDF foundations. | PFE 611 | NORMATIVE | S-002/S-003 | OBSERVED / LIMITED | Inspect authorized texts and map requirement differences; retain edition distinction |
 | C-006 | PDF/X-6 is a PDF 2.0 print-exchange profile. | PFE 613 | NORMATIVE | S-004 | OBSERVED / LIMITED | Authorized profile requirements and preflight evidence |
 | C-007 | PDF/A-4 is a PDF 2.0 preservation profile. | PFE 614 | NORMATIVE | S-005 | OBSERVED / LIMITED | Authorized profile requirements and preservation test |
 | C-008 | CSS Paged Media Level 3 describes page boxes, margins, size, orientation, and page-context behavior. | PFE 615 | NORMATIVE WEB SPEC | S-006 | OBSERVED / WORKING DRAFT | Browser/version fixture and divergence record |
@@ -25,4 +25,3 @@
 ## Gate interpretation
 
 The frozen inventory separates what has been observed from what remains to be proved. C-005 and C-002 are explicit hard-veto items. C-004, C-006, C-007, C-008, C-009, C-010, C-011, C-012, C-013, and C-014 are bounded teaching claims until their stated release conditions are met. No aggregate score is assigned while any hard-veto item remains unresolved.
-

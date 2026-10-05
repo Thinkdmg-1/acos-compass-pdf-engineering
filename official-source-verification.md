@@ -31,6 +31,17 @@ Official Online Browsing Platform sample: <https://www.iso.org/obp/ui?_escaped_f
 
 **Curriculum use:** PFE 611 must test the applicable version explicitly. Presence of a structure tree or a validator result cannot be promoted to PDF/UA-2 conformance without the complete requirement set and human review.
 
+### ISO 14289-1:2014 — PDF/UA-1
+
+Official ISO record: <https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/06/45/64599.html>
+
+- Edition 2, published December 2014.
+- The official record says the edition was last reviewed and confirmed in 2025 and remains current.
+- The abstract identifies ISO 32000-1:2008 as the PDF foundation and lists the same broad exclusions for conversion processes, rendering implementation details, storage, and hardware/operating systems.
+- ISO 14289-1:2012 is separately listed as withdrawn; it must not be used as the current PDF/UA-1 edition.
+
+**Curriculum use:** PFE 611 keeps PDF/UA-1 and PDF/UA-2 separate. The official records establish the edition distinction and PDF foundation; complete requirement-by-requirement comparison still requires authorized standard text.
+
 ### ISO 15930-9:2020 — PDF/X-6
 
 Official ISO record: <https://www.iso.org/standard/77103.html>
@@ -101,10 +112,10 @@ Release page inspected: <https://github.com/veraPDF/veraPDF-library/releases>
 - The docs explicitly distinguish machine-verifiable PDF/UA checks from human checkpoints and point to the Matterhorn protocol for that boundary.
 - The CLI documentation lists distinct profiles including PDF/A-4, PDF/UA-1, and PDF/UA-2, and explains that profile selection can come from metadata or an explicit command option.
 - The corpus repository describes atomic, self-documented tests for PDF/A, PDF/UA, ISO 32000-1, and ISO 32000-2.
-- The release page currently identifies veraPDF v1.26.2; this version is recorded as source evidence, not as a completed local validation run.
+- The official release/distribution inspected for this run is veraPDF v1.30.2, built 2026-06-03; the exact installer digest and local reports are preserved in `reports/verapdf-1.30.2/`.
 
-**Curriculum use:** PFE 611/PFE 614 must record the exact veraPDF version, profile, command, report, test fixture, and human inspection protocol. A validator pass is machine evidence only and cannot establish full PDF/UA conformance alone.
+**Curriculum use:** PFE 611/PFE 614 records the exact veraPDF version, profile, command, report, test fixture, and human inspection boundary. The 2026-10-05 run found no compliant PDF/A-4 or PDF/UA-2 fixture in the teaching set; a validator result remains machine evidence only and cannot establish full PDF/UA conformance alone.
 
 ## Gate disposition after verification
 
-The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status. The remaining hard-veto work is access to the complete authorized normative texts, a claim-by-claim mapping of the curriculum to those texts, and a local veraPDF run. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
+The source inventory now has direct official ISO records for the governing PDF 2.0, PDF/UA-2, PDF/X-6, and PDF/A-4 identities and current status, plus a pinned local veraPDF run. The remaining hard-veto work is access to the complete authorized normative texts and a claim-by-claim mapping of the curriculum to those texts. Until that is completed, the source gate remains `CHANGES_REQUIRED`; a 995 score is not claimed.
