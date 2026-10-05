@@ -1,0 +1,16 @@
+{
+  "standard": "ACOS Compass source gate",
+  "target": 995,
+  "maximum": 1000,
+  "status": "CHANGES_REQUIRED",
+  "reason": "The source inventory is strong but source-by-source inspection, version capture, claim mapping, and independent challenge are not complete.",
+  "hard_vetoes": [
+    "unsupported normative claim",
+    "superseded standard without version note",
+    "summary or search result used as sole material evidence",
+    "hidden source conflict",
+    "local experiment presented as universal rule",
+    "unverified claim of university, standards-body, validator, or publisher support"
+  ],
+  "next_gate": "Complete sources/source-register.md, score every factor with evidence notes, run independent source challenge, then update status only if 995 is supported."
+}
