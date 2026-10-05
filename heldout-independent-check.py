@@ -1,0 +1,5 @@
+import json,hashlib
+from pathlib import Path
+b=Path(__file__).parent;raw=json.loads((b/'heldout-nested-widthpatched-ua2.json').read_text());v=raw['report']['jobs'][0]['validationResult'][0];d=v['details'];p=json.loads((b/'heldout-preservation-check.json').read_text())
+checks={'ua2_zero_failed_rules':d['failedRules']==0,'ua2_zero_failed_checks':d['failedChecks']==0,'all_rules_passed':d['passedRules']==1727,'all_checks_passed':d['passedChecks']==657,'page_count_preserved':p['comparisons']['pages'] is True,'geometry_preserved':p['comparisons']['mediabox'] is True,'text_hash_preserved':p['comparisons']['text_sha256'] is True,'raster_hash_preserved':p['comparisons']['raster_sha256'] is True,'artifact_hash_matches_receipt':hashlib.sha256((b/'shaping-fixture-heldout-nested-widthpatched-tagged.pdf').read_bytes()).hexdigest()==p['tagged']['sha256']}
+print(json.dumps({'checks':checks,'all_pass':all(checks.values()),'interpretation':'Held-out complex-script case independently reaches the same PDF/UA-2 machine pass with byte-preserved geometry/text/raster observations; human and production scope remain open.'},indent=2));assert all(checks.values())
