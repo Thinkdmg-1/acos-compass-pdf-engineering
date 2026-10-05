@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "pypdf_hash_preserved": true,
+    "poppler_hash_preserved": true,
+    "known_parser_divergence_recorded": true,
+    "combined_pypdf_nonempty": true,
+    "combined_poppler_nonempty": true,
+    "pypdf_receipt_consistent": true,
+    "poppler_receipt_consistent": true
+  },
+  "all_pass": true,
+  "interpretation": "The combined semantic layer preserves each parser path relative to the tagged source; the expected pypdf/Poppler divergence for combining/RTL text remains visible and is not collapsed."
+}
