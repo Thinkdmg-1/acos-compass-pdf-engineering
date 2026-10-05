@@ -25,3 +25,11 @@ The visual inspection found a clean A4 page geometry, a coherent forced break, a
 ## Interpretation
 
 The fixture supplies the previously missing browser/version evidence for the curriculum's CSS page-size and fragmentation claims. It also demonstrates the transfer boundary described by CSS Paged Media: an element can exceed the page box and the user agent determines the resulting fragmentation. The fixture does not establish cross-browser equivalence; another engine, print dialog, margin setting, or header/footer policy may produce different bytes or page counts.
+
+## Firefox comparison and divergence
+
+Firefox `111.0` was run with its headless `--screenshot` path at 794 × 1123 px. The screenshot is a **screen-media** observation, not a print-to-PDF result. In that path, the explicit page break does not create a separate screenshot page and the overflow probe remains in the continuous viewport. This is a useful divergence record, but it does not count as a second print-engine conformance result.
+
+Firefox screenshot SHA-256: `c8235a702d369d5e5c9d1b4bef81d3b103648ce5a5c7258c35b71a9e43937da4`
+
+The remaining browser-study action is a second engine's actual print path or a declared reason that it cannot be obtained in the current environment. The Chrome print result remains scoped to Chrome 154 and its frozen print settings.

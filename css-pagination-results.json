@@ -7,5 +7,9 @@
   "form_feed_count": 4,
   "contains_forced_page": true,
   "contains_overflow_probe": true,
-  "text_len": 1419
+  "text_len": 1419,
+  "firefox_version": "111.0",
+  "firefox_screenshot_sha256": "c8235a702d369d5e5c9d1b4bef81d3b103648ce5a5c7258c35b71a9e43937da4",
+  "firefox_path": "headless --screenshot screen-media only; not a print-to-PDF result",
+  "firefox_divergence": "forced page break and overflow remain in one continuous screen viewport"
 }
