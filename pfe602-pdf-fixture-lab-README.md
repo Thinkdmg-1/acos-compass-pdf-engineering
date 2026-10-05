@@ -75,3 +75,33 @@ The Adobe-hosted PDF 32000-1 reference was inspected as a historical implementat
 ### Namespace and tag negative controls
 
 After the structure-tree reading, four negative controls changed namespace or marked-content tag choices. None repaired §8.2.2. The child-namespace variant matched the one-rule state; removing the document namespace, using `/NonStruct`, or using `/Span` introduced additional failures. The outcomes and an independent existence/state check are preserved in [`namespace-linkage-experiments.json`](namespace-linkage-experiments.json) and [`namespace-linkage-independent-check.json`](namespace-linkage-independent-check.json).
+
+### Nested semantic-parent machine pass
+
+The decisive structure experiment mirrors the inspected passing specimen: each real marked-content sequence is represented by a semantic parent (`/H1` or `/P`) whose `/K` child is a `/NonStruct` MCID leaf. The corrected source fixture uses four lines and has the unsupported emoji sequence removed; the two measured width entries remain corrected.
+
+- Reproducer: [`tag-noemoji-nested.py`](tag-noemoji-nested.py)
+- Output: [`shaping-fixture-noemoji-nested-tagged.pdf`](shaping-fixture-noemoji-nested-tagged.pdf)
+- Fresh veraPDF receipt: [`noemoji-nested-ua2.json`](noemoji-nested-ua2.json)
+- Preservation receipt: [`nested-preservation-check.json`](nested-preservation-check.json)
+- Independent checker: [`nested-independent-check.py`](nested-independent-check.py) / [`nested-independent-check.json`](nested-independent-check.json)
+
+Fresh veraPDF PDF/UA-2 validation reports **1,727 rules passed / 0 failed and 470 checks passed / 0 failed**. Independent pypdf and Poppler-based preservation checks retain page count, MediaBox, extracted-text hash, and 144 DPI raster hash. This is a machine-validator pass for one source-corrected diagnostic specimen; it does not establish human screen-reader behavior, production-export conformance, PDF/A, PDF/X-6, or a universal repair recipe. The original untagged and failed repair cohorts remain preserved.
+
+
+Cross-profile check: the same nested machine-pass specimen fails fresh PDF/A-4 validation at 104 passed / 5 failed rules and 337 passed / 8 failed checks (clauses 6.1.2, 6.1.3, 6.2.4.3, and 6.7.3). The PDF/UA-2 zero-failure result is therefore profile-specific. The PDF/A-4 receipt is [`noemoji-nested-pdfa4.json`](noemoji-nested-pdfa4.json).
+
+### Held-out complex-script transfer case
+
+A fresh held-out fixture was generated after the nested repair was chosen. It uses different Latin combining text, a different Hebrew run, Myanmar text with an additional word, Oriya text with an additional word, and a plain fallback line. The same semantic-parent method was applied, with width entries measured from the fresh validator diagnostics and independently patched.
+
+- Held-out generator: [`make-heldout-fixture.py`](make-heldout-fixture.py)
+- Held-out tagger: [`tag-heldout.py`](tag-heldout.py)
+- Width repair: [`patch-heldout-widths.py`](patch-heldout-widths.py)
+- Source fixture: [`shaping-fixture-heldout.pdf`](shaping-fixture-heldout.pdf)
+- Tagged output: [`shaping-fixture-heldout-nested-widthpatched-tagged.pdf`](shaping-fixture-heldout-nested-widthpatched-tagged.pdf)
+- Fresh veraPDF receipt: [`heldout-nested-widthpatched-ua2.json`](heldout-nested-widthpatched-ua2.json)
+- Preservation receipt: [`heldout-preservation-check.json`](heldout-preservation-check.json)
+- Independent checker: [`heldout-independent-check.py`](heldout-independent-check.py) / [`heldout-independent-check.json`](heldout-independent-check.json)
+
+The held-out case independently passes PDF/UA-2 at **1,727/0 rules and 657/0 checks**. Page count, MediaBox, extracted-text hash, and raster hash remain equal to its source fixture. This demonstrates transfer for the stated fixture family only; it is not a universal repair claim or human accessibility result.
