@@ -1,0 +1,19 @@
+name: ACOS release gate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fail-closed-governance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Run fail-closed release gate
+        run: python3 governance/release_gate_check.py
+      - name: Check patch whitespace
+        run: git diff --check
