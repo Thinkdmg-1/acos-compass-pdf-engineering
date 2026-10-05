@@ -1,0 +1,125 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.2",
+  "buildDate" : 1780497780000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.2",
+  "buildDate" : 1780497960000
+},{
+  "id" : "apps",
+  "version" : "1.30.2",
+  "buildDate" : 1780498500000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/acos-compass-pdf-engineering-repo/reports/pfe611-tagged-repair-2026-10-06/truetype-tagged-metadata-repaired.pdf",
+  "size" : 26466
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 1724,
+    "failedRules" : 3,
+    "passedChecks" : 2540,
+    "failedChecks" : 5,
+    "tags" : [ "artifact", "syntax", "structure", "table" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.2.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "artifact" ],
+      "description" : "Content that is not considered real shall be an artifact",
+      "object" : "SESimpleContentItem",
+      "test" : "isTaggedContent == true || parentsTags.contains('Artifact') == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](3 0 obj PDPage)/contentStream[0](16 0 obj PDSemanticContentStream)/content[0]/contentItem[0]",
+        "errorMessage" : "Content is neither marked as Artifact nor tagged as real content",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 32005:2023",
+      "clause" : "Table 5. Table-content",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "structure", "table" ],
+      "description" : "<Table> shall not contain content items",
+      "object" : "SETable",
+      "test" : "hasContentItems == false",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/StructTreeRoot[0](17 0 obj PDStructTreeRoot)/K[0](18 0 obj SEDocument Document)/K[0](19 0 obj SENonStruct NonStruct)/K[3](33 0 obj SENonStruct NonStruct)/K[1](36 0 obj SETable Table)",
+        "errorMessage" : "<Table> contains content item(s)",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-2:2024",
+      "clause" : "8.8",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 3,
+      "tags" : [ "syntax" ],
+      "description" : "All destinations whose target lies within the current document shall be structure destinations",
+      "object" : "PDDestination",
+      "test" : "isStructDestination == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/Outlines[0](outline 63 0)/Dest[0]",
+        "errorMessage" : "Destination in Outline item, OpenAction or Link annotation is not a structure destination",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/Outlines[1](outline 62 0)/Dest[0]",
+        "errorMessage" : "Destination in Outline item, OpenAction or Link annotation is not a structure destination",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/Outlines[2](outline 64 0)/Dest[0]",
+        "errorMessage" : "Destination in Outline item, OpenAction or Link annotation is not a structure destination",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-2 + Tagged PDF validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1791214617594,
+  "finish" : 1791214618065,
+  "duration" : "00:00:00.471",
+  "difference" : 471
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1791214617533,
+    "finish" : 1791214618095,
+    "duration" : "00:00:00.562",
+    "difference" : 562
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "compliantPdfaCount" : 0,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "nonCompliantPdfaCount" : 1,
+    "successfulJobCount" : 1
+  }
+}}}
