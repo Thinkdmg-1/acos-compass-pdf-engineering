@@ -1,0 +1,45 @@
+{
+  "source": {
+    "file": "shaping-fixture-heldout-shaped-semantic-tagged.pdf",
+    "pages": 1,
+    "text_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "has_struct_root": true,
+    "has_metadata": true,
+    "has_output_intents": false,
+    "trim_box": null,
+    "art_box": null,
+    "info": {}
+  },
+  "variant": {
+    "file": "x6-metadata-box-variant-v2.pdf",
+    "pages": 1,
+    "text_sha256": "6227d0e3d265543e756b18df480b103f1937072ecb53fa78a33cd8eaa604cf37",
+    "has_struct_root": false,
+    "has_metadata": true,
+    "has_output_intents": true,
+    "trim_box": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "art_box": [
+      0.0,
+      0.0,
+      612.0,
+      792.0
+    ],
+    "info": {
+      "/GTS_PDFXVersion": "PDF/X-6",
+      "/GTS_PDFXConformance": "PDF/X-6"
+    }
+  },
+  "checks": {
+    "page_count_preserved": true,
+    "text_hash_preserved": true,
+    "x6_catalog_keys_present": true,
+    "semantic_structure_preserved": false
+  },
+  "all_expected_checks_pass": false,
+  "interpretation": "Metadata, output-intent and page-box injection reached the Rust X6 implementation path and preserved page count/text extraction, but the pypdf rewrite dropped StructTreeRoot. veraPDF therefore reports PDF/UA-2 and PDF/A-4 failures. This is a controlled negative result, not a conformance claim."
+}
