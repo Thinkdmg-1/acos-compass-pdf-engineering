@@ -32,3 +32,11 @@ This is a controlled repair result for one fixture. It does not establish PDF/UA
 ## Isolated outline ablation
 
 A separate ablation removed the catalog Outlines entry from the repaired copy, without changing page content or the structure tree. Its PDF/UA-2 result was 1,725 rules passed and 2 failed, with 2 failed checks; removing Outlines eliminated 8.8. It remains non-compliant because artifact marking and table-content structure still fail. This is diagnostic evidence only: removing navigation is a product regression and is not accepted as a production repair.
+
+## Final bounded machine-pass variant
+
+The reproducible [`final-repair.py`](final-repair.py) applies the complete sequence to the metadata-repaired copy: it removes the invalid outline tree, removes the stray integer child from the Table structure element, and wraps only the initial page-background paint in Artifact marked content. The fresh report is [`variant-combined-artifact-repair-ua2.json`](variant-combined-artifact-repair-ua2.json), with stderr in the neighboring capture.
+
+Result: **compliant**, 1,727 rules passed and 0 failed; 2,539 checks passed and 0 failed. Repaired PDF digest: `2b668a09aabf10fae25679dd18b51a305f07905042af8b5acd8a1ad92ddb84e5`.
+
+This is a machine-validator pass for one deliberately repaired copy. It does not prove that the source export is compliant, that removing outlines is acceptable for the product, that the remaining content order is usable to a person, or that PDF/UA-2 is satisfied under human review. The original fixture, failed repairs, and destructive ablations remain preserved.
