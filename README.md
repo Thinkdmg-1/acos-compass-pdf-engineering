@@ -1,63 +1,32 @@
-# ACOS Compass: doctoral PDF engineering curriculum
+# Experimental combined PDF/A-4 and PDF/UA-2 machine pass — 2026-10-06
 
-This repository is the durable learning home for Echo's Compass. It turns the three-failure recovery rule into a repeatable curriculum for PDF engineering: standards study, university coursework, controlled laboratories, independent challenge, qualifying examinations, candidacy, and dissertation research.
+**Status:** EXECUTED / PROFILE-SCOPED MACHINE PASS
 
-The curriculum is intentionally stronger than a production checklist. It requires a learner to understand the PDF object model, typography and shaping, layout algorithms, accessibility, color science, print production, preservation, reproducible software, research methods, and original contribution. A polished export does not count as doctoral evidence.
+This experiment starts from the bounded PDF/UA-2 repair copy and adds the minimum document-level metadata required for a PDF/A-4 validator run. It is a separate experimental artifact; the original tagged fixture and the earlier repair variants remain preserved.
 
-## Repository map
+## Controlled changes
 
-- `curriculum/doctoral-curriculum.md` — four-year, 60-credit doctoral-equivalent sequence and gates.
-- `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
-- `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
-- `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
-- `sources/source-register.md` — source inventory and required inspections.
-- `sources/official-source-verification.md` — official ISO status and scope checks.
-- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
-- `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
-- `sources/independent-source-challenge.md` — second-path identity, version, scope, and conflict challenge for the source register.
-- `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
-- `evidence/foundation-study.md` — actual completed foundation study.
-- `evidence/independent-challenge.md` — independent technical challenge and limits.
-- `evidence/pfe611-accessibility-review-2026-10-05.md` — structured tagged-PDF review with completed checks and unavailable human checks separated.
-- `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
-- `evidence/standards-access-recheck-2026-10-06.md` — current sponsored-access, public-model, and errata recheck with custody boundaries.
-- `evidence/arlington-object-model-lab-2026-10-06.md` — pinned Arlington TSV inspection and independent catalog/structure comparison.
-- `evidence/pdf2normrefs-graph-lab-2026-10-06.md` — pinned PDF 2.0 normative-reference graph traversal and integrity receipt.
-- `evidence/public-errata-profile-recheck-2026-10-06.md` — current PDF/A-4 and PDF/X-6 errata, revision, and copyright-boundary receipt.
-- `evidence/pdf20-examples-lab-2026-10-06.md` — dual-reader inspection of public PDF 2.0 examples and deliberate edge cases.
-- `evidence/entry-diagnostic-2026-10-06.md` — five-part entry diagnostic classification and next-gate boundaries.
-- `reports/pfe604-pagination-lab-2026-10-06/` — bounded greedy/dynamic-programming pagination lab with an independent exhaustive oracle.
-- `reports/year1-qualifying-exam-2026-10-06/` — Year 1 qualifying-exam attempt with section dispositions and remediation requirements.
-- `reports/pfe601-rerun-2026-10-06/` — source-level rerun receipt for the object-model and xref-repair labs.
-- `evidence/pfe602-font-capability-2026-10-06.md` — installed-font metadata and shaping-toolchain boundary for PFE 602.
-- `reports/css-pagination-rerun-2026-10-06/` — independent pypdf/Poppler rerun of the frozen Chrome pagination artifact.
-- `evidence/pfe604-color-profile-receipt-2026-10-06.md` — ICC profile inventory and output-intent inspection with print-color boundaries.
-- `reports/pfe605-pilot-2026-10-06/` — frozen analysis protocol, exploratory baseline, and executed font/tag follow-up pilot.
-- `reports/verapdf-runtime-capability-2026-10-06/` — fresh veraPDF launcher check showing the current Java-runtime boundary.
-- `reports/verapdf-runtime-rerun-2026-10-06/` — fresh veraPDF 1.30.2 PDF/A-4 and PDF/UA-2 runs using a portable Temurin runtime.
-- `reports/verapdf-rerun-independent-check-2026-10-06/` — separate parser/assertion check of fresh validator reports and profile claims.
-- `reports/pdfoxide-pdfx6-2026-10-06/` — PDF Oxide PDF/X-6 capability probe preserving its installed API conflict.
-- `reports/pfe611-tagged-repair-2026-10-06/` — controlled PDF/UA-2 metadata/namespace repair with fresh validator comparison.
-  - includes failed and ablated variants plus one bounded machine-pass copy; no human conformance claim.
-  - includes an independent pypdf/Poppler text, geometry, and raster preservation check.
-  - includes fresh PDF/A-4 and WTPDF cross-profile checks.
-- `labs/` — executable exercises and saved results.
-- `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
-- `reports/production-pdfa4-2026-10-05/` — separately authored office-export experiment with preserved initial failures and a bounded post-export PDF/A-4 repair pass; PDF/UA-2 remains failed.
-- `reports/profile-test-plan-2026-10-05/` — declared next-step plan for authorized normative-text custody, profile tests, and human accessibility review.
-- `reports/human-review-partial-2026-10-05/` — bounded 144/288 DPI visual review receipt; explicitly not a PDF/UA conformance review.
-- `reports/preflight-capability-inventory-2026-10-05/` — fresh executable inventory showing why PDF/X-6 preflight remains unexecuted in this environment.
-- `reports/repository-integrity-2026-10-05/` — independent source-ID, path, package, and release-state consistency receipt.
-- `governance/completion-audit-2026-10-05.md` — current requirement-by-requirement completion audit and hard-veto decision.
+- set the PDF header and catalog version to PDF 2.0;
+- omitted the document information dictionary, which PDF/A-4 disallows here;
+- added a deterministic trailer identifier;
+- copied the embedded sRGB output intent and ICC profile semantics from the separately repaired PDF/A-4 fixture;
+- added XMP identification for PDF/A-4 (`pdfaid:part=4`, `pdfaid:rev=2020`) and PDF/UA-2 (`pdfuaid:part=2`, `pdfuaid:rev=2024`).
 
-## Evidence state
+The repair source is [`repair.py`](repair.py), and the resulting bytes are [`combined-pdfa4-ua2.pdf`](combined-pdfa4-ua2.pdf), SHA-256 `68b9fb2e89c450284c1a8294faa96ac0e1e03020a552ad3b94ab6cdfdfb8000a`.
 
-The repository currently contains a foundation recovery slice. It does not claim a PhD, completed coursework, qualifying-exam passage, candidacy, dissertation, or universal PDF conformance. Future work must advance through the gates in the curriculum and update the evidence state explicitly.
+## Fresh veraPDF 1.30.2 results
 
-## Operating rule
+| Profile | Rules passed/failed | Checks passed/failed | Result |
+|---|---:|---:|---|
+| PDF/A-4 | 109 / 0 | 1,635 / 0 | **Compliant** |
+| PDF/UA-2 + Tagged PDF | 1,727 / 0 | 2,539 / 0 | **Compliant** |
 
-When three failures occur on the same capability, stop repeating the unchanged approach. Return to the curriculum, identify the smallest falsifiable deficiency, complete the relevant study and exercise, test an unfamiliar case, obtain independent challenge, and only then retry the production task.
+The JSON receipts and stderr captures are [`4.json`](4.json), [`4.stderr`](4.stderr), [`ua2.json`](ua2.json), and [`ua2.stderr`](ua2.stderr). The run used the pinned repository veraPDF 1.30.2 launcher and the recorded portable Temurin JRE from the parent runtime receipt.
 
-## Sources
+## Independent preservation check
 
-The source register distinguishes standards, primary research, university teaching material, validator documentation, and informative guidance. The 995 target is a hard source-quality gate, not a decorative claim. A score is recorded only after source identity, authority, version, scope, access, applicability, and limitations are evidenced.
+[`independent-check.json`](independent-check.json) uses a separate pypdf and Poppler path. Relative to the bounded PDF/UA-2 repair copy, it found equal page count, MediaBox, extracted-text digest, and 144 DPI raster digest. The experimental copy adds `/OutputIntents` and `/Version` as expected for PDF/A-4 metadata; it does not establish unchanged navigation, because the earlier bounded repair had already removed `/Outlines`.
+
+## Limits and release meaning
+
+This is one deliberately repaired specimen and two profile-scoped machine-validator passes. It does not prove that the source export is compliant, that the outline removal is an acceptable product decision, that a production exporter will reproduce the result, or that screen-reader, keyboard, visual, color-management, or second-reviewer checks pass. PDF/X-6 remains untested because the available validators do not expose a usable PDF/X-6 profile and the installed PDF Oxide API rejected level `6`. The repository therefore remains `INCOMPLETE / CHANGES_REQUIRED` under the 995 source gate.
