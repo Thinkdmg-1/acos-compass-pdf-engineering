@@ -1,0 +1,56 @@
+{
+  "protocol_id": "PFE605-2026-10-06-v1",
+  "rows": [
+    {
+      "case": "cff-untagged",
+      "sha256": "55e66f3adfacca9862c8f39b479698757bc75f0fae2b2a3a5c1a449383934352",
+      "pages": 1,
+      "boxes": [
+        [
+          792.0,
+          612.0
+        ]
+      ],
+      "tag_tree": false,
+      "marked": "None",
+      "lang": "None",
+      "text_len": 273,
+      "normalized_text": true,
+      "pdf_version": "1.4"
+    },
+    {
+      "case": "truetype-untagged",
+      "sha256": "f15751d6e3799b79f479ef80c5a1878c2459c1309b85711caf4e83004e6c1544",
+      "pages": 1,
+      "boxes": [
+        [
+          792.0,
+          612.0
+        ]
+      ],
+      "tag_tree": false,
+      "marked": "None",
+      "lang": "None",
+      "text_len": 273,
+      "normalized_text": true,
+      "pdf_version": "1.4"
+    },
+    {
+      "case": "truetype-tagged",
+      "sha256": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6",
+      "pages": 1,
+      "boxes": [
+        [
+          792.0,
+          612.0
+        ]
+      ],
+      "tag_tree": true,
+      "marked": "{'/Type': '/MarkInfo', '/Marked': True}",
+      "lang": "en",
+      "text_len": 273,
+      "normalized_text": true,
+      "pdf_version": "1.4"
+    }
+  ]
+}
