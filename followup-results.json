@@ -1,0 +1,66 @@
+{
+  "protocol_id": "PFE605-2026-10-06-v1",
+  "tool_versions": {
+    "pypdf": "6.10.0",
+    "poppler": "pdftoppm version 26.05.0"
+  },
+  "rows": [
+    {
+      "case": "cff-untagged",
+      "bytes": 30133,
+      "sha256": "55e66f3adfacca9862c8f39b479698757bc75f0fae2b2a3a5c1a449383934352",
+      "pages": 1,
+      "box": [
+        792.0,
+        612.0
+      ],
+      "pdf_version": "%PDF-1.4",
+      "tag_tree": false,
+      "marked": "None",
+      "lang": "None",
+      "outline_count": 0,
+      "normalized_text_sha256": "45f7d225e5a6d7f35e7981ba8c6da4f174ad9a13d4c5dbdac89f871cd90d42b3",
+      "critical_text_present": true,
+      "raster_sha256": "f9ff14066f217631b5483448148138619557645201d26e76a78b69261be2664c",
+      "raster_bytes": 55092
+    },
+    {
+      "case": "truetype-untagged",
+      "bytes": 19439,
+      "sha256": "f15751d6e3799b79f479ef80c5a1878c2459c1309b85711caf4e83004e6c1544",
+      "pages": 1,
+      "box": [
+        792.0,
+        612.0
+      ],
+      "pdf_version": "%PDF-1.4",
+      "tag_tree": false,
+      "marked": "None",
+      "lang": "None",
+      "outline_count": 0,
+      "normalized_text_sha256": "45f7d225e5a6d7f35e7981ba8c6da4f174ad9a13d4c5dbdac89f871cd90d42b3",
+      "critical_text_present": true,
+      "raster_sha256": "33512817cec6a859e4c831ef74eccf7769533717959c6d7d567e95bce6441d7c",
+      "raster_bytes": 79802
+    },
+    {
+      "case": "truetype-tagged",
+      "bytes": 25323,
+      "sha256": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6",
+      "pages": 1,
+      "box": [
+        792.0,
+        612.0
+      ],
+      "pdf_version": "%PDF-1.4",
+      "tag_tree": true,
+      "marked": "{'/Type': '/MarkInfo', '/Marked': True}",
+      "lang": "en",
+      "outline_count": 2,
+      "normalized_text_sha256": "45f7d225e5a6d7f35e7981ba8c6da4f174ad9a13d4c5dbdac89f871cd90d42b3",
+      "critical_text_present": true,
+      "raster_sha256": "33512817cec6a859e4c831ef74eccf7769533717959c6d7d567e95bce6441d7c",
+      "raster_bytes": 79802
+    }
+  ]
+}
