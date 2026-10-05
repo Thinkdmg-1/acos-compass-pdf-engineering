@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "ua2_failed_rules_exactly_2": true,
+    "ua2_failed_checks_exactly_6": true,
+    "remaining_clauses_exact": true,
+    "page_count_preserved": true,
+    "geometry_preserved": true,
+    "text_hash_preserved": true,
+    "raster_hash_preserved": true,
+    "artifact_hash_matches_receipt": true
+  },
+  "all_pass": true,
+  "interpretation": "Expected bounded repair state: exact remaining validator failures are preserved; preservation checks pass."
+}
