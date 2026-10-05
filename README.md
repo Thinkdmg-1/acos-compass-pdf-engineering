@@ -1,32 +1,33 @@
-# veraPDF validation run — 1.30.2
+# ACOS Compass: doctoral PDF engineering curriculum
 
-**Run date:** 2026-10-05  
-**Validator:** veraPDF Greenfield CLI 1.30.2, built 2026-06-03  
-**Profiles:** PDF/A-4 (`4`) and PDF/UA-2 + Tagged PDF (`ua2`)  
-**Java runtime:** Temurin/OpenJDK 21.0.12.1, x86_64 macOS  
-**Installer source:** <https://software.verapdf.org/releases/verapdf-installer.zip>  
-**Installer SHA-256:** `6cc6341cb1af644044054b81f00a6590a7918abb18f762243de115258bcad838`
+This repository is the durable learning home for Echo's Compass. It turns the three-failure recovery rule into a repeatable curriculum for PDF engineering: standards study, university coursework, controlled laboratories, independent challenge, qualifying examinations, candidacy, and dissertation research.
 
-The installer was downloaded from the official veraPDF distribution site and installed into the ignored `work/` area. The CLI and documentation packs were selected; the GUI and sample plugins were not selected. The local machine does not have `gpg`, so the detached signature was downloaded but could not be cryptographically checked in this run. The SHA-256 digest is preserved above.
+The curriculum is intentionally stronger than a production checklist. It requires a learner to understand the PDF object model, typography and shaping, layout algorithms, accessibility, color science, print production, preservation, reproducible software, research methods, and original contribution. A polished export does not count as doctoral evidence.
 
-## Command form
+## Repository map
 
-```text
-verapdf --format json --flavour 4 <file.pdf>
-verapdf --format json --flavour ua2 <file.pdf>
-```
+- `curriculum/doctoral-curriculum.md` — four-year, 60-credit doctoral-equivalent sequence and gates.
+- `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
+- `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
+- `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
+- `sources/source-register.md` — source inventory and required inspections.
+- `sources/official-source-verification.md` — official ISO status and scope checks.
+- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
+- `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
+- `evidence/foundation-study.md` — actual completed foundation study.
+- `evidence/independent-challenge.md` — independent technical challenge and limits.
+- `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
+- `labs/` — executable exercises and saved results.
+- `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
 
-The complete JSON reports and stderr captures are in this directory. `results-summary.json` is a derived index, not a substitute for the raw reports.
+## Evidence state
 
-## Results
+The repository currently contains a foundation recovery slice. It does not claim a PhD, completed coursework, qualifying-exam passage, candidacy, dissertation, or universal PDF conformance. Future work must advance through the gates in the curriculum and update the evidence state explicitly.
 
-| Fixture | PDF/A-4 | PDF/UA-2 | Interpretation |
-|---|---:|---:|---|
-| `pfe601-minimal.pdf` | fail: 6 checks / 6 rules | fail: 7 checks / 7 rules | minimal syntax/rendering teaching file; not an archival or accessibility deliverable |
-| `pfe601-repaired-xref.pdf` | fail: 6 checks / 6 rules | fail: 7 checks / 7 rules | xref repair preserved parser/rendering behavior but did not create profile conformance |
-| `truetype-tagged.pdf` | fail: 276 checks / 6 rules | fail: 7 checks / 5 rules | useful tagged specimen with remaining PDF/UA-2 defects; no PDF/A-4 claim |
-| `truetype-untagged.pdf` | fail: 276 checks / 6 rules | fail: 257 checks / 5 rules | intentionally untagged comparison specimen |
-| `cff-untagged.pdf` | fail: 276 checks / 6 rules | fail: 257 checks / 5 rules | CFF/Type3 comparison specimen; not a missing-font conclusion |
+## Operating rule
 
-The validator result is machine evidence only. veraPDF's own documentation distinguishes machine-verifiable PDF/UA checks from human checkpoints. No row above establishes full PDF/UA conformance, physical print quality, screen-reader acceptance, or archival suitability.
+When three failures occur on the same capability, stop repeating the unchanged approach. Return to the curriculum, identify the smallest falsifiable deficiency, complete the relevant study and exercise, test an unfamiliar case, obtain independent challenge, and only then retry the production task.
 
+## Sources
+
+The source register distinguishes standards, primary research, university teaching material, validator documentation, and informative guidance. The 995 target is a hard source-quality gate, not a decorative claim. A score is recorded only after source identity, authority, version, scope, access, applicability, and limitations are evidenced.

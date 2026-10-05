@@ -2,6 +2,8 @@
 
 This matrix prevents a curriculum topic from masquerading as a verified standard requirement. The current matrix is a live audit record; `MISSING` items block the 995 release gate.
 
+The frozen claim IDs and release conditions are defined in [`frozen-claim-inventory.md`](frozen-claim-inventory.md). This matrix records the evidence state for each claim family; it does not award a score by implication.
+
 | Claim family | Curriculum location | Source | Evidence currently inspected | State | Missing evidence / next action |
 |---|---|---|---|---|---|
 | PDF 2.0 identity, purpose, scope | PFE 601 | S-001 / official ISO record | Edition, date, 986 pages, committee, purpose, explicit exclusions, 2026 confirmation | OBSERVED | Authorized full text or approved extract; clause-by-clause map |
@@ -15,7 +17,7 @@ This matrix prevents a curriculum topic from masquerading as a verified standard
 | Typography and layout principles | PFE 603 | S-009/S-010 | MIT readings and assignments actually read; adaptations recorded | IMPLEMENTED STUDY | Independent pedagogical challenge and current research corroboration |
 | Doctoral research-methods sequence | PFE 605 | S-009/S-011/S-012/S-015 | MIT doctoral readings, RIT program structure, Reading research scope, ASA statement inspected | IMPLEMENTED STUDY | Independent committee-style examination |
 | Pagination objective and dynamic programming | PFE 604 | S-013/S-014 | Pagination paper inspected through algorithm and constraints; local model independently tested | IMPLEMENTED STUDY | Full Knuth–Plass source and reproduction of published benchmark |
-| Validator scope | PFE 611/PFE 614 | S-016 / official veraPDF docs and corpus | Official docs describe formalized `shall` rules, machine-versus-human PDF/UA limits, profile selection, corpus scope, and a v1.26.2 release page | OBSERVED / NO LOCAL RUN | Install or recover an approved veraPDF binary, pin version/profile/command, run on declared fixtures, archive report, and preserve human-review boundary |
+| Validator scope | PFE 611/PFE 614 | S-016 / official veraPDF docs, corpus, and `reports/verapdf-1.30.2/` | Official docs describe formalized `shall` rules, machine-versus-human PDF/UA limits, profile selection, corpus scope, and a v1.30.2 release; local PDF/A-4 and PDF/UA-2 reports are archived for five teaching fixtures | IMPLEMENTED STUDY / LIMITED | Interpret and repair the recorded failures; add a human accessibility review and a declared production fixture before any conformance claim |
 | Vendor implementation behavior | PFE 601/PFE 613 | S-017 | Not used as normative authority | PROPOSED SUPPORT | Capture versioned vendor source only where needed and corroborate with ISO |
 | Independent challenge of completed labs | PFE 601/PFE 602/PFE 604/PFE 611 | evidence/independent-audit-2026-10-05.md | Separate reviewer reproduced bounded computational, geometry, tagging, font, hash, and raster checks and recorded six scope limits | IMPLEMENTED STUDY / LIMITED | Extend challenge to authorized normative clauses, validator version/run, screen-reader review, and held-out production files |
 
