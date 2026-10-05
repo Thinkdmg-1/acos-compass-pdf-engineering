@@ -13,12 +13,12 @@ This score follows the frozen rubric in `governance/source-quality-gate.md`. Poi
 | Directness to the claim | 170 | 130 | Official records directly establish identity, edition, status, and scope; PDF/UA-2 public preview exposes relevant section headings. | Full normative requirements are not available for every claim; identity evidence cannot support clause-level assertions. |
 | Technical completeness | 150 | 45 | Labs, validator reports, public preview headings, and research adaptations expose parts of the technical method. | Full ISO clauses, exceptions, tables, and conformance conditions are not mapped. |
 | Currency and version control | 120 | 115 | ISO current/confirmed dates, W3C publication statuses, veraPDF 1.30.2 build, hashes, and report dates are recorded. | A small number of university and research sources require explicit archival/version metadata. |
-| Reproducibility | 120 | 95 | Local labs, commands, fixtures, raw validator reports, hashes, and independent challenge are preserved. | Standards-based reproduction still requires authorized text and production-condition fixtures. |
+| Reproducibility | 120 | 100 | Local labs, commands, fixtures, raw validator reports, hashes, independent challenge, and a separately authored office-export production experiment are preserved. | Standards-based reproduction still requires authorized text and a repaired production-condition fixture. |
 | Independent corroboration | 100 | 85 | Separate source challenge, independent lab audit, multiple parsers/renderers, and veraPDF evidence are recorded. | No independent clause-by-clause standards review or human screen-reader review is complete. |
-| Scope and transfer limits | 80 | 75 | Draft-versus-standard, PDF-versus-web, machine-versus-human, parser-versus-print, and teaching-versus-production boundaries are explicit. | Production transfer boundaries for PDF/X, PDF/A, color, and vendor acceptance remain untested. |
+| Scope and transfer limits | 80 | 78 | Draft-versus-standard, PDF-versus-web, machine-versus-human, parser-versus-print, and teaching-versus-production boundaries are explicit; the office-export failure makes transfer risk concrete. | PDF/X, repaired PDF/A/PDF-UA, color, and vendor acceptance remain untested. |
 | Accessibility and recoverability | 40 | 35 | Public source links, local Markdown records, Git history, GitHub mirror, raw reports, and archive hashes are available. | Authorized standards text cannot be redistributed in this record; one installer signature check was unavailable because `gpg` is absent. |
 | Evidence integrity | 40 | 40 | Failures, corrections, missing evidence, and non-degree status are preserved; no numerical release claim is made. | No deduction. |
-| **Provisional total** | **1,000** | **780** | Evidence-supported working score only. | Hard veto still blocks release. |
+| **Provisional total** | **1,000** | **788** | Evidence-supported working score only. | Hard veto still blocks release. |
 
 ## Required path to 995
 
@@ -29,4 +29,3 @@ This score follows the frozen rubric in `governance/source-quality-gate.md`. Poi
 5. Re-score each factor, preserve dissent, and apply the hard-veto test before any release decision.
 
 The provisional total is an audit instrument. It is not a claim that the curriculum is 780/1000 complete, and it is not a substitute for resolving the hard veto.
-

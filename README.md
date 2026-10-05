@@ -1,36 +1,42 @@
-# ACOS Compass: doctoral PDF engineering curriculum
+# Production export path experiment — 2026-10-05
 
-This repository is the durable learning home for Echo's Compass. It turns the three-failure recovery rule into a repeatable curriculum for PDF engineering: standards study, university coursework, controlled laboratories, independent challenge, qualifying examinations, candidacy, and dissertation research.
+## Input and method
 
-The curriculum is intentionally stronger than a production checklist. It requires a learner to understand the PDF object model, typography and shaping, layout algorithms, accessibility, color science, print production, preservation, reproducible software, research methods, and original contribution. A polished export does not count as doctoral evidence.
+- Source: a minimal, separately authored ODT fixture containing a heading and three paragraphs.
+- Exporter: bundled LibreOffice `soffice` through `writer_pdf_Export` with `SelectPdfVersion=4`.
+- Export command:
 
-## Repository map
+  ```text
+  soffice --headless --convert-to 'pdf:writer_pdf_Export:SelectPdfVersion=4' --outdir <out> fixture.odt
+  ```
 
-- `curriculum/doctoral-curriculum.md` — four-year, 60-credit doctoral-equivalent sequence and gates.
-- `governance/three-failure-recovery.md` — ACOS Compass recovery rule.
-- `governance/study-plan.json` — ordered plan with inputs, methods, verification, and stop conditions.
-- `governance/source-quality-gate.md` — 995/1000 source gate and release rules.
-- `sources/source-register.md` — source inventory and required inspections.
-- `sources/official-source-verification.md` — official ISO status and scope checks.
-- `sources/claim-evidence-matrix.md` — claim-by-claim evidence states and remaining hard vetoes.
-- `sources/frozen-claim-inventory.md` — frozen claim IDs, evidence classes, release conditions, and explicit hard-veto items.
-- `sources/independent-source-challenge.md` — second-path identity, version, scope, and conflict challenge for the source register.
-- `sources/provisional-scorecard.md` — conservative factor-by-factor score with hard-veto status; explicitly not a release score.
-- `evidence/foundation-study.md` — actual completed foundation study.
-- `evidence/independent-challenge.md` — independent technical challenge and limits.
-- `evidence/pfe611-accessibility-review-2026-10-05.md` — structured tagged-PDF review with completed checks and unavailable human checks separated.
-- `evidence/retained-pdf-lessons.md` — scoped reusable lessons.
-- `labs/` — executable exercises and saved results.
-- `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
+- Fixture PDF SHA-256: `77bf5f4ca0807d6028c3121531293f10319e6ca2539b3a54fd041879ae9dceff`
+- Validator: veraPDF Greenfield CLI 1.30.2.
 
-## Evidence state
+## Results
 
-The repository currently contains a foundation recovery slice. It does not claim a PhD, completed coursework, qualifying-exam passage, candidacy, dissertation, or universal PDF conformance. Future work must advance through the gates in the curriculum and update the evidence state explicitly.
+| Profile | Result | Passed checks | Failed checks | Failed rules |
+|---|---:|---:|---:|---:|
+| PDF/A-4 | non-compliant | 388 | 10 | 5 |
+| PDF/UA-2 | non-compliant | 467 | 5 | 5 |
 
-## Operating rule
+## PDF/A-4 failures
 
-When three failures occur on the same capability, stop repeating the unchanged approach. Return to the curriculum, identify the smallest falsifiable deficiency, complete the relevant study and exercise, test an unfamiliar case, obtain independent challenge, and only then retry the production task.
+- ISO 19005-4:2020 6.1.3-4: Info key present without a permitted PieceInfo condition.
+- ISO 19005-4:2020 6.7.3-1: missing or invalid PDF/A identification extension schema.
+- ISO 19005-4:2020 6.2.4.3-2: DeviceRGB used without the required device-independent or output-intent condition (6 checks).
+- ISO 19005-4:2020 6.1.2-1: header is not `%PDF-2.n` as required for PDF/A-4.
+- ISO 19005-4:2020 6.1.3-5: document information dictionary contains entries beyond the permitted ModDate condition.
 
-## Sources
+## PDF/UA-2 failures
 
-The source register distinguishes standards, primary research, university teaching material, validator documentation, and informative guidance. The 995 target is a hard source-quality gate, not a decorative claim. A score is recorded only after source identity, authority, version, scope, access, applicability, and limitations are evidenced.
+- ISO 14289-2:2024 8.11.2-1: missing required `DisplayDocTitle=true` viewer preference.
+- ISO 14289-2:2024 8.8-1: internal destinations are not structure destinations.
+- ISO 14289-2:2024 5-1: missing PDF/UA identification metadata.
+- ISO 14289-2:2024 8.11.1-1: missing `dc:title` metadata.
+- ISO 14289-2:2024 8.2.5.2-1: structure tree root does not satisfy the PDF 2.0 namespace/Document-child requirement.
+
+## Disposition
+
+This experiment proves that selecting a PDF/A-4 export option in a general office exporter is not evidence of PDF/A-4 or PDF/UA-2 conformance. The failure report is retained as production-path evidence and a repair target. No production-ready or conformance claim is made.
+
