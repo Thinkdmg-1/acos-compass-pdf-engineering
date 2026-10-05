@@ -17,6 +17,7 @@ This matrix prevents a curriculum topic from masquerading as a verified standard
 | Pagination objective and dynamic programming | PFE 604 | S-013/S-014 | Pagination paper inspected through algorithm and constraints; local model independently tested | IMPLEMENTED STUDY | Full Knuth–Plass source and reproduction of published benchmark |
 | Validator scope | PFE 611/PFE 614 | S-016 | Documentation identified; tool version and test run not yet captured in this repository | MISSING | Pin validator version, run, archive report, and human-review boundary |
 | Vendor implementation behavior | PFE 601/PFE 613 | S-017 | Not used as normative authority | PROPOSED SUPPORT | Capture versioned vendor source only where needed and corroborate with ISO |
+| Independent challenge of completed labs | PFE 601/PFE 602/PFE 604/PFE 611 | evidence/independent-audit-2026-10-05.md | Separate reviewer reproduced bounded computational, geometry, tagging, font, hash, and raster checks and recorded six scope limits | IMPLEMENTED STUDY / LIMITED | Extend challenge to authorized normative clauses, validator version/run, screen-reader review, and held-out production files |
 
 ## Admission rule
 
