@@ -11,12 +11,13 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "pfe601-minimal.pdf"
 RESULT = ROOT / "pfe601-object-lab-results.json"
 
+content = b"BT /F1 24 Tf 72 720 Td (PFE 601) Tj ET\n"
 objects = {
     1: b"<< /Type /Catalog /Pages 2 0 R >>",
     2: b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
     3: b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>",
     4: b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
-    5: b"<< /Length 44 >>\nstream\nBT /F1 24 Tf 72 720 Td (PFE 601) Tj ET\nendstream",
+    5: b"<< /Length " + str(len(content)).encode() + b" >>\nstream\n" + content + b"endstream",
 }
 
 parts = [b"%PDF-1.4\n%\xe2\xe3\xcf\xd3\n"]
@@ -48,6 +49,11 @@ result = {
     "root_type": str(reader.trailer["/Root"]["/Type"]),
     "independent_parser": "pypdf",
     "status": "OBSERVED_AND_VERIFIED_FOR_THIS_FIXTURE",
+    "preserved_failure_and_repair": {
+        "failure": "Initial hard-coded content-stream Length produced Poppler stream errors despite pypdf extraction succeeding.",
+        "repair": "Compute Length from the exact content bytes before writing the stream.",
+        "verification": "Re-run pypdf extraction, Poppler rendering, and page metadata inspection after repair."
+    },
     "limits": [
         "No compression, transparency, Unicode font, tagging, annotations, signatures, encryption, incremental update, or PDF 2.0 feature is exercised.",
         "The Type1 Helvetica resource is a teaching fixture and is not a production font-embedding recommendation.",
