@@ -1,37 +1,58 @@
 {
-  "fixtures": {
-    "production-repaired": {
-      "bytes": 18759,
-      "path": "reports/production-pdfa4-2026-10-05/fixture-repaired2.pdf",
-      "pdfx4_control": {
-        "repr": "{'valid': False, 'level': '4', 'errors': ['[XMETA-002] GTS_PDFX output intent is required', '[XBOX-001] Either TrimBox or ArtBox is required for PDF/X (page 1)'], 'warnings': ['[XMETA-006] XMP metadata missing pdfxid:GTS_PDFXVersion identification', '[XMETA-007] Info dictionary not found']}",
-        "status": "returned"
-      },
-      "pdfx6_attempt": {
-        "exception_type": "ValueError",
-        "message": "Unknown PDF/X level: '6'. Use 1a_2001, 3_2002, 4",
-        "status": "unsupported_or_error"
-      },
-      "sha256": "c027477c49ffbb7f055a3c7ed37a804ef3423c3d6c1a0ad4faaa5f1a916f8c73"
-    },
-    "truetype-tagged": {
-      "bytes": 25323,
-      "path": "/Users/quickwhitt/Documents/Codex/2026-10-05/referenced-chatgpt-conversation-this-is-an/outputs/pdf-engineering/truetype-tagged.pdf",
-      "pdfx4_control": {
-        "repr": "{'valid': False, 'level': '4', 'errors': ['[XMETA-001] OutputIntents array is required for PDF/X', '[XMETA-005] XMP metadata stream is required for PDF/X', '[XMETA-007] GTS_PDFXVersion key is required in Info dictionary', '[XBOX-001] Either TrimBox or ArtBox is required for PDF/X (page 1)', \"[XFONT-001] Font 'F4' must be embedded (page 1)\", \"[XFONT-001] Font 'F5' must be embedded (page 1)\"], 'warnings': ['[XMETA-006] Could not extract XMP metadata for PDF/X identification', '[XMETA-004] Trapped key should be present in Info dictionary', '[XANNOT-001] Link annotation should have appearance stream (page 1)']}",
-        "status": "returned"
-      },
-      "pdfx6_attempt": {
-        "exception_type": "ValueError",
-        "message": "Unknown PDF/X level: '6'. Use 1a_2001, 3_2002, 4",
-        "status": "unsupported_or_error"
-      },
-      "sha256": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6"
-    }
+  "comparisons": {
+    "geometry_equal": true,
+    "page_count_equal": true,
+    "raster_hash_equal": true,
+    "text_hash_equal": true
   },
-  "platform": "macOS-15.4.1-x86_64-i386-64bit",
-  "python": "3.9.6",
-  "requested_target": "PDF/X-6 (ISO 15930-9:2020)",
-  "tool": "pdf_oxide",
-  "version": "0.3.78"
+  "final": {
+    "bytes": 34802,
+    "catalog_keys": [
+      "/Lang",
+      "/MarkInfo",
+      "/Metadata",
+      "/Pages",
+      "/StructTreeRoot",
+      "/Type",
+      "/ViewerPreferences"
+    ],
+    "mediabox": [
+      0.0,
+      0.0,
+      792.0,
+      612.0
+    ],
+    "pages": 1,
+    "raster_bytes": 91465,
+    "raster_sha256": "c64d0955a0d3818fc6ebaaf6a93052dc0dd81cafa2a8a34267e6722c8bb1448b",
+    "sha256": "2b668a09aabf10fae25679dd18b51a305f07905042af8b5acd8a1ad92ddb84e5",
+    "text_chars": 273,
+    "text_preview": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0",
+    "text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e"
+  },
+  "original": {
+    "bytes": 25323,
+    "catalog_keys": [
+      "/Lang",
+      "/MarkInfo",
+      "/Outlines",
+      "/Pages",
+      "/StructTreeRoot",
+      "/Type",
+      "/ViewerPreferences"
+    ],
+    "mediabox": [
+      0.0,
+      0.0,
+      792.0,
+      612.0
+    ],
+    "pages": 1,
+    "raster_bytes": 91465,
+    "raster_sha256": "c64d0955a0d3818fc6ebaaf6a93052dc0dd81cafa2a8a34267e6722c8bb1448b",
+    "sha256": "d82571d66f6018ce60a7f6c13cf2d842ccdcc04001a8bb1f50ccdbc949c3c3c6",
+    "text_chars": 273,
+    "text_preview": "PDF engineering specimen\nA higher standard for what\u2019s next. Precision. Progress. Proof.\nGeometry and meaning\nCounter, taper, spacing. \ufb00i fi fl \u00c6 \u03a9 \u2192\n0123456789.\nReading-order reference\nMeasured properties\nProperty Target\nPage 11 \u00d7 8.5 in\nBody 24 px / 18 pt\nExport scale 1.0",
+    "text_sha256": "141d3b01923d9daa3b78ff0985fe683048ada2af9e3040d801fe01455593711e"
+  }
 }
