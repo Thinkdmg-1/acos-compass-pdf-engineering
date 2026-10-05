@@ -22,6 +22,7 @@
 | Human accessibility checks | `reports/profile-test-plan-2026-10-05/README.md` | Keyboard, screen-reader, visual, and second-reviewer checks are specified but not executed in an equipped environment. | **MISSING** |
 | Independent lab challenge | `evidence/independent-audit-2026-10-05.md` | Separate parser, geometry, font, hash, and raster checks are preserved; scope limits are explicit. | **PROVEN / LIMITED** |
 | Public repository publication | GitHub repository; the audit artifact is visible in the rendered repository after publication | Latest test plan is visible in the public repository. | **PROVEN** |
+| Preflight capability boundary | `reports/preflight-capability-inventory-2026-10-05/README.md` | A fresh executable inventory checked available validators and searched the installed Adobe resource tree; no PDF/X-6-capable preflight executable was available. The limitation is recorded as an environment boundary, not as a conformance result. | **PROVEN / LIMITED** |
 | Markdown-only handoff package | `outputs/ACOS-Compass-MD-University-Study.zip` | 17 entries, all `.md`; SHA-256 `1b30a3455587d94ed4289019900b7272d036d9f7f502703fc831deb83cd887e5`. | **PROVEN** |
 | 995/1000 source gate | `governance/source-quality-gate.md`, `sources/provisional-scorecard.md` | Conservative provisional score is 796/1000. Hard veto remains active because normative text, clause maps, PDF/X-6 preflight, and human checks are incomplete. | **NOT ACHIEVED** |
 
@@ -31,6 +32,7 @@
 - The public repository exposes the new test-plan artifact and commit independently through GitHub’s rendered page.
 - The Markdown package was rebuilt from the study directory, then reopened as a ZIP and checked for exactly 17 Markdown entries and zero non-Markdown entries.
 - The source gate and scorecard use the same disposition: `CHANGES_REQUIRED`; no numerical 995 claim appears in either record.
+- The preflight capability inventory is treated as a reproducibility receipt only; tool absence cannot be promoted to a PDF/X-6 pass or failure.
 
 ## Hard-veto decision
 
