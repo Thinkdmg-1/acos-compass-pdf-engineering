@@ -27,6 +27,7 @@ The curriculum is intentionally stronger than a production checklist. It require
 - `evidence/pdf20-examples-lab-2026-10-06.md` — dual-reader inspection of public PDF 2.0 examples and deliberate edge cases.
 - `evidence/entry-diagnostic-2026-10-06.md` — five-part entry diagnostic classification and next-gate boundaries.
 - `reports/pfe601-rerun-2026-10-06/` — source-level rerun receipt for the object-model and xref-repair labs.
+- `evidence/pfe602-font-capability-2026-10-06.md` — installed-font metadata and shaping-toolchain boundary for PFE 602.
 - `reports/verapdf-runtime-capability-2026-10-06/` — fresh veraPDF launcher check showing the current Java-runtime boundary.
 - `labs/` — executable exercises and saved results.
 - `reports/verapdf-1.30.2/` — pinned PDF/A-4 and PDF/UA-2 validator reports, stderr captures, hashes, and interpretation limits.
